@@ -1,7 +1,7 @@
 "use client";
 
 import Example from "@/components/Example";
-import TestIcon from "@/public/assets/icons/test.svg";
+import TestIcon from "@/public/assets/icons/placeholder.svg";
 
 export default function Home() {
   return (
