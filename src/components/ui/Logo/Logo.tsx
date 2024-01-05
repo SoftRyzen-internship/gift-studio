@@ -5,14 +5,10 @@ const Logo = () => {
   return (
     <a
       href="/"
-      className="group flex items-center gap-x-2 font-sans text-base text-black transition-colors hover:text-accent focus:text-accent"
+      className="group flex items-center gap-x-2 font-sans text-base font-normal text-black transition-colors hover:text-accent focus:text-accent xl:text-3xl"
       aria-label={data.logoAriaLabel}
     >
-      <LogoIcon
-        width={29}
-        height={36}
-        className="transition-colors group-hover:stroke-accent group-hover:stroke-[0.6px]"
-      />
+      <LogoIcon className="h-9 w-7 transition-colors group-hover:stroke-accent group-hover:stroke-[0.6px] lg:h-12 lg:w-10" />
       {data.companyName}
     </a>
   );
