@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  font-family: var(--font-montserrat);
+    color: rgb(var(--foreground-rgb));
+    font-family: var(--font-montserrat);
 }
 
 h1 {
-  font-family: var(--font-caveat);
+    font-family: var(--font-caveat);
 }
 
 @layer utilities {
-  .section {
-    @apply py-[0px] md:py-[0px] lg:py-[0px];
-  }
+    .section {
+        @apply py-[0px] md:py-[0px] lg:py-[0px];
+    }
 
-  .body-small {
-    @apply text-[12px] font-extralight leading-5 lg:leading-6;
-  }
+    .body-small {
+        @apply text-[12px] font-extralight leading-5 lg:leading-6;
+    }
 
-  .flex-center {
-    @apply flex justify-center items-center;
-  }
-  .flex-between {
-    @apply flex justify-between items-center;
-  }
-  .flex-start {
-    @apply flex justify-start items-center;
-  }
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+    .flex-start {
+        @apply flex justify-start items-center;
+    }
 }
