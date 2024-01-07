@@ -25,6 +25,7 @@
       "@/sections/*": ["src/sections/*"],
       "@/lib/*": ["src/lib/*"],
       "@/public/*": ["public/*"],
+      "@/data/*": ["src/data/*"],
       "@/*": ["src/*"]
     }
   },
