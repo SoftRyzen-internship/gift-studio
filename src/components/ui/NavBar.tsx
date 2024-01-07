@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 
 import React from "react";
-import data from "../../data/navbar.json";
+import data from "@/data/navbar.json";
 type navData = {
   text: string;
   textRef: string;
@@ -12,21 +12,20 @@ type navProps = {
 };
 
 const Navbar = ({ isMobile }: navProps) => {
-  const desktopStyles = "hidden lg:flex lg:w-[508px] lg:h-[20px]";
-  const mobileStyles = "lg:hidden flex w-[123px] h-[294px] mx-auto";
+  const desktopStyles = "hidden lg:flex lg:w-max[508px] lg:h-max[20px]";
+  const mobileStyles = "lg:hidden flex w-max-[123px] h-max-[294px] mx-auto ";
   return (
     <nav className={!isMobile ? desktopStyles : mobileStyles}>
       <ul className="flex flex-col lg:flex-row gap-6 mx-auto list-none text-center justify-center ">
         {data.map(({ text, textRef, id }: navData) => (
-          <li key={id} className="">
+          <li key={id}>
             <Link
               className="font-sans font-normal text-black transition hover:text-accent focus:text-accent 
-              text-3xl lg:text-base"
-              to={textRef}
+              text-3xl lg:text-base cursor-pointer"
+              to={`${textRef}`}
               spy
               smooth
               duration={500}
-              href="#"
             >
               {text}
             </Link>

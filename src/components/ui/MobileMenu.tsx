@@ -9,10 +9,15 @@ const MobileMenu = () => {
   };
 
   return (
-    <div>
-      <button onClick={toggleMenu}>|||</button>
-      <Navbar isMobile={isMobileMenuShown} />
-    </div>
+    <>
+      <button className="w-max-[24px] h-max-[24px]" onClick={toggleMenu}>
+        {!isMobileMenuShown ? "|||" : "X"}
+      </button>
+      <div className="w-min-full h-fill overflow-hidden bg-white pt-[16px] z-50">
+        <Navbar isMobile={isMobileMenuShown} />
+        <a href="tel:+380981234567">+380981234567</a>
+      </div>
+    </>
   );
 };
 
