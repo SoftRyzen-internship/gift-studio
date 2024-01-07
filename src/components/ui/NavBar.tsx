@@ -13,7 +13,7 @@ type navProps = {
 
 const Navbar = ({ isMobile }: navProps) => {
   const desktopStyles = "hidden lg:flex lg:w-max[508px] lg:h-max[20px]";
-  const mobileStyles = "lg:hidden flex w-max-[123px] h-max-[294px] mx-auto ";
+  const mobileStyles = "lg:hidden flex w-max-[123px] h-max-[294px] mx-auto";
   return (
     <nav className={!isMobile ? desktopStyles : mobileStyles}>
       <ul className="flex flex-col lg:flex-row gap-6 mx-auto list-none text-center justify-center ">

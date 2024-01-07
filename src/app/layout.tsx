@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat, Caveat } from "next/font/google";
 
 import "./globals.css";
+import Header from "@/sections/Header/Header";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "700"],
@@ -30,7 +31,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="uk" className={`${montserrat.variable} ${caveat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

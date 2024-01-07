@@ -25,7 +25,8 @@
       "@/sections/*": ["src/sections/*"],
       "@/lib/*": ["src/lib/*"],
       "@/public/*": ["public/*"],
-      "@/data/*": ["src/data/*"]
+      "@/data/*": ["src/data/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
