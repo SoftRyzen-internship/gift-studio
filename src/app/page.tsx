@@ -13,10 +13,10 @@ export default function Home() {
       </div>
 
       {/* Для тесту скролу, можна прибрати */}
-      <div className="h-[500px] block bg-cyan-600" id="about">
+      <div className="block h-[500px] bg-cyan-600" id="about">
         about
       </div>
-      <div className="h-[500px] block bg-red-600" id="faq">
+      <div className="block h-[500px] bg-red-600" id="faq">
         faq
       </div>
     </>
