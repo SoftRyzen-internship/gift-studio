@@ -3,20 +3,23 @@ import React from "react";
 import contacts from "@/data/contacts.json";
 import PhoneIcon from "@/public/assets/icons/icon-phone.svg";
 
-type phoneLink = {
+type phoneLinkType = {
   customStyle?: string;
 };
 
-const PhoneLink = ({ customStyle }: phoneLink) => {
+const PhoneLink = ({ customStyle }: phoneLinkType) => {
   return (
     <a
-      className={"flex items-center gap-2 text-xl " + customStyle}
+      className={
+        !customStyle
+          ? "flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent"
+          : "flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent" +
+            customStyle
+      }
       href={`tel:${contacts.phoneData.phone}`}
-      target="_blank"
-      rel="noopener noreferrer nofollow"
       aria-label={contacts.phoneData.ariaLabel}
     >
-      <PhoneIcon className="fill-white w-6 h-6" />
+      <PhoneIcon className="w-6 h-6 fill-current text-white transition group-hover:text-accent" />
       {contacts.phoneData.phone}
     </a>
   );

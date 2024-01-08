@@ -3,17 +3,17 @@ import PhoneLink from "../PhoneLink";
 import contacts from "@/data/contacts.json";
 import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
-type contactsList = {
+type contactsListType = {
   customListStyle?: string;
 };
 
-const ContactsList = ({ customListStyle }: contactsList) => {
+const ContactsList = ({ customListStyle }: contactsListType) => {
   return (
     <ul
       className={
         !customListStyle
           ? "inline-flex flex-col gap-3 justify-center items-center md:flex-row md:gap-[48px]"
-          : "inline-flex flex-col gap-3 justify-center items-center md:flex-row md:gap-[48px]" +
+          : "inline-flex flex-col gap-3 justify-center items-center md:flex-row md:gap-[48px] " +
             customListStyle
       }
     >
@@ -22,13 +22,11 @@ const ContactsList = ({ customListStyle }: contactsList) => {
       </li>
       <li>
         <a
-          className="flex items-center gap-2 text-xl"
+          className="flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent"
           href={`tel:${contacts.emailData.email}`}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
           aria-label={contacts.emailData.ariaLabel}
         >
-          <EmailIcon className="w-6 h-6 fill-white" />
+          <EmailIcon className="w-6 h-6 fill-current text-white transition group-hover:text-accent" />
           {contacts.emailData.email}
         </a>
       </li>
