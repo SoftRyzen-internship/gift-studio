@@ -33,7 +33,7 @@ const review = {
       name: "description",
       title: "Текст відгука",
       type: "array",
-      description: "Напишіть повний текст для цього вігука",
+      description: "Напишіть повний текст для цього відгука",
       of: [{ type: "block" }],
       validation: Rule =>
         Rule.custom((blocks: TBlocks) => {

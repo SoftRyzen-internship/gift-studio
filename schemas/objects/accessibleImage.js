@@ -12,27 +12,27 @@ export default defineType({
       validation: Rule =>
         Rule.required().custom(imageField => {
           if (!imageField || !imageField.asset) {
-            return "Image is required";
+            return "Необхідне зображення";
           }
 
           const maxSizeInBytes = 5 * 1024 * 1024; // 5 MB
           const maxWidth = 1920; // Maximum width in pixels
           const maxHeight = 1080; // Maximum height in pixels
-
+          console.log(imageField.asset);
           const fileSize = imageField.asset.size;
           const imageWidth = imageField.asset.metadata.width;
           const imageHeight = imageField.asset.metadata.height;
 
           if (fileSize > maxSizeInBytes) {
-            return "Image size must be less than 5 MB";
+            return "Розмір зображення має бути менший за 5 MB";
           }
 
           if (imageWidth > maxWidth) {
-            return `Image width must be less than ${maxWidth} pixels`;
+            return `Ширина зображення має бути менша за ${maxWidth} пікселів`;
           }
 
           if (imageHeight > maxHeight) {
-            return `Image height must be less than ${maxHeight} pixels`;
+            return `Висота зображення має бути менша за ${maxHeight} пікселів`;
           }
 
           return true;
@@ -41,10 +41,9 @@ export default defineType({
     {
       name: "alt",
       type: "string",
-      title: "Опис зображення",
-      description: "Введіть опис зображення",
-      validation: Rule => [Rule.required().error("Alt text is required")],
-      // hidden: ({ parent }) => !parent?.asset,
+      title: "Опис зображення2",
+      description: "Введіть краткий опис зображення",
+      validation: Rule => [Rule.required().error("Необхідний опис зображення")],
       options: {
         isHighlighted: true,
       },
