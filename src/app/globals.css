@@ -21,7 +21,6 @@ h3 {
   .section {
     @apply pt-[40px] md:pt-[60px] lg:pt-[100px];
   }
-
   .flex-center {
     @apply flex justify-center items-center;
   }
