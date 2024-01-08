@@ -54,6 +54,7 @@ const config: Config = {
         accent: "#E42C2C",
         lava: "#CF1919",
         latte: "#FFFAE7",
+        gray: "#292D32",
       },
       screens: {
         sm: "480px",

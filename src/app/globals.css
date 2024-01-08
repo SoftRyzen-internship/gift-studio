@@ -31,3 +31,14 @@ h3 {
     @apply flex justify-start items-center;
   }
 }
+
+.gallery-slider {
+  height: 472px;
+  padding-bottom: 48px !important;
+  @media screen and (min-width: 768px) {
+    height: 508px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 544px;
+  }
+}
