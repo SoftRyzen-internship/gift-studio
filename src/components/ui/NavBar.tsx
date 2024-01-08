@@ -1,8 +1,6 @@
-"use client";
-import { Link } from "react-scroll";
-
 import React from "react";
 import data from "@/data/navbar.json";
+import ButtonLink from "@/components/ui/ButtonLink";
 type navData = {
   text: string;
   textRef: string;
@@ -20,16 +18,7 @@ const Navbar = ({ isMobile }: navProps) => {
       <ul className="mx-auto flex list-none flex-col justify-center gap-6 text-center lg:flex-row ">
         {data.map(({ text, textRef, id }: navData) => (
           <li key={id}>
-            <Link
-              className="cursor-pointer font-sans text-3xl font-normal text-black transition 
-              hover:text-accent focus:text-accent lg:text-base"
-              to={`${textRef}`}
-              spy
-              smooth
-              duration={500}
-            >
-              {text}
-            </Link>
+            <ButtonLink label={text} elementName={textRef} variant="ghost" />
           </li>
         ))}
       </ul>

@@ -1,9 +1,11 @@
-import { About } from "@/sections/About";
+import AboutSection from "@/sections/AboutSection";
+import GallerySection from "@/sections/GallerySection";
 
 export default function Home() {
   return (
     <>
-      <About />
+      <AboutSection />
+      <GallerySection />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import Logo from "@/components/ui/Logo/Logo";
+import Logo from "@/components/ui/Logo";
 import Navbar from "@/components/ui/NavBar";
 
 const Header = () => {
