@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { cn } from "@/utils/cn";
 
 import { SectionHeadingProps } from "./types";

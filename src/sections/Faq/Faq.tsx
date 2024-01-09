@@ -1,4 +1,4 @@
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "@/components/typography/SectionHeading";
 import TabList from "@/components/TabList";
 import content from "@/data/faq.json";
 
