@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
-import Navbar from "@/components/ui/NavBar/NavBar";
+
+import Navbar from "@/components/ui/NavBar";
 import Example from "@/components/Example";
 import MobileMenu from "@/components/ui/MobileMenu";
 import MobileBtn from "@/components/ui/MobileBtn";
@@ -11,6 +13,7 @@ export default function Home() {
     setIsMobileMenuShown(prevState => !prevState);
     document.body.classList.toggle("overflow-hidden", !isMobileMenuShown);
   };
+
   return (
     <>
       {/* z-index для хедеру */}
@@ -19,7 +22,7 @@ export default function Home() {
           isMobileMenuShown={isMobileMenuShown}
           handleClick={toggleMenu}
         />
-        <Navbar isMobile={false} />
+        <Navbar isMobile={isMobileMenuShown} />
         <h1 className="text-2xl text-accent">Подарунок</h1>
         <Example />
       </div>

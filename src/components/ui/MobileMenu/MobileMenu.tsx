@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
-import Navbar from "../NavBar/NavBar";
 
-type navProps = {
-  isMobile: boolean;
-};
+import { FC } from "react";
 
-const MobileMenu = ({ isMobile }: navProps) => {
+import Navbar from "@/components/ui/NavBar";
+
+import { NavPropsType } from "@/components/ui/NavBar/types";
+
+const MobileMenu: FC<NavPropsType> = ({ isMobile }) => {
   return (
     <>
       <div
