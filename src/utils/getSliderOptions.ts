@@ -5,44 +5,67 @@ const SCREENS = {
 };
 
 export const getSliderOptions = (
-  section: "features" | "feedback" | "gallery",
+  section: "features" | "feedback" | "gallery" | "services",
 ) => {
-  //   if (section === 'features') {
-  //     return {
-  //       [SCREENS.SX]: {
-  //         slidesPerView: 1,
-  //       },
-  //     };
-  //     }
+  switch (section) {
+    case "services": {
+      return {
+        [SCREENS.LG]: {
+          slidesPerView: 4,
+          spaceBetween: 12,
+          loopedSlides: 3,
+          loop: true,
+        },
+      };
+    }
+    case "features": {
+      return {
+        [SCREENS.SX]: {
+          slidesPerView: 1,
+        },
+      };
+    }
+    case "feedback": {
+      return {
+        [SCREENS.LG]: {
+          slidesPerView: 2,
+        },
+      };
+    }
+    case "gallery": {
+      return {
+        [SCREENS.MD]: {
+          slidesPerView: 2,
+          loopedSlides: 2,
+          spaceBetween: 16,
+        },
+        [SCREENS.LG]: {
+          slidesPerView: 3,
+          loopedSlides: 3,
+          loop: true,
+          centeredSlides: true,
+        },
+      };
+    }
 
-  if (section === "feedback") {
-    return {
-      //   [SCREENS.SX]: {
-      //     slidesPerView: 1,
-      //   },
-      //   [SCREENS.MD]: {
-      //     slidesPerView: 1,
-      //     loopedSlides: 1,
-      //   },
-      [SCREENS.LG]: {
-        slidesPerView: 2,
-        loopedSlides: 2,
-      },
-    };
-  }
-  if (section === "gallery") {
-    return {
-      [SCREENS.MD]: {
-        slidesPerView: 2,
-        loopedSlides: 2,
-        spaceBetween: 16,
-      },
-      [SCREENS.LG]: {
-        slidesPerView: 3,
-        loopedSlides: 3,
-        centeredSlides: true,
-        loop: true,
-      },
-    };
+    default: {
+      return {
+        [SCREENS.SX]: {
+          slidesPerView: 1,
+        },
+        [SCREENS.MD]: {
+          slidesPerView: 2,
+          loop: true,
+          loopedSlides: 2,
+          spaceBetween: 16,
+        },
+        [SCREENS.LG]: {
+          slidesPerView: 3,
+          loop: true,
+          loopedSlides: 3,
+          spaceBetween: 24,
+        },
+      };
+    }
   }
 };

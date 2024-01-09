@@ -32,13 +32,30 @@ h3 {
   }
 }
 
+.services-slider {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    height: 504px;
+  }
+}
+
+.features-slider {
+  height: 386px;
+  padding-bottom: 24px !important;
+}
+
+.feedback-slider {
+  height: 531px;
+  padding-bottom: 24px !important;
+}
+
 .gallery-slider {
-  height: 472px;
-  padding-bottom: 48px !important;
+  height: 424px;
+  margin-bottom: 24px !important;
   @media screen and (min-width: 768px) {
-    height: 508px;
+    height: 460px;
   }
   @media screen and (min-width: 1280px) {
-    height: 544px;
+    height: 496px;
   }
 }

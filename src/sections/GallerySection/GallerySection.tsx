@@ -17,16 +17,13 @@ const GallerySection = () => {
       style={{ objectFit: "cover" }}
     />
   ));
-
   return (
-    <section id={id} className="section container py-10">
+    <section id={id} className="section container relative py-10">
       <SectionHeading title={title} />
-      <Slider
-        sliderClass={`${id}-slider`}
-        slideClass={`${id}-slide`}
-        data={dataSlides}
-        sectionId="gallery"
-      />
+      <Slider slides={dataSlides.concat(dataSlides)} section="services" />
+      <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />
+      <Slider slides={dataSlides.concat(dataSlides)} section="features" />
+      <Slider slides={dataSlides.concat(dataSlides)} section="feedback" />
     </section>
   );
 };
