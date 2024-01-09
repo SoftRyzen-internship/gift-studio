@@ -2,19 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  font-family: var(--font-montserrat);
+  @apply font-montserrat text-[#000000];
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-caveat);
+  @apply font-caveat;
 }
 
 @layer utilities {

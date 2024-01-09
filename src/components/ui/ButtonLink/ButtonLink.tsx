@@ -16,7 +16,7 @@ const ButtonLink: FC<ButtonLinkProps> = ({
     outline:
       "text-accent text-base font-bold bg-white py-4 px-6 rounded-[10px] hover:bg-accent hover:text-white",
     ghost:
-      "font-sans text-3xl font-normal text-black hover:text-accent focus:text-accent lg:text-base",
+      "font-montserrat text-3xl font-normal text-black hover:text-accent focus:text-accent lg:text-base",
   };
 
   return (
