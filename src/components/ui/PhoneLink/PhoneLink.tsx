@@ -12,14 +12,14 @@ const PhoneLink = ({ customStyle }: phoneLinkType) => {
     <a
       className={
         !customStyle
-          ? "flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent"
-          : "flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent" +
+          ? "inline-flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px]"
+          : "inline-flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px]" +
             customStyle
       }
       href={`tel:${contacts.phoneData.phone}`}
       aria-label={contacts.phoneData.ariaLabel}
     >
-      <PhoneIcon className="w-6 h-6 fill-current text-white transition group-hover:text-accent" />
+      <PhoneIcon className="w-6 h-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
       {contacts.phoneData.phone}
     </a>
   );

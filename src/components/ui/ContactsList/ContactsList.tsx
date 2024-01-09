@@ -22,11 +22,11 @@ const ContactsList = ({ customListStyle }: contactsListType) => {
       </li>
       <li>
         <a
-          className="flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent"
+          className="flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px]"
           href={`tel:${contacts.emailData.email}`}
           aria-label={contacts.emailData.ariaLabel}
         >
-          <EmailIcon className="w-6 h-6 fill-current text-white transition group-hover:text-accent" />
+          <EmailIcon className="w-6 h-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
           {contacts.emailData.email}
         </a>
       </li>
