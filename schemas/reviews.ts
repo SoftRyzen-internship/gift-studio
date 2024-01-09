@@ -1,6 +1,5 @@
 import { MdOutlineRateReview } from "react-icons/md";
 import { defineField } from "sanity";
-// import { createImageField } from "sanity-pills";
 
 interface TextBlock {
   _type: string;
@@ -23,27 +22,20 @@ const review = {
       type: "string",
       validation: rule => rule.required(),
     }),
-    // createImageField({
-    //   name: "image",
-    //   validations: {
-    //     required: true,
-    //     minWidth: 500,
-    //     maxHeight: 9000,
-    //   },
-    // }),
-    // defineField({
-    //   name: "image",
-    //   title: "Distributor image",
-    //   type: "accessibleImage",
-    //   description: "Add an image or logo of the distributor",
-    //   validation: rule => rule.required(),
-    // }),
-    // {
-    //   name: "image",
-    //   title: "Distributor image",
-    //   type: "accessibleImage",
-    //   description: "Add an image or logo of the distributor",
-    // },
+    defineField({
+      name: "image",
+      type: "accessibleImage",
+      title: "Завантажте зображення відгука",
+      // validation: rule =>
+      //   rule.custom((value, context) => {
+      //     if (!value) {
+      //       return "Зображення обов'язкове";
+      //     }
+      //     console.log("🚀 ~ file: reviews.ts:32 ~ value:", value);
+
+      //     return true; // Validation passed
+      //   }),
+    }),
     defineField({
       name: "description",
       title: "Текст відгука",
