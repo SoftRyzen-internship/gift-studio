@@ -45,8 +45,8 @@ const config: Config = {
         "16": "22px",
       },
       fontFamily: {
-        display: ["var(--font-caveat)"],
-        sans: ["var(--font-montserrat)"],
+        caveat: ["var(--font-caveat)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       colors: {
         white: "#ffffff",
