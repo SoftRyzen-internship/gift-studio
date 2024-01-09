@@ -1,7 +1,9 @@
 "use client";
+
 import { FC, useState } from "react";
+import TabListIem from "@/components/TabListIem";
+
 import { TabListProps } from "./types";
-import TabListIem from "../TabListIem";
 
 const TabList: FC<TabListProps> = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);

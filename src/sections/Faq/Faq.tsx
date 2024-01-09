@@ -2,15 +2,17 @@ import SectionHeading from "@/components/SectionHeading";
 import TabList from "@/components/TabList";
 import content from "@/data/faq.json";
 
-const FaqSection = () => {
+const Faq = () => {
   const { title, id, answers } = content;
 
   return (
-    <section id={id} className="section container">
-      <SectionHeading title={title} className="mb-6" />
-      <TabList data={answers} />
+    <section id={id} className="section">
+      <div className="container">
+        <SectionHeading title={title} />
+        <TabList data={answers} />
+      </div>
     </section>
   );
 };
 
-export default FaqSection;
+export default Faq;

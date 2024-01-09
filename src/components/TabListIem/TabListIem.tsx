@@ -1,8 +1,8 @@
 import { FC } from "react";
+import { cn, getSocialLink } from "@/utils";
+import SocialLink from "@/components/ui/SocialLink";
+
 import { TabListIemProps } from "./types";
-import { cn } from "@/utils/cn";
-import { getSocialLink } from "@/utils/getSocialLink";
-import SocialLink from "../ui/SocialLink";
 
 const TabListIem: FC<TabListIemProps> = ({
   isActive,
