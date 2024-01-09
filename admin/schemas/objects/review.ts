@@ -1,5 +1,4 @@
-import { MdOutlineRateReview } from "react-icons/md";
-import { defineField } from "sanity";
+import { defineType, defineField } from "sanity";
 
 interface TextBlock {
   _type: string;
@@ -8,12 +7,9 @@ interface TextBlock {
 
 type TBlocks = TextBlock[] | undefined;
 
-const review = {
+export default defineType({
   name: "review",
-  title: "Відгуки",
-  description: "Review Schema",
-  type: "document",
-  icon: MdOutlineRateReview,
+  type: "object",
   fields: [
     defineField({
       name: "name",
@@ -63,6 +59,14 @@ const review = {
         }),
     }),
   ],
-};
-
-export default review;
+  // validation: rule =>
+  //   rule.custom((value, context) => {
+  //     if (!value || !value.image) {
+  //       return "Зображення обов'язкове";
+  //     }
+  //     if (!value.alt) {
+  //       return "Опис зображення обов'язковий";
+  //     }
+  //     return true;
+  //   }),
+});
