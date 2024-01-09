@@ -1,6 +1,8 @@
 import React from "react";
-import data from "@/data/navbar.json";
+
 import ButtonLink from "@/components/ui/ButtonLink";
+import data from "@/data/navbar.json";
+
 type navData = {
   text: string;
   textRef: string;

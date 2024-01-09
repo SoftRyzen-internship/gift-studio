@@ -8,7 +8,6 @@ const AboutSection = () => {
   return (
     <section id={id} className="section container">
       <SectionHeading title={title} />
-
       {/* REMOVE: ONLY FOR EXAMPLE BUTTONS LINKS */}
       <div className="mx-auto block space-y-4">
         <ButtonLink

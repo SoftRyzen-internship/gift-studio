@@ -7,6 +7,7 @@ const GallerySection = () => {
   return (
     <section id={id} className="section container">
       <SectionHeading title={title} />
+
       {/* ADD: HERE WILL BE SLIDER GALLERY */}
     </section>
   );
