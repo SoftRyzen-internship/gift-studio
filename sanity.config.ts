@@ -13,6 +13,7 @@ export default defineConfig({
   dataset: "production",
 
   plugins: [
+    // deskTool(),
     deskTool({
       structure: myStructure,
     }),

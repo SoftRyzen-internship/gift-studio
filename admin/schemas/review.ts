@@ -26,15 +26,6 @@ const review = {
       name: "image",
       type: "accessibleImage",
       title: "Завантажте зображення відгука",
-      // validation: rule =>
-      //   rule.custom((value, context) => {
-      //     if (!value) {
-      //       return "Зображення обов'язкове";
-      //     }
-      //     console.log("🚀 ~ file: reviews.ts:32 ~ value:", value);
-
-      //     return true; // Validation passed
-      //   }),
     }),
     defineField({
       name: "description",

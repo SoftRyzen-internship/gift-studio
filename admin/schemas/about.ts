@@ -1,11 +1,11 @@
-import { FaHandHolding } from "react-icons/fa";
+import { GrGallery } from "react-icons/gr";
 
 const about = {
   name: "about",
-  title: "Про нас",
+  title: "Про нас2",
   description: "About Schema",
   type: "document",
-  icon: FaHandHolding,
+  icon: GrGallery,
   fields: [
     {
       name: "image",
