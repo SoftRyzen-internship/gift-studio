@@ -1,5 +1,4 @@
 import { FaHandHolding } from "react-icons/fa";
-// import { imageField } from "../imageField";
 
 const service = {
   name: "service",
@@ -14,13 +13,14 @@ const service = {
       type: "string",
       description: "Введіть назву послуги",
     },
-    // imageField,
+
     {
       name: "url",
       title: "URL послуги",
       description: "Введіть http-адресу послуги",
       type: "url",
     },
+
     {
       name: "image",
       title: "Distributor image",
