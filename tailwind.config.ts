@@ -61,6 +61,9 @@ const config: Config = {
         lg: "1280px",
       },
     },
+    transitionDuration: {
+      DEFAULT: "300ms",
+    },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
