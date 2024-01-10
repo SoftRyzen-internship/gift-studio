@@ -3,7 +3,7 @@ import ButtonLink from "@/components/ui/ButtonLink";
 import content from "@/data/about.json";
 import Image from "next/image";
 
-const AboutSection = () => {
+const About = () => {
   const { id, title, image, description, buttonLabel, btnScrollTo } = content;
 
   return (
@@ -38,4 +38,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;
