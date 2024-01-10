@@ -28,7 +28,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
         id={`swiper-${section}`}
         modules={[A11y]}
         slidesPerView={1}
-        loop={false}
+        loop={true}
         speed={1000}
         spaceBetween={24}
         breakpoints={getSliderOptions(section)}

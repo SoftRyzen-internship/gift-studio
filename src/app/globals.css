@@ -2,19 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  font-family: var(--font-montserrat);
+  @apply font-montserrat text-[#000000];
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-caveat);
+  @apply font-caveat;
 }
 
 @layer utilities {
@@ -33,20 +28,18 @@ h3 {
 }
 
 .services-slider {
-  display: none;
-  @media screen and (min-width: 1280px) {
-    height: 504px;
-  }
+  margin-bottom: 24px !important;
+  height: 504px;
 }
 
 .features-slider {
   height: 386px;
-  padding-bottom: 24px !important;
+  margin-bottom: 24px !important;
 }
 
 .feedback-slider {
   height: 531px;
-  padding-bottom: 24px !important;
+  margin-bottom: 24px !important;
 }
 
 .gallery-slider {

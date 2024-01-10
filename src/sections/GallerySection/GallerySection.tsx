@@ -1,12 +1,15 @@
-import SectionHeading from "@/components/SectionHeading";
+import Image from "next/image";
+
+import SectionHeading from "@/components/typography/SectionHeading";
 import Slider from "@/components/Slider";
 import content from "@/data/gallery.json";
-import Image from "next/image";
+
 const gallery = [1, 2, 3];
 
 const GallerySection = () => {
   const { title, id } = content;
 
+  // TODO: ITS AS EXAMPLE WHAT SLIDER DATA EXPECT
   const dataSlides = gallery.map(slide => (
     <Image
       key={slide}
@@ -17,12 +20,17 @@ const GallerySection = () => {
       style={{ objectFit: "cover" }}
     />
   ));
+
   return (
     <section id={id} className="section container relative py-10">
       <SectionHeading title={title} />
+      <SectionHeading title="services" />
       <Slider slides={dataSlides.concat(dataSlides)} section="services" />
+      <SectionHeading title="gallery" />
       <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />
+      <SectionHeading title="features" />
       <Slider slides={dataSlides.concat(dataSlides)} section="features" />
+      <SectionHeading title="feedback" />
       <Slider slides={dataSlides.concat(dataSlides)} section="feedback" />
     </section>
   );

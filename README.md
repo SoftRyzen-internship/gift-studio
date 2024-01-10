@@ -56,10 +56,10 @@ is a list of more common components and their API.
 
 - ### SectionHeading
 
-| Prop         | Default     | Description                   |
-| ------------ | ----------- | ----------------------------- |
-| `title `     | `undefined` | required, any text content    |
-| `className ` | `undefined` | add optional styles if needed |
+| Prop         | Default     | Description                              |
+| ------------ | ----------- | ---------------------------------------- |
+| `title `     | `undefined` | required, any text content section title |
+| `className ` | `undefined` | add optional styles if needed            |
 
 - ### ButtonLink
 
@@ -68,8 +68,8 @@ styled variant and perfom smooth scroll to `targetName` by `click`
 
 | Prop         | Default     | Description                                                               |
 | ------------ | ----------- | ------------------------------------------------------------------------- |
-| `label `     | `undefined` | required, any text content                                                |
-| `targetName` | `undefined` | required, id of existing DOM element                                      |
+| `label `     | `undefined` | required, any text content for button title                               |
+| `targetName` | `undefined` | required, id of existing DOM element, which is the target for the scroll  |
 | `variant `   | `undefined` | required, choose the name of the section: `primary`, `outline` or `ghost` |
 | `className ` | `undefined` | add optional styles if needed                                             |
 

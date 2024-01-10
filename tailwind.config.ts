@@ -45,8 +45,8 @@ const config: Config = {
         "16": "22px",
       },
       fontFamily: {
-        display: ["var(--font-caveat)"],
-        sans: ["var(--font-montserrat)"],
+        caveat: ["var(--font-caveat)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       colors: {
         white: "#ffffff",
@@ -61,6 +61,9 @@ const config: Config = {
         md: "768px",
         lg: "1280px",
       },
+    },
+    transitionDuration: {
+      DEFAULT: "300ms",
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

@@ -1,12 +1,7 @@
-const SCREENS = {
-  SX: 480,
-  MD: 768,
-  LG: 1280,
-};
+import { SCREENS } from "@/constants";
+import { ISections } from "@/types";
 
-export const getSliderOptions = (
-  section: "features" | "feedback" | "gallery" | "services",
-) => {
+export const getSliderOptions = (section: ISections) => {
   switch (section) {
     case "services": {
       return {
@@ -14,7 +9,6 @@ export const getSliderOptions = (
           slidesPerView: 4,
           spaceBetween: 12,
           loopedSlides: 3,
-          loop: true,
         },
       };
     }
@@ -34,15 +28,19 @@ export const getSliderOptions = (
     }
     case "gallery": {
       return {
+        [SCREENS.SX]: {
+          slidesPerView: 1,
+        },
         [SCREENS.MD]: {
           slidesPerView: 2,
           loopedSlides: 2,
           spaceBetween: 16,
+          centeredSlides: false,
         },
         [SCREENS.LG]: {
           slidesPerView: 3,
           loopedSlides: 3,
-          loop: true,
+          spaceBetween: 16,
           centeredSlides: true,
         },
       };
@@ -55,13 +53,11 @@ export const getSliderOptions = (
         },
         [SCREENS.MD]: {
           slidesPerView: 2,
-          loop: true,
           loopedSlides: 2,
           spaceBetween: 16,
         },
         [SCREENS.LG]: {
           slidesPerView: 3,
-          loop: true,
           loopedSlides: 3,
           spaceBetween: 24,
         },

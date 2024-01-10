@@ -2,8 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import { Montserrat, Caveat } from "next/font/google";
 
+import Header from "@/layout/Header";
+
 import "./globals.css";
-import Header from "@/sections/Header";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "700"],

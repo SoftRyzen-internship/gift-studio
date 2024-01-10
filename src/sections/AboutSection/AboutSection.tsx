@@ -1,4 +1,4 @@
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "@/components/typography/SectionHeading";
 import content from "@/data/about.json";
 
 const AboutSection = () => {
