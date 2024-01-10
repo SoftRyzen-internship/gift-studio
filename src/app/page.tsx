@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import ServiceCard from "@/components/ui/ServiceCard";
+
 import Navbar from "@/components/ui/NavBar";
 import MobileMenu from "@/components/ui/MobileMenu";
 import MobileBtn from "@/components/ui/MobileBtn";
@@ -9,9 +11,10 @@ import ContactsList from "@/components/ui/ContactsList";
 import PhoneLink from "@/components/ui/PhoneLink";
 import SocialMediaList from "@/components/ui/SocialMediaList";
 
+import data from "@/data/service-card.json";
 import About from "@/sections/About";
 import Advantages from "@/sections/Advantages";
-// import Gallery from "@/sections/Gallery";
+import Gallery from "@/sections/Gallery";
 
 export default function Home() {
   const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);
@@ -23,6 +26,12 @@ export default function Home() {
 
   return (
     <>
+      <ServiceCard
+        link={data.link}
+        serviceDescription={data.serviceDescription}
+        alt={data.alt}
+      />
+
       <Navbar isMobile={false} />
       <MobileBtn
         isMobileMenuShown={isMobileMenuShown}
@@ -34,7 +43,7 @@ export default function Home() {
       {isMobileMenuShown && <MobileMenu isMobile={isMobileMenuShown} />}
       <About />
       <Advantages />
-      {/* <Gallery /> */}
+      <Gallery />
     </>
   );
 }

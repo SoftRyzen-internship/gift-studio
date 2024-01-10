@@ -4,7 +4,7 @@ import { FC } from "react";
 
 import ButtonLink from "@/components/ui/ButtonLink";
 
-import { NavDataType, NavPropsType } from "@/components/ui/NavBar/types";
+import { NavDataType, NavPropsType } from "./types";
 
 import data from "@/data/navbar.json";
 

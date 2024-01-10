@@ -80,7 +80,7 @@ give the `section` property `position: relative`. This is necessary in order for
 the `Slider` to extend beyond the `container`. By section bame you will able to
 edit custom styles for your `sectionName`-slider and `sectionName`-slide
 
-| Prop       | Default     | Description                                                                               |
-| ---------- | ----------- | ----------------------------------------------------------------------------------------- |
-| `section ` | `undefined` | required, choose the name of the section: `services`, `features`, `feedback` or `gallery` |
-| `slides`   | `undefined` | required, any array of slides `ReactNode` for mapping                                     |
+| Prop       | Default     | Description                                                                                 |
+| ---------- | ----------- | ------------------------------------------------------------------------------------------- |
+| `section ` | `undefined` | required, choose the name of the section: `services`, `advantages`, `feedback` or `gallery` |
+| `slides`   | `undefined` | required, any array of slides `ReactNode` for mapping                                       |

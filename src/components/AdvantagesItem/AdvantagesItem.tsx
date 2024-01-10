@@ -20,13 +20,12 @@ const AdvantagesItem: FC<AdvantagesItemProps> = ({ data }) => {
       {SelectedIcon && (
         <SelectedIcon width={128} height={128} className="mx-auto mb-3" />
       )}
-      <h3 className="mb-2 text-center font-montserrat text-xl font-bold leading-26">
+      <h3 className="mb-2 whitespace-pre text-center font-montserrat text-xl font-bold leading-26">
         {data.title}
       </h3>
-      <p className="text-center text-base font-normal leading-16">
+      <p className="mx-auto max-w-[235px] text-center text-base font-normal leading-16 md:whitespace-pre">
         {data.description}
       </p>
-      ;
     </>
   );
 };

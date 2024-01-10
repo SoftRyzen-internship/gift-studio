@@ -29,8 +29,6 @@ const GallerySection = () => {
         <Slider slides={dataSlides.concat(dataSlides)} section="services" />
         <SectionHeading title="gallery" />
         <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />
-        <SectionHeading title="features" />
-        <Slider slides={dataSlides.concat(dataSlides)} section="features" />
         <SectionHeading title="feedback" />
         <Slider slides={dataSlides.concat(dataSlides)} section="feedback" />
       </div>
