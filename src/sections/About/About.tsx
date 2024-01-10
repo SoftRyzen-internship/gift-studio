@@ -1,7 +1,7 @@
 import SectionHeading from "@/components/typography/SectionHeading";
 import content from "@/data/about.json";
 
-const AboutSection = () => {
+const About = () => {
   const { title, id } = content;
 
   return (
@@ -11,4 +11,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;

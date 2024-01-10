@@ -22,16 +22,18 @@ const GallerySection = () => {
   ));
 
   return (
-    <section id={id} className="section container relative py-10">
-      <SectionHeading title={title} />
-      <SectionHeading title="services" />
-      <Slider slides={dataSlides.concat(dataSlides)} section="services" />
-      <SectionHeading title="gallery" />
-      <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />
-      <SectionHeading title="features" />
-      <Slider slides={dataSlides.concat(dataSlides)} section="features" />
-      <SectionHeading title="feedback" />
-      <Slider slides={dataSlides.concat(dataSlides)} section="feedback" />
+    <section id={id} className="section relative">
+      <div className="container">
+        <SectionHeading title={title} />
+        <SectionHeading title="services" />
+        <Slider slides={dataSlides.concat(dataSlides)} section="services" />
+        <SectionHeading title="gallery" />
+        <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />
+        <SectionHeading title="features" />
+        <Slider slides={dataSlides.concat(dataSlides)} section="features" />
+        <SectionHeading title="feedback" />
+        <Slider slides={dataSlides.concat(dataSlides)} section="feedback" />
+      </div>
     </section>
   );
 };
