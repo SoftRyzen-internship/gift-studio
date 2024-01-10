@@ -1,19 +1,23 @@
 export const myStructure = (S: any) =>
   S.list()
-    .title("Контент2")
+    .title("Контент")
     .items([
       S.listItem()
         .title("Про нас")
-        .child(S.document().schemaType("about").documentId("about"))
-        .icon(() => "ℹ️"), // Replace 'ℹ️' with the desired icon (you can use Unicode or a URL)
+        .child(
+          S.document().schemaType("about").title("Про нас").documentId("about"),
+        )
+        .icon(() => "🌸"),
 
-      // S.listItem()
-      //   .title("Галерея")
-      //   .child(
-      //     S.list()
-      //       .title("Галерея")
-      //       .menuItems(S.documentTypeList("gallery").getMenuItems()),
-      //   ),
+      S.listItem()
+        .title("Контакти")
+        .child(
+          S.document()
+            .schemaType("contacts")
+            .title("Контакти")
+            .documentId("contacts"),
+        )
+        .icon(() => "📞"),
 
       S.listItem()
         .title("Відгуки")
@@ -22,7 +26,8 @@ export const myStructure = (S: any) =>
             .schemaType("reviews")
             .title("Відгуки")
             .documentId("reviews"),
-        ),
+        )
+        .icon(() => "📝"),
 
       S.listItem()
         .title("Галерея")
@@ -31,10 +36,23 @@ export const myStructure = (S: any) =>
             .schemaType("gallery")
             .title("Галерея")
             .documentId("gallery"),
-        ),
+        )
+        .icon(() => "🖼️"),
+
+      S.listItem()
+        .title("Послуги")
+        .child(
+          S.document()
+            .schemaType("services")
+            .title("Послуги")
+            .documentId("services"),
+        )
+        .icon(() => "🛠️"),
 
       ...S.documentTypeListItems()
         .filter((listItem: any) => !["about"].includes(listItem.getId()))
         .filter((listItem: any) => !["reviews"].includes(listItem.getId()))
+        .filter((listItem: any) => !["services"].includes(listItem.getId()))
+        .filter((listItem: any) => !["contacts"].includes(listItem.getId()))
         .filter((listItem: any) => !["gallery"].includes(listItem.getId())),
     ]);
