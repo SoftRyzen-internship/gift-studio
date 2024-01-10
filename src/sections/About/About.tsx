@@ -1,15 +1,14 @@
 import SectionHeading from "@/components/typography/SectionHeading";
-import content from "@/data/gallery.json";
+import content from "@/data/about.json";
 
-const GallerySection = () => {
+const About = () => {
   const { title, id } = content;
 
   return (
     <section id={id} className="section container">
       <SectionHeading title={title} />
-      {/* ADD: HERE WILL BE SLIDER GALLERY */}
     </section>
   );
 };
 
-export default GallerySection;
+export default About;
