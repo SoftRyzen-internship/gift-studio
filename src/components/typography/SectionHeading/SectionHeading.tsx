@@ -1,5 +1,7 @@
 import { FC } from "react";
+
 import { cn } from "@/utils/cn";
+
 import { SectionHeadingProps } from "./types";
 
 const SectionHeading: FC<SectionHeadingProps> = ({ className, title }) => {

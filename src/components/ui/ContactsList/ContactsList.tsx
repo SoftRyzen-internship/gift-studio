@@ -1,13 +1,18 @@
 "use client";
-import PhoneLink from "../PhoneLink";
-import contacts from "@/data/contacts.json";
+
+import PhoneLink from "@/components/ui/PhoneLink";
+
+import { ContactsListType } from "./types";
+
 import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
-type contactsListType = {
-  customListStyle?: string;
-};
+import contacts from "@/data/contacts.json";
 
-const ContactsList = ({ customListStyle }: contactsListType) => {
+const ContactsList = ({ customListStyle }: ContactsListType) => {
+  const {
+    emailData: { email, ariaLabel },
+  } = contacts;
+
   return (
     <ul
       className={
@@ -23,11 +28,11 @@ const ContactsList = ({ customListStyle }: contactsListType) => {
       <li>
         <a
           className="flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px]"
-          href={`tel:${contacts.emailData.email}`}
-          aria-label={contacts.emailData.ariaLabel}
+          href={`tel:${email}`}
+          aria-label={ariaLabel}
         >
           <EmailIcon className="w-6 h-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
-          {contacts.emailData.email}
+          {email}
         </a>
       </li>
     </ul>

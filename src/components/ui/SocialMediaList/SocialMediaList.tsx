@@ -1,14 +1,18 @@
 "use client";
 
-import contacts from "@/data/contacts.json";
+import { FC } from "react";
+
+import {
+  SocialMediaListType,
+  SocialMediaLinkProps,
+} from "@/components/ui/SocialMediaList/types";
+
 import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
 
-type socialMediaListType = {
-  customListStyle?: string;
-};
+import contacts from "@/data/contacts.json";
 
-const SocialMediaList = ({ customListStyle }: socialMediaListType) => {
+const SocialMediaList: FC<SocialMediaListType> = ({ customListStyle }) => {
   const icons = [
     <InstagramIcon
       key={1}
@@ -19,6 +23,7 @@ const SocialMediaList = ({ customListStyle }: socialMediaListType) => {
       className="w-6 h-6 transition group-hover:stroke-accent group-focus:stroke-accent"
     />,
   ];
+
   return (
     <ul
       className={
@@ -27,19 +32,21 @@ const SocialMediaList = ({ customListStyle }: socialMediaListType) => {
           : "inline-flex items-start gap-2 " + customListStyle
       }
     >
-      {contacts.socialLinks.map(({ id, link, ariaLabel }) => (
-        <li key={id}>
-          <a
-            className="transition text-transparent group stroke-black stroke-[1.5px]"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            aria-label={ariaLabel}
-          >
-            {icons[id]}
-          </a>
-        </li>
-      ))}
+      {contacts.socialLinks.map(
+        ({ id, link, ariaLabel }: SocialMediaLinkProps) => (
+          <li key={id}>
+            <a
+              className="transition text-transparent group stroke-black stroke-[1.5px]"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label={ariaLabel}
+            >
+              {icons[id]}
+            </a>
+          </li>
+        ),
+      )}
     </ul>
   );
 };

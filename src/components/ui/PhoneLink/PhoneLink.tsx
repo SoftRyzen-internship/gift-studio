@@ -1,13 +1,18 @@
 "use client";
-import React from "react";
-import contacts from "@/data/contacts.json";
+
+import { FC } from "react";
+
+import { PhoneLinkType } from "./types";
+
 import PhoneIcon from "@/public/assets/icons/icon-phone.svg";
 
-type phoneLinkType = {
-  customStyle?: string;
-};
+import contacts from "@/data/contacts.json";
 
-const PhoneLink = ({ customStyle }: phoneLinkType) => {
+const PhoneLink: FC<PhoneLinkType> = ({ customStyle }) => {
+  const {
+    phoneData: { phone, ariaLabel },
+  } = contacts;
+
   return (
     <a
       className={
@@ -16,11 +21,11 @@ const PhoneLink = ({ customStyle }: phoneLinkType) => {
           : "inline-flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px]" +
             customStyle
       }
-      href={`tel:${contacts.phoneData.phone}`}
-      aria-label={contacts.phoneData.ariaLabel}
+      href={`tel:${phone}`}
+      aria-label={ariaLabel}
     >
       <PhoneIcon className="w-6 h-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
-      {contacts.phoneData.phone}
+      {phone}
     </a>
   );
 };
