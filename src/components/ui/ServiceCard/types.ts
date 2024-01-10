@@ -1,7 +1,6 @@
 export interface ServiceCardProps {
   link: string;
-  alt: string;
-  accentWord: string;
+  serviceDescription: string;
   src?: string;
   wrapperCustomStyle?: string;
 }
