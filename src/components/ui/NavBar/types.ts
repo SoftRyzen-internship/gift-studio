@@ -3,6 +3,7 @@ export interface NavDataType {
   textRef: string;
   id: number;
 }
+
 export type NavPropsType = {
   isMobile: boolean;
 };
