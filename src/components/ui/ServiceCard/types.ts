@@ -3,4 +3,5 @@ export interface ServiceCardProps {
   serviceDescription: string;
   src?: string;
   wrapperCustomStyle?: string;
+  alt: string;
 }

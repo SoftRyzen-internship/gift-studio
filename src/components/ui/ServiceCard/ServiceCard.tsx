@@ -13,6 +13,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   link,
   serviceDescription,
   src = cardImage,
+  alt,
   wrapperCustomStyle,
 }) => {
   return (
@@ -31,11 +32,11 @@ const ServiceCard: FC<ServiceCardProps> = ({
       >
         <Image
           src={src}
-          alt={serviceDescription}
+          alt={alt}
           className="md:w-[295px] h-[416px] object-cover rounded-3xl"
         />
 
-        <ReactMarkdown className="flex flex-col items-center text-xl md:text-3xl ">
+        <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:leading-[32.1px] md:text-3xl ">
           {serviceDescription}
         </ReactMarkdown>
       </Link>

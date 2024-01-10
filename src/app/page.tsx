@@ -26,6 +26,7 @@ export default function Home() {
       <ServiceCard
         link={data.link}
         serviceDescription={data.serviceDescription}
+        alt={data.alt}
       />
 
       <Navbar isMobile={false} />
