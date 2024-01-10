@@ -1,30 +1,37 @@
 import { defineType, defineField } from "sanity";
 
-interface TextBlock {
+export interface TextBlock {
   _type: string;
   children?: Array<{ text?: string }>;
 }
 
-type TBlocks = TextBlock[] | undefined;
+export type TBlocks = TextBlock[] | undefined;
 
 export default defineType({
   name: "review",
   type: "object",
   fields: [
     defineField({
-      name: "name",
+      name: "reviewName",
       title: "Заголовок відгука",
       description: "Введіть заголовок відгука",
       type: "string",
-      validation: rule => rule.required(),
+      validation: rule =>
+        rule
+          .required()
+          .error("Заголовок обов'язковий")
+          .min(3)
+          .error("Введіть заголовок, який містить хоча б 3 символи")
+          .max(20)
+          .error("Введіть заголовок, який містить не більше 20 символів"),
     }),
     defineField({
-      name: "image",
+      name: "reviewImage",
       type: "accessibleImage",
       title: "Завантажте зображення відгука",
     }),
     defineField({
-      name: "description",
+      name: "reviewDescription",
       title: "Текст відгука",
       type: "array",
       description: "Напишіть повний текст для цього відгука",
@@ -50,15 +57,22 @@ export default defineType({
             return acc;
           }, 0);
 
-          const maxLength = 10;
+          const maxLength = 425;
 
           if (totalLength > maxLength || totalLength < 1) {
-            return `Загальна довжина тексту блоків повинна бути заповнена й менше ${maxLength} символів`;
+            return `Загальна довжина тексту блоків повинна бути заповнена й містити менше ${maxLength} символів`;
           }
           return true;
         }),
     }),
   ],
+
+  preview: {
+    select: {
+      title: "reviewName",
+      media: "reviewImage",
+    },
+  },
   // validation: rule =>
   //   rule.custom((value, context) => {
   //     if (!value || !value.image) {
