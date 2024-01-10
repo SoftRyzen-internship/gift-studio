@@ -3,9 +3,12 @@
 import React from "react";
 
 import Navbar from "@/components/ui/NavBar";
-import Example from "@/components/Example";
 import MobileMenu from "@/components/ui/MobileMenu";
 import MobileBtn from "@/components/ui/MobileBtn";
+import ContactsList from "@/components/ui/ContactsList";
+import PhoneLink from "@/components/ui/PhoneLink";
+import SocialMediaList from "@/components/ui/SocialMediaList";
+
 import AboutSection from "@/sections/AboutSection";
 import GallerySection from "@/sections/GallerySection";
 
@@ -19,16 +22,14 @@ export default function Home() {
 
   return (
     <>
-      <div className="container bg-green-300 relative z-20">
-        <MobileBtn
-          isMobileMenuShown={isMobileMenuShown}
-          handleClick={toggleMenu}
-        />
-        <Navbar isMobile={isMobileMenuShown} />
-        <h1 className="text-2xl text-accent">Подарунок</h1>
-        <Example />
-      </div>
-
+      <Navbar isMobile={false} />
+      <MobileBtn
+        isMobileMenuShown={isMobileMenuShown}
+        handleClick={toggleMenu}
+      />
+      <ContactsList />
+      <PhoneLink />
+      <SocialMediaList />
       {isMobileMenuShown && <MobileMenu isMobile={isMobileMenuShown} />}
       <AboutSection />
       <GallerySection />
