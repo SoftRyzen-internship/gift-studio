@@ -10,7 +10,7 @@ const SocialLink: FC<SocialLinkProps> = ({ username, className }) => {
 
   return (
     <a
-      className={cn("social-link transition", className)}
+      className={cn("social-link transition font-medium", className)}
       href={instagramLink}
       target="_blank"
       title={username}

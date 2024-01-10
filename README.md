@@ -46,3 +46,41 @@ from the creators of Next.js.
 Check out our
 [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
 details.
+
+---
+
+## 💼 Components API 💼
+
+Each component has its own API. You can find it in the component's folder. This
+is a list of more common components and their API.
+
+- ### SectionHeading
+
+| Prop         | Default     | Description                              |
+| ------------ | ----------- | ---------------------------------------- |
+| `title `     | `undefined` | required, any text content section title |
+| `className ` | `undefined` | add optional styles if needed            |
+
+- ### ButtonLink
+
+The `ButtonLink` component is created using `Link` from `react-scroll`, has
+styled variant and perfom smooth scroll to `targetName` by `click`
+
+| Prop         | Default     | Description                                                               |
+| ------------ | ----------- | ------------------------------------------------------------------------- |
+| `label `     | `undefined` | required, any text content for button title                               |
+| `targetName` | `undefined` | required, id of existing DOM element, which is the target for the scroll  |
+| `variant `   | `undefined` | required, choose the name of the section: `primary`, `outline` or `ghost` |
+| `className ` | `undefined` | add optional styles if needed                                             |
+
+- ### Slider
+
+The `Slider` component is created using `swiper` library. It is important to
+give the `section` property `position: relative`. This is necessary in order for
+the `Slider` to extend beyond the `container`. By section bame you will able to
+edit custom styles for your `sectionName`-slider and `sectionName`-slide
+
+| Prop       | Default     | Description                                                                               |
+| ---------- | ----------- | ----------------------------------------------------------------------------------------- |
+| `section ` | `undefined` | required, choose the name of the section: `services`, `features`, `feedback` or `gallery` |
+| `slides`   | `undefined` | required, any array of slides `ReactNode` for mapping                                     |

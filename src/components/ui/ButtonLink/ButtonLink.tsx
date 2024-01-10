@@ -8,7 +8,7 @@ import { ButtonLinkProps } from "./types";
 
 const ButtonLink: FC<ButtonLinkProps> = ({
   label,
-  elementName,
+  targetName,
   variant,
   className,
 }) => {
@@ -28,7 +28,7 @@ const ButtonLink: FC<ButtonLinkProps> = ({
         styles[variant],
         className,
       )}
-      to={elementName}
+      to={targetName}
       spy
       smooth
       duration={500}

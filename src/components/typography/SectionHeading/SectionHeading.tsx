@@ -8,7 +8,7 @@ const SectionHeading: FC<SectionHeadingProps> = ({ className, title }) => {
   return (
     <h2
       className={cn(
-        "text-4xl md:text-5xl lg:text-7xl text-accent text-center font-display font-normal mb-6",
+        "text-4xl md:text-5xl lg:text-7xl text-accent text-center font-caveat font-normal mb-6",
         className,
       )}
     >
