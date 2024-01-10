@@ -1,16 +1,16 @@
 "use client";
 
+import About from "@/sections/About";
+import Faq from "@/sections/Faq";
+import Gallery from "@/sections/Gallery";
 import React from "react";
-
 import ServiceCard from "@/components/ui/ServiceCard";
-
 import Navbar from "@/components/ui/NavBar";
 import MobileMenu from "@/components/ui/MobileMenu";
 import MobileBtn from "@/components/ui/MobileBtn";
 import ContactsList from "@/components/ui/ContactsList";
 import PhoneLink from "@/components/ui/PhoneLink";
 import SocialMediaList from "@/components/ui/SocialMediaList";
-
 import data from "@/data/service-card.json";
 
 export default function Home() {
@@ -38,6 +38,9 @@ export default function Home() {
       <PhoneLink />
       <SocialMediaList />
       {isMobileMenuShown && <MobileMenu isMobile={isMobileMenuShown} />}
+      <About />
+      <Faq />
+      <Gallery />
     </>
   );
 }

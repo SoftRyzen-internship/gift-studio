@@ -6,7 +6,7 @@ import content from "@/data/gallery.json";
 
 const gallery = [1, 2, 3];
 
-const GallerySection = () => {
+const Gallery = () => {
   const { title, id } = content;
 
   // TODO: ITS AS EXAMPLE WHAT SLIDER DATA EXPECT
@@ -38,4 +38,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default Gallery;
