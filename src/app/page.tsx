@@ -10,7 +10,8 @@ import PhoneLink from "@/components/ui/PhoneLink";
 import SocialMediaList from "@/components/ui/SocialMediaList";
 
 import About from "@/sections/About";
-import Gallery from "@/sections/Gallery";
+import Advantages from "@/sections/Advantages";
+// import Gallery from "@/sections/Gallery";
 
 export default function Home() {
   const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);
@@ -32,7 +33,8 @@ export default function Home() {
       <SocialMediaList />
       {isMobileMenuShown && <MobileMenu isMobile={isMobileMenuShown} />}
       <About />
-      <Gallery />
+      <Advantages />
+      {/* <Gallery /> */}
     </>
   );
 }
