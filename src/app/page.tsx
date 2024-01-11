@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import Example from "@/components/Example";
 import ContactsList from "@/components/ui/ContactsList";
 import MobileBtn from "@/components/ui/MobileBtn";
 import MobileMenu from "@/components/ui/MobileMenu";
@@ -25,6 +26,8 @@ export default function Home() {
 
   return (
     <>
+      <Example />
+
       <ServiceCard
         link={data.link}
         serviceDescription={data.serviceDescription}
