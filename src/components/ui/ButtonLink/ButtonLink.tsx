@@ -1,12 +1,11 @@
 "use client";
 
 import { FC } from "react";
-
 import { Link } from "react-scroll";
 
-import { cn } from "@/utils/cn";
-
 import { ButtonLinkProps } from "./types";
+
+import { cn } from "@/utils/cn";
 
 const ButtonLink: FC<ButtonLinkProps> = ({
   label,

@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/typography/SectionHeading";
 import ButtonLink from "@/components/ui/ButtonLink";
+
 import content from "@/data/about.json";
 
 const AboutSection = () => {

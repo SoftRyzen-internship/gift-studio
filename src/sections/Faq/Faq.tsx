@@ -1,5 +1,6 @@
 import TabList from "@/components/TabList";
 import SectionHeading from "@/components/typography/SectionHeading";
+
 import content from "@/data/faq.json";
 
 const Faq = () => {

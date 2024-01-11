@@ -9,10 +9,11 @@ import Navbar from "@/components/ui/NavBar";
 import PhoneLink from "@/components/ui/PhoneLink";
 import ServiceCard from "@/components/ui/ServiceCard";
 import SocialMediaList from "@/components/ui/SocialMediaList";
-import data from "@/data/service-card.json";
 import About from "@/sections/About";
 import Faq from "@/sections/Faq";
 import Gallery from "@/sections/Gallery";
+
+import data from "@/data/service-card.json";
 
 export default function Home() {
   const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);

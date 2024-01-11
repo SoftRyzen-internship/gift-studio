@@ -1,11 +1,11 @@
+import type { Metadata } from "next";
 import React from "react";
 
-import type { Metadata } from "next";
+import "./globals.css";
 import { Caveat, Montserrat } from "next/font/google";
 
 import meta from "@/data/meta";
 import Header from "@/layout/Header";
-import "./globals.css";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "700"],

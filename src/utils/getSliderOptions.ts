@@ -1,5 +1,6 @@
-import { SCREENS } from "@/constants";
 import { ISections } from "@/types";
+
+import { SCREENS } from "@/constants";
 
 export const getSliderOptions = (section: ISections) => {
   switch (section) {

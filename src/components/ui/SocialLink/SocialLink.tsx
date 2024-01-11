@@ -1,9 +1,10 @@
 import { FC } from "react";
 
-import content from "@/data/common.json";
+import { SocialLinkProps } from "./types";
+
 import { cn } from "@/utils";
 
-import { SocialLinkProps } from "./types";
+import content from "@/data/common.json";
 
 const SocialLink: FC<SocialLinkProps> = ({ username, className }) => {
   const link = content.instagramLink;

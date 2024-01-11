@@ -3,6 +3,7 @@
 import { FC } from "react";
 
 import { MobileBtnType } from "@/components/ui/MobileBtn/types";
+
 import CloseIcon from "@/public/assets/icons/icon-close.svg";
 import MenuIcon from "@/public/assets/icons/icon-menu.svg";
 
