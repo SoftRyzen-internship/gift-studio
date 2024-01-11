@@ -12,6 +12,7 @@ import SocialMediaList from "@/components/ui/SocialMediaList";
 import About from "@/sections/About";
 import Faq from "@/sections/Faq";
 import Gallery from "@/sections/Gallery";
+import Feedbacks from "@/sections/Feedbacks";
 
 import data from "@/data/service-card.json";
 
@@ -25,12 +26,12 @@ export default function Home() {
 
   return (
     <>
+      <Feedbacks />
       <ServiceCard
         link={data.link}
         serviceDescription={data.serviceDescription}
         alt={data.alt}
       />
-
       <Navbar isMobile={false} />
       <MobileBtn
         isMobileMenuShown={isMobileMenuShown}
