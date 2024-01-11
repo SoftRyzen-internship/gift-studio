@@ -10,14 +10,14 @@ export const myStructure = (S: any) =>
         .icon(() => "🌸"),
 
       S.listItem()
-        .title("Контакти")
+        .title("Послуги")
         .child(
           S.document()
-            .schemaType("contacts")
-            .title("Контакти")
-            .documentId("contacts"),
+            .schemaType("services")
+            .title("Послуги")
+            .documentId("services"),
         )
-        .icon(() => "📞"),
+        .icon(() => "🛠️"),
 
       S.listItem()
         .title("Відгуки")
@@ -40,30 +40,12 @@ export const myStructure = (S: any) =>
         .icon(() => "🖼️"),
 
       S.listItem()
-        .title("Послуги")
+        .title("Контакти")
         .child(
           S.document()
-            .schemaType("services")
-            .title("Послуги")
-            .documentId("services"),
+            .schemaType("contacts")
+            .title("Контакти")
+            .documentId("contacts"),
         )
-        .icon(() => "🛠️"),
-
-      S.listItem()
-        .title("Послуги тест2")
-        .child(
-          S.document()
-            .schemaType("reviews2")
-            .title("Послуги тест2")
-            .documentId("reviews2"),
-        )
-        .icon(() => "🛠️"),
-
-      ...S.documentTypeListItems()
-        .filter((listItem: any) => !["about"].includes(listItem.getId()))
-        .filter((listItem: any) => !["reviews"].includes(listItem.getId()))
-        .filter((listItem: any) => !["services"].includes(listItem.getId()))
-        .filter((listItem: any) => !["contacts"].includes(listItem.getId()))
-        .filter((listItem: any) => !["gallery"].includes(listItem.getId()))
-        .filter((listItem: any) => !["reviews2"].includes(listItem.getId())),
+        .icon(() => "📞"),
     ]);
