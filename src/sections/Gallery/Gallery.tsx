@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import SectionHeading from "@/components/typography/SectionHeading";
 import Slider from "@/components/Slider";
+import SectionHeading from "@/components/typography/SectionHeading";
 import content from "@/data/gallery.json";
 
 const gallery = [1, 2, 3];

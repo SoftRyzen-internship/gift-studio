@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { cn, getSocialLink } from "@/utils";
+
 import SocialLink from "@/components/ui/SocialLink";
+import { cn, getSocialLink } from "@/utils";
 
 import { TabListIemProps } from "./types";
 

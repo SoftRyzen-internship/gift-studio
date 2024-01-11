@@ -1,12 +1,12 @@
 "use client";
 
 import { FC } from "react";
-import ReactMarkdown from "react-markdown";
+
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 import { ServiceCardProps } from "@/components/ui/ServiceCard/types";
-
 import cardImage from "@/public/assets/images/services/services-1@x2.webp";
 
 const ServiceCard: FC<ServiceCardProps> = ({
@@ -20,12 +20,12 @@ const ServiceCard: FC<ServiceCardProps> = ({
     <div
       className={
         !wrapperCustomStyle
-          ? "text-center w-fit"
+          ? "w-fit text-center"
           : "text-center w-fit " + wrapperCustomStyle
       }
     >
       <Link
-        className="flex flex-col gap-3 lg:gap-6 transition-all hover:text-accent focus:text-accent"
+        className="flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
         href={link}
         target="_blank"
         rel="noopener noreferrer"
@@ -33,10 +33,10 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <Image
           src={src}
           alt={alt}
-          className="md:w-[295px] h-[416px] object-cover rounded-3xl"
+          className="h-[416px] rounded-3xl object-cover md:w-[295px]"
         />
 
-        <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:leading-[32.1px] md:text-3xl ">
+        <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
           {serviceDescription}
         </ReactMarkdown>
       </Link>

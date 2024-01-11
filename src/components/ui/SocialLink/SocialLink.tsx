@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { cn } from "@/utils";
+
 import content from "@/data/common.json";
+import { cn } from "@/utils";
 
 import { SocialLinkProps } from "./types";
 

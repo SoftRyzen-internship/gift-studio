@@ -3,10 +3,9 @@
 import { FC } from "react";
 
 import ButtonLink from "@/components/ui/ButtonLink";
+import data from "@/data/navbar.json";
 
 import { NavDataType, NavPropsType } from "./types";
-
-import data from "@/data/navbar.json";
 
 const Navbar: FC<NavPropsType> = ({ isMobile }) => {
   const desktopStyles = "hidden lg:flex w-fit h-fit";

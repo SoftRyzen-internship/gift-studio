@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-import { cn } from "@/utils/cn";
 import content from "@/data/gallery.json";
+import ArrowIcon from "@/public/assets/icons/icon-arrow-left.svg";
+import { cn } from "@/utils/cn";
 
 import { SliderNavButtonProps } from "./types";
-import ArrowIcon from "@/public/assets/icons/icon-arrow-left.svg";
 
 const SliderNavButton: FC<SliderNavButtonProps> = ({
   direction = "left",
@@ -13,6 +13,7 @@ const SliderNavButton: FC<SliderNavButtonProps> = ({
   const { navButtonsAria } = content;
   const ariaNav =
     direction === "left" ? navButtonsAria.left : navButtonsAria.right;
+
   return (
     <button
       className={cn(
