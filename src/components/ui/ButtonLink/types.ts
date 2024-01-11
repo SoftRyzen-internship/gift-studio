@@ -1,6 +1,6 @@
 export interface ButtonLinkProps {
   label: string;
-  elementName: string;
+  targetName: string;
   variant: "primary" | "outline" | "ghost";
   className?: string;
 }

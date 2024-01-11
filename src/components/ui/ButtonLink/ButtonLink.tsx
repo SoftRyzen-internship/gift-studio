@@ -1,12 +1,15 @@
 "use client";
+
 import { FC } from "react";
-import { ButtonLinkProps } from "./types";
 import { Link } from "react-scroll";
+
+import { ButtonLinkProps } from "./types";
+
 import { cn } from "@/utils/cn";
 
 const ButtonLink: FC<ButtonLinkProps> = ({
   label,
-  elementName,
+  targetName,
   variant,
   className,
 }) => {
@@ -26,7 +29,7 @@ const ButtonLink: FC<ButtonLinkProps> = ({
         styles[variant],
         className,
       )}
-      to={elementName}
+      to={targetName}
       spy
       smooth
       duration={500}

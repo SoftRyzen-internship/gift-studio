@@ -26,3 +26,42 @@ h3 {
     @apply flex justify-start items-center;
   }
 }
+
+.social-link {
+  background: -webkit-linear-gradient(180deg, #c84b4c 9.21%, #672e66 39.47%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: -webkit-text-fill-color 250ms ease-in-out;
+}
+
+.social-link:hover,
+.social-link:focus {
+  -webkit-text-fill-color: #e42c2c;
+}
+
+.services-slider {
+  margin-bottom: 24px !important;
+  height: 504px;
+}
+
+.features-slider {
+  height: 386px;
+  margin-bottom: 24px !important;
+}
+
+.feedback-slider {
+  height: 531px;
+  margin-bottom: 24px !important;
+}
+
+.gallery-slider {
+  height: 424px;
+  margin-bottom: 24px !important;
+  @media screen and (min-width: 768px) {
+    height: 460px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 496px;
+  }
+}
