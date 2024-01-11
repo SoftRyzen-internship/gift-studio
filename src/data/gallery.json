@@ -4,5 +4,22 @@
   "navButtonsAria": {
     "left": "Перейти до попереднього слайду",
     "right": "Перейти до наступного слайду"
-  }
+  },
+  "images": [
+    {
+      "title": "B",
+      "fileName": "gallery-slide-1@x2.webp",
+      "alt": "A lake in the mountains"
+    },
+    {
+      "title": "Mountains",
+      "fileName": "gallery-slide-2@x2.webp",
+      "alt": "A lake in the mountains"
+    },
+    {
+      "title": "Mountains",
+      "fileName": "gallery-slide-3@x2.webp",
+      "alt": "A lake in the mountains"
+    }
+  ]
 }

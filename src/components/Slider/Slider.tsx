@@ -24,6 +24,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
   return (
     <>
       <Swiper
+        wrapperTag="ul"
         onSwiper={setSwiperRef}
         id={`swiper-${section}`}
         modules={[A11y]}
@@ -37,6 +38,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
         {slides.map((slide: ReactNode, idx: number) => (
           <SwiperSlide
             key={idx}
+            tag="li"
             className={cn(
               "overflow-hidden rounded-normal relative",
               `${section}-slide`,
