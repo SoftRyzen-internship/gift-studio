@@ -1,5 +1,6 @@
-import content from "@/data/common.json";
 import LogoIcon from "public/assets/icons/icon-logo.svg";
+
+import content from "@/data/common.json";
 
 const Logo = () => {
   const { logoAriaLabel, companyName } = content.logo;
