@@ -26,3 +26,29 @@ h3 {
     @apply flex justify-start items-center;
   }
 }
+
+.services-slider {
+  margin-bottom: 24px !important;
+  height: 504px;
+}
+
+.features-slider {
+  height: 386px;
+  margin-bottom: 24px !important;
+}
+
+.feedback-slider {
+  height: 531px;
+  margin-bottom: 24px !important;
+}
+
+.gallery-slider {
+  height: 424px;
+  margin-bottom: 24px !important;
+  @media screen and (min-width: 768px) {
+    height: 460px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 496px;
+  }
+}
