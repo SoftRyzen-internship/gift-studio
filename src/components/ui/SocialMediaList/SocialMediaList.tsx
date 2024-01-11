@@ -3,12 +3,12 @@
 import { FC } from "react";
 
 import {
-  SocialMediaListType,
   SocialMediaLinkProps,
+  SocialMediaListType,
 } from "@/components/ui/SocialMediaList/types";
 
-import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
+import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
 
 import contacts from "@/data/contacts.json";
 

@@ -1,10 +1,11 @@
-import React from "react";
 import type { Metadata } from "next";
-import { Montserrat, Caveat } from "next/font/google";
-
-import Header from "@/layout/Header";
+import React from "react";
 
 import "./globals.css";
+import { Caveat, Montserrat } from "next/font/google";
+
+import meta from "@/data/meta";
+import Header from "@/layout/Header";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "700"],
@@ -20,10 +21,7 @@ const caveat = Caveat({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Подарунок",
-  description: "Подарунки для вас",
-};
+export const metadata: Metadata = meta;
 
 export default function RootLayout({
   children,

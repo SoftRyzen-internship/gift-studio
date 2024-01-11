@@ -1,5 +1,7 @@
 import { FC } from "react";
+
 import SliderNavButton from "@/components/SliderNavButton";
+
 import { SliderNavigationProps } from "./types";
 
 const SliderNavigation: FC<SliderNavigationProps> = ({ onNext, onPrev }) => {
