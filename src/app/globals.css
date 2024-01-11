@@ -2,20 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply font-montserrat text-[#000000];
+:root {
+  --foreground-rgb: 0, 0, 0;
 }
 
-h1,
-h2,
-h3 {
-  @apply font-caveat;
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-montserrat);
+}
+
+h1 {
+  font-family: var(--font-caveat);
 }
 
 @layer utilities {
   .section {
-    @apply pt-[40px] md:pt-[60px] lg:pt-[100px];
+    @apply py-[0px] md:py-[0px] lg:py-[0px];
   }
+
+  .body-small {
+    @apply text-[12px] font-extralight leading-5 lg:leading-6;
+  }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -24,31 +32,5 @@ h3 {
   }
   .flex-start {
     @apply flex justify-start items-center;
-  }
-}
-
-.services-slider {
-  margin-bottom: 24px !important;
-  height: 504px;
-}
-
-.features-slider {
-  height: 386px;
-  margin-bottom: 24px !important;
-}
-
-.feedback-slider {
-  height: 531px;
-  margin-bottom: 24px !important;
-}
-
-.gallery-slider {
-  height: 424px;
-  margin-bottom: 24px !important;
-  @media screen and (min-width: 768px) {
-    height: 460px;
-  }
-  @media screen and (min-width: 1280px) {
-    height: 496px;
   }
 }

@@ -45,8 +45,8 @@ const config: Config = {
         "16": "22px",
       },
       fontFamily: {
-        caveat: ["var(--font-caveat)"],
-        montserrat: ["var(--font-montserrat)"],
+        display: ["var(--font-caveat)"],
+        sans: ["var(--font-montserrat)"],
       },
       colors: {
         white: "#ffffff",
@@ -54,16 +54,12 @@ const config: Config = {
         accent: "#E42C2C",
         lava: "#CF1919",
         latte: "#FFFAE7",
-        gray: "#292D32",
       },
       screens: {
         sm: "480px",
         md: "768px",
         lg: "1280px",
       },
-    },
-    transitionDuration: {
-      DEFAULT: "300ms",
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
