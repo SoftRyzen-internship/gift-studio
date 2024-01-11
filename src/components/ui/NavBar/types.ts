@@ -6,4 +6,5 @@ export interface NavDataType {
 
 export type NavPropsType = {
   isMobile: boolean;
+  handleClick?: () => void;
 };
