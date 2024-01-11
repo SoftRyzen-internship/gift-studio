@@ -1,5 +1,5 @@
-// import { groq } from "next-sanity";
+import { groq } from "next-sanity";
 
-// export const galleryQuery = groq`
-//    *[_type == "gallery"]{_id, images[]->}
-// `;
+export const galleryQuery = groq`
+   *[_type == "gallery"]{_id, images[]{image->, alt}}
+`;

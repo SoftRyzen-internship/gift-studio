@@ -6,3 +6,10 @@ export type ImgType = {
 };
 
 export type AboutResponse = ImgType;
+
+export type ContactsResponse = {
+  phone: string;
+  email: string;
+};
+
+export type GalleryResponse = ImgType[];

@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
 
 export const contactsQuery = groq`
-   *[_type == "contacts"]{_id, phone, email, instagram, facebook}
+   *[_type == "contacts"][0]{phone, email, instagram, facebook}
 `;
