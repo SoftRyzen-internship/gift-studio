@@ -2,10 +2,11 @@
 
 import { FC } from "react";
 
-import contacts from "@/data/contacts.json";
+import { PhoneLinkType } from "./types";
+
 import PhoneIcon from "@/public/assets/icons/icon-phone.svg";
 
-import { PhoneLinkType } from "./types";
+import contacts from "@/data/contacts.json";
 
 const PhoneLink: FC<PhoneLinkType> = ({ customStyle }) => {
   const {

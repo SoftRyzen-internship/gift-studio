@@ -6,9 +6,11 @@ import {
   SocialMediaLinkProps,
   SocialMediaListType,
 } from "@/components/ui/SocialMediaList/types";
-import contacts from "@/data/contacts.json";
+
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
 import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
+
+import contacts from "@/data/contacts.json";
 
 const SocialMediaList: FC<SocialMediaListType> = ({ customListStyle }) => {
   const icons = [

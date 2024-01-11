@@ -1,12 +1,12 @@
 "use client";
 
 import { FC } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 import { ServiceCardProps } from "@/components/ui/ServiceCard/types";
+
 import cardImage from "@/public/assets/images/services/services-1@x2.webp";
 
 const ServiceCard: FC<ServiceCardProps> = ({

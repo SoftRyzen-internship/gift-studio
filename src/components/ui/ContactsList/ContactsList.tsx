@@ -1,10 +1,12 @@
 "use client";
 
 import PhoneLink from "@/components/ui/PhoneLink";
-import contacts from "@/data/contacts.json";
-import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
 import { ContactsListType } from "./types";
+
+import EmailIcon from "@/public/assets/icons/icon-mail.svg";
+
+import contacts from "@/data/contacts.json";
 
 const ContactsList = ({ customListStyle }: ContactsListType) => {
   const {

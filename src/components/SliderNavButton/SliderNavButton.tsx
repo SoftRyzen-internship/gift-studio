@@ -1,10 +1,12 @@
 import { FC } from "react";
 
-import content from "@/data/gallery.json";
-import ArrowIcon from "@/public/assets/icons/icon-arrow-left.svg";
+import { SliderNavButtonProps } from "./types";
+
 import { cn } from "@/utils/cn";
 
-import { SliderNavButtonProps } from "./types";
+import ArrowIcon from "@/public/assets/icons/icon-arrow-left.svg";
+
+import content from "@/data/gallery.json";
 
 const SliderNavButton: FC<SliderNavButtonProps> = ({
   direction = "left",
