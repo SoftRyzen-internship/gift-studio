@@ -35,13 +35,14 @@ export const getSliderOptions = (section: ISections) => {
           slidesPerView: 2,
           loopedSlides: 2,
           spaceBetween: 16,
-          centeredSlides: false,
         },
         [SCREENS.LG]: {
+          spaceBetween: 80,
           slidesPerView: 3,
-          loopedSlides: 3,
-          spaceBetween: 16,
           centeredSlides: true,
+          roundLengths: true,
+          loopAdditionalSlides: 30,
+          centeredSlidesBounds: true,
         },
       };
     }

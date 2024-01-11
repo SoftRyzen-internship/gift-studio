@@ -7,19 +7,19 @@
   },
   "images": [
     {
-      "title": "B",
-      "fileName": "gallery-slide-1@x2.webp",
-      "alt": "A lake in the mountains"
+      "title": "Букети для чоловіків",
+      "imagePath": "gallery-slide-1@x2.webp",
+      "alt": "Букети для чоловіків"
     },
     {
-      "title": "Mountains",
-      "fileName": "gallery-slide-2@x2.webp",
-      "alt": "A lake in the mountains"
+      "title": "Букети для жінок",
+      "imagePath": "gallery-slide-2@x2.webp",
+      "alt": "Букети для жінок"
     },
     {
-      "title": "Mountains",
-      "fileName": "gallery-slide-3@x2.webp",
-      "alt": "A lake in the mountains"
+      "title": "Букети з фініків та цукерок",
+      "imagePath": "gallery-slide-3@x2.webp",
+      "alt": "Букети з фініків та цукерок"
     }
   ]
 }
