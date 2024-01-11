@@ -27,6 +27,19 @@ h3 {
   }
 }
 
+.social-link {
+  background: -webkit-linear-gradient(180deg, #c84b4c 9.21%, #672e66 39.47%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: -webkit-text-fill-color 250ms ease-in-out;
+}
+
+.social-link:hover,
+.social-link:focus {
+  -webkit-text-fill-color: #e42c2c;
+}
+
 .services-slider {
   margin-bottom: 24px !important;
   height: 504px;

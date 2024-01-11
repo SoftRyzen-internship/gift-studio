@@ -10,6 +10,9 @@ import PhoneLink from "@/components/ui/PhoneLink";
 import ServiceCard from "@/components/ui/ServiceCard";
 import SocialMediaList from "@/components/ui/SocialMediaList";
 import data from "@/data/service-card.json";
+import About from "@/sections/About";
+import Faq from "@/sections/Faq";
+import Gallery from "@/sections/Gallery";
 
 export default function Home() {
   const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);
@@ -36,6 +39,9 @@ export default function Home() {
       <PhoneLink />
       <SocialMediaList />
       {isMobileMenuShown && <MobileMenu isMobile={isMobileMenuShown} />}
+      <About />
+      <Faq />
+      <Gallery />
     </>
   );
 }
