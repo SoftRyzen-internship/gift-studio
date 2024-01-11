@@ -8,6 +8,7 @@ import reviews from "./reviews";
 import services from "./services";
 import service from "./objects/service";
 import contacts from "./contacts";
+import reviews2 from "./reviews2";
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   service,
@@ -15,6 +16,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   accessibleImage,
   review,
   reviews,
+  reviews2,
   about,
   gallery,
   contacts,
