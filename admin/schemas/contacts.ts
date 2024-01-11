@@ -1,12 +1,10 @@
 import { defineField } from "sanity";
-import { GrGallery } from "react-icons/gr";
 
 const contacts = {
   name: "contacts",
   title: "Контакти",
   description: "Contacts Schema",
   type: "document",
-  icon: GrGallery,
   fields: [
     defineField({
       name: "phone",

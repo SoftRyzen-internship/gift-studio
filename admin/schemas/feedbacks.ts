@@ -1,19 +1,12 @@
-import { MdOutlineRateReview } from "react-icons/md";
 import { defineField } from "sanity";
 
-export interface TextBlock {
-  _type: string;
-  children?: Array<{ text?: string }>;
-}
+import { TBlocks } from "@/data/types";
 
-export type TBlocks = TextBlock[] | undefined;
-
-const reviews = {
-  name: "reviews",
+const feedbacks = {
+  name: "feedbacks",
   title: "Відгуки",
   description: "Review Schema",
   type: "document",
-  icon: MdOutlineRateReview,
   fields: [
     defineField({
       name: "reviews",
@@ -109,4 +102,4 @@ const reviews = {
   ],
 };
 
-export default reviews;
+export default feedbacks;

@@ -1,10 +1,11 @@
 import { defineField } from "sanity";
-import { TBlocks } from "./reviews";
 
-const services = {
-  name: "services",
+import { TBlocks } from "@/data/types";
+
+const serviceList = {
+  name: "serviceList",
   title: "Послуги",
-  description: "Services Schema",
+  description: "serviceList Schema",
   type: "document",
   fields: [
     defineField({
@@ -79,4 +80,4 @@ const services = {
   ],
 };
 
-export default services;
+export default serviceList;

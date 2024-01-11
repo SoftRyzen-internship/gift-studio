@@ -2,16 +2,16 @@ import { type SchemaTypeDefinition } from "sanity";
 
 import accessibleImage from "./objects/accessibleImage";
 import about from "./about";
-import gallery from "./gallery";
-import reviews from "./reviews";
-import services from "./services";
+import photoGallery from "./photoGallery";
+import serviceList from "./serviceList";
 import contacts from "./contacts";
+import feedbacks from "./feedbacks";
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   accessibleImage,
-  services,
-  reviews,
+  serviceList,
   about,
-  gallery,
+  photoGallery,
   contacts,
+  feedbacks,
 ];

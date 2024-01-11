@@ -1,11 +1,8 @@
-import { GrGallery } from "react-icons/gr";
-
 const about = {
   name: "about",
   title: "Про нас",
   description: "About Schema",
   type: "document",
-  icon: GrGallery,
   fields: [
     {
       name: "image",

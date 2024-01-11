@@ -8,7 +8,6 @@ export default defineType({
       name: `image`,
       type: `image`,
       title: "Зображення",
-      // description: "Завантажте зображення",
       options: {
         hotspot: true,
       },

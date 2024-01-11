@@ -1,13 +1,11 @@
-"use client";
-
 import Example from "@/components/Example";
-import Navbar from "@/components/ui/NavBar";
+// import Navbar from "@/components/ui/NavBar";
 
 export default function Home() {
   return (
     <>
       <div className="container bg-green-300">
-        <Navbar isMobile={false} />
+        {/* <Navbar isMobile={false} /> */}
         <h1 className="text-2xl text-accent">Подарунок</h1>
         <Example />
       </div>

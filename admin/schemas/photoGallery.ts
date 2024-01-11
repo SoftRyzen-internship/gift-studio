@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
 
 const gallery = {
-  name: "gallery",
+  name: "photoGallery",
   title: "Галерея",
   description: "Gallery Schema",
   type: "document",

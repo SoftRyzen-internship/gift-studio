@@ -13,9 +13,9 @@ export const myStructure = (S: any) =>
         .title("Послуги")
         .child(
           S.document()
-            .schemaType("services")
+            .schemaType("serviceList")
             .title("Послуги")
-            .documentId("services"),
+            .documentId("serviceList"),
         )
         .icon(() => "🛠️"),
 
@@ -23,9 +23,9 @@ export const myStructure = (S: any) =>
         .title("Відгуки")
         .child(
           S.document()
-            .schemaType("reviews")
+            .schemaType("feedbacks")
             .title("Відгуки")
-            .documentId("reviews"),
+            .documentId("feedbacks"),
         )
         .icon(() => "📝"),
 
@@ -33,9 +33,9 @@ export const myStructure = (S: any) =>
         .title("Галерея")
         .child(
           S.document()
-            .schemaType("gallery")
+            .schemaType("photoGallery")
             .title("Галерея")
-            .documentId("gallery"),
+            .documentId("photoGallery"),
         )
         .icon(() => "🖼️"),
 
