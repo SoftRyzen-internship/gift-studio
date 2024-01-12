@@ -25,10 +25,10 @@ const Header = () => {
     <>
       <header className="relative z-20 py-6 md:py-9">
         <div className="container flex items-center justify-between">
-          <Logo />
+          <Logo className="lg:mr-[180px]" />
           <Navbar isMobile={false} />
           <PhoneLink
-            customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mx-0"}
+            customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mr-0"}
           />
           <MobileBtn
             handleClick={toggleMenu}

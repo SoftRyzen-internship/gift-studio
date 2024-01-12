@@ -17,8 +17,8 @@ const PhoneLink: FC<PhoneLinkType> = ({ customStyle }) => {
     <a
       className={
         !customStyle
-          ? "group inline-flex items-center gap-2 stroke-black stroke-[1.5px] text-xl transition hover:text-accent focus:text-accent"
-          : "inline-flex items-center gap-2 text-xl transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px] " +
+          ? "group inline-flex items-center gap-2 stroke-black stroke-[1.5px] text-xl transition hover:text-accent focus:text-accent lg:text-[24px]"
+          : "inline-flex items-center gap-2 text-xl lg:text-[24px] transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px] " +
             customStyle
       }
       href={`tel:${phone}`}
