@@ -1,4 +1,4 @@
-import { AboutResponse } from "@/data/types";
+import { AboutResponse } from "@/types";
 
 import { client } from "admin/client";
 import { aboutQuery } from "./queries/about";

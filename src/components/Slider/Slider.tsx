@@ -1,4 +1,5 @@
 "use client";
+
 import { FC, ReactNode, useCallback, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";

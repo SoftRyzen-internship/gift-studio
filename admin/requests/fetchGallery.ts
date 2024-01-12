@@ -1,4 +1,4 @@
-import { GalleryResponse } from "@/data/types";
+import { GalleryResponse } from "@/types";
 
 import { client } from "admin/client";
 import { galleryQuery } from "./queries/gallery";

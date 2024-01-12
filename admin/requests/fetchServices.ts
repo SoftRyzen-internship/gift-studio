@@ -1,4 +1,4 @@
-import { ServicesResponse } from "@/data/types";
+import { ServicesResponse } from "@/types";
 
 import { client } from "admin/client";
 import { servicesQuery } from "./queries/services";
