@@ -12,7 +12,7 @@ import SocialMediaList from "@/components/ui/SocialMediaList";
 import About from "@/sections/About";
 import Faq from "@/sections/Faq";
 import Gallery from "@/sections/Gallery";
-import Feedbacks from "@/sections/Feedbacks";
+import FeedbackCard from "@/components/ui/FeedbackCard";
 
 import data from "@/data/service-card.json";
 
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Feedbacks />
+      <FeedbackCard />
       <ServiceCard
         link={data.link}
         serviceDescription={data.serviceDescription}
