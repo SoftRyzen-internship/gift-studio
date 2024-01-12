@@ -1,8 +1,7 @@
 "use client";
+
 import { FC, useState } from "react";
-
 import TabListIem from "@/components/TabListIem";
-
 import { TabListProps } from "./types";
 
 const TabList: FC<TabListProps> = ({ data }) => {
