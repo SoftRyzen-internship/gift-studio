@@ -32,7 +32,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
         modules={[A11y]}
         slidesPerView={1}
         loop={true}
-        speed={500}
+        speed={1000}
         spaceBetween={24}
         breakpoints={getSliderOptions(section)}
         className={cn(`${section}-slider`)}

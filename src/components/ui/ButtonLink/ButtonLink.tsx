@@ -15,9 +15,9 @@ const ButtonLink: FC<ButtonLinkProps> = ({
 }) => {
   const styles = {
     primary:
-      "text-white text-base font-bold bg-accent py-4 px-6 rounded-[10px] hover:bg-lava focus:bg-lava",
+      "text-white text-base font-bold bg-accent py-4 px-6 rounded-[10px] hover:bg-lava",
     outline:
-      "text-accent text-base font-bold bg-white py-4 px-6 rounded-[10px] hover:bg-accent hover:text-white focus:bg-accent focus:text-white border-accent border-[1px]",
+      "text-accent text-base font-bold bg-white py-4 px-6 rounded-[10px] hover:bg-accent hover:text-white",
     ghost:
       "font-montserrat text-3xl font-normal text-black hover:text-accent focus:text-accent lg:text-base",
   };
@@ -29,7 +29,6 @@ const ButtonLink: FC<ButtonLinkProps> = ({
         styles[variant],
         className,
       )}
-      href="/"
       to={targetName}
       spy
       smooth
