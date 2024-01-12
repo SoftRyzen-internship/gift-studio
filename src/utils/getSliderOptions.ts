@@ -13,7 +13,7 @@ export const getSliderOptions = (section: ISections) => {
         },
       };
     }
-    case "features": {
+    case "advantages": {
       return {
         [SCREENS.SX]: {
           slidesPerView: 1,

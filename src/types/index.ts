@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
-export type ISections = "features" | "feedback" | "gallery" | "services";
+export type ISections = "advantages" | "feedback" | "gallery" | "services";
 
 export type ContactsResponse = {
   phone: string;
