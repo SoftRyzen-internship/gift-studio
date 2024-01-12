@@ -12,6 +12,7 @@ const ButtonLink: FC<ButtonLinkProps> = ({
   targetName,
   variant,
   className,
+  handleClick,
 }) => {
   const styles = {
     primary:
@@ -24,6 +25,7 @@ const ButtonLink: FC<ButtonLinkProps> = ({
 
   return (
     <Link
+      onClick={handleClick}
       className={cn(
         "cursor-pointer transition block w-fit",
         styles[variant],
