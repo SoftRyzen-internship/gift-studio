@@ -1,14 +1,13 @@
-"use client";
-
-import React from "react";
-
 import About from "@/sections/About";
-import Faq from "@/sections/Faq";
 import Gallery from "@/sections/Gallery";
+import Hero from "@/sections/Hero";
+import Faq from "@/sections/Faq";
 
 export default function Home() {
   return (
     <>
+      <Hero />
+
       <About />
       <Faq />
       <Gallery />
