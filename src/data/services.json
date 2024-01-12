@@ -1,0 +1,26 @@
+{
+  "id": "services",
+  "title": "Наші послуги",
+  "cards": [
+    {
+      "link": "https://www.instagram.com/stories/highlights/17996660302994519",
+      "serviceDescription": "Букети\n\n для чоловіків",
+      "alt": "Зображення продуктового букету з солоною продукцією"
+    },
+    {
+      "link": "https://www.instagram.com/stories/highlights/17917231427758668",
+      "serviceDescription": "Букети\n\n для жінок",
+      "alt": "Зображення продуктового букету з продукцією"
+    },
+    {
+      "link": "https://www.instagram.com/stories/highlights/18079127335370673",
+      "serviceDescription": "Букети\n\n для дітей",
+      "alt": "Зображення продуктового букету"
+    },
+    {
+      "link": "hhttps://www.instagram.com/stories/highlights/17967442616439231",
+      "serviceDescription": "Букети\n\n та фініків та цукерок",
+      "alt": "Зображення продуктового букету солоною продукцією"
+    }
+  ]
+}

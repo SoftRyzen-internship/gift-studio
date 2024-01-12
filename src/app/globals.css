@@ -44,7 +44,22 @@ h3 {
   margin-bottom: 24px !important;
   height: 504px;
 }
+/* .services-slide {
+  @apply transition overflow-hidden;
+} */
+/* .services-slide:hover.services-slide,
+.services-slide:focus.services-slide {
+  @apply opacity-25;
+} */
 
+/* .services-slide:hover,
+.services-slide:focus {
+  @apply opacity-100;
+}
+.services-slide:hover img,
+.services-slide:focus img {
+  @apply scale-110;
+} */
 .features-slider {
   height: 386px;
   margin-bottom: 24px !important;

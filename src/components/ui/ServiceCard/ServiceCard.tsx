@@ -25,16 +25,18 @@ const ServiceCard: FC<ServiceCardProps> = ({
       }
     >
       <Link
-        className="flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
+        className="group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6 "
         href={link}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          src={src}
-          alt={alt}
-          className="h-[416px] rounded-3xl object-cover md:w-[295px]"
-        />
+        <div className="rounded-3xl lg:overflow-hidden">
+          <Image
+            src={src}
+            alt={alt}
+            className="h-[416px] object-cover md:w-[295px]  lg:transition-transform lg:group-hover:scale-110"
+          />
+        </div>
 
         <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
           {serviceDescription}
