@@ -10,10 +10,9 @@ export default defineConfig({
   title: "project test sanity",
   basePath: "/admin",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
-  dataset: "production",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "",
 
   plugins: [
-    // deskTool(),
     deskTool({
       structure: myStructure,
     }),
