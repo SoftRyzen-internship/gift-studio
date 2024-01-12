@@ -1,0 +1,21 @@
+{
+  "id": "feedback",
+  "title": "Відгуки",
+  "feedbacks": [
+    {
+      "title": "Букети для чоловіків",
+      "imagePath": "gallery-slide-1@x2.webp",
+      "alt": "Букети для чоловіків"
+    },
+    {
+      "title": "Букети для жінок",
+      "imagePath": "gallery-slide-2@x2.webp",
+      "alt": "Букети для жінок"
+    },
+    {
+      "title": "Букети з фініків та цукерок",
+      "imagePath": "gallery-slide-3@x2.webp",
+      "alt": "Букети з фініків та цукерок"
+    }
+  ]
+}

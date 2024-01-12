@@ -24,6 +24,8 @@ export const getSliderOptions = (section: ISections) => {
       return {
         [SCREENS.LG]: {
           slidesPerView: 2,
+          loopedSlides: 2,
+          spaceBetween: 16,
         },
       };
     }
@@ -40,9 +42,9 @@ export const getSliderOptions = (section: ISections) => {
         [SCREENS.LG]: {
           spaceBetween: 80,
           slidesPerView: 3,
+          loopedSlides: 3,
           centeredSlides: true,
           roundLengths: true,
-          loopAdditionalSlides: 30,
           centeredSlidesBounds: true,
         },
       };

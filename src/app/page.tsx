@@ -11,6 +11,7 @@ import Hero from "@/sections/Hero";
 import Faq from "@/sections/Faq";
 
 import Services from "@/sections/Services";
+import Feedback from "@/sections/Feedback";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <PhoneLink />
       <SocialMediaList />
       <About />
+      <Feedback />
       <Faq />
       <Gallery />
       <Example />
