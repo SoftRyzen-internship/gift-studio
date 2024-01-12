@@ -9,8 +9,8 @@ import { NavDataType, NavPropsType } from "./types";
 import data from "@/data/navbar.json";
 
 const Navbar: FC<NavPropsType> = ({ isMobile }) => {
-  const desktopStyles = "hidden lg:flex w-fit h-fit";
-  const mobileStyles = "lg:hidden flex w-fit h-fit mx-auto";
+  const desktopStyles = "max-lg:hidden w-fit h-fit";
+  const mobileStyles = "lg:hidden block w-fit h-fit mx-auto";
 
   return (
     <nav className={!isMobile ? desktopStyles : mobileStyles}>
