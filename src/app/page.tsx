@@ -22,7 +22,6 @@ export default function Home() {
         serviceDescription={data.serviceDescription}
         alt={data.alt}
       />
-
       <Navbar isMobile={false} />
 
       <ContactsList />

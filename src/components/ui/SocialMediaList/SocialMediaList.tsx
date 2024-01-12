@@ -2,10 +2,14 @@
 
 import { FC } from "react";
 
+import SocialLink from "@/components/ui/SocialLink";
+
 import {
   SocialMediaLinkProps,
   SocialMediaListType,
 } from "@/components/ui/SocialMediaList/types";
+
+import { cn } from "@/utils/cn";
 
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
 import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
@@ -25,25 +29,18 @@ const SocialMediaList: FC<SocialMediaListType> = ({ customListStyle }) => {
   ];
 
   return (
-    <ul
-      className={
-        !customListStyle
-          ? "inline-flex items-start gap-2"
-          : "inline-flex items-start gap-2 " + customListStyle
-      }
-    >
+    <ul className={cn("inline-flex items-start gap-2", customListStyle)}>
       {contacts.socialLinks.map(
         ({ id, link, ariaLabel }: SocialMediaLinkProps) => (
           <li key={id}>
-            <a
+            <SocialLink
+              username={ariaLabel}
               className="group stroke-black stroke-[1.5px] text-transparent transition"
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              aria-label={ariaLabel}
+              socialLink={link}
+              ariaLabel={ariaLabel}
             >
               {icons[id]}
-            </a>
+            </SocialLink>
           </li>
         ),
       )}
