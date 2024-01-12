@@ -13,7 +13,7 @@ const MobileMenu: FC<NavPropsType> = ({ isMobile }) => {
         className="fixed left-0 top-0 z-10 flex h-full min-w-full flex-col
         items-center overflow-hidden bg-white pt-[100px] sm:px-[20px] md:px-[30px] md:pt-[136px] lg:hidden"
       >
-        <div className="pointer-events-auto mb-[64px] flex w-full flex-col text-center sm:mb-[40px] sm:justify-between">
+        <div className="pointer-events-auto flex w-full flex-col text-center sm:justify-between">
           <Navbar isMobile={isMobile} />
           <a
             className="mt-[58px] inline-block md:hidden"
