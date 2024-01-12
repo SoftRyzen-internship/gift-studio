@@ -40,26 +40,18 @@ h3 {
   -webkit-text-fill-color: #e42c2c;
 }
 
-.services-slider {
-  margin-bottom: 24px !important;
-  height: 504px;
-}
-/* .services-slide {
-  @apply transition overflow-hidden;
-} */
-/* .services-slide:hover.services-slide,
-.services-slide:focus.services-slide {
-  @apply opacity-25;
-} */
+@media screen and (min-width: 1280px) {
+  .services-slider {
+    margin-bottom: 24px !important;
+    height: 504px;
+  }
 
-/* .services-slide:hover,
-.services-slide:focus {
-  @apply opacity-100;
+  .services-slider:hover .services-card:not(:hover),
+  .services-slider:focus-within .services-card:not(:focus) {
+    @apply opacity-25;
+  }
 }
-.services-slide:hover img,
-.services-slide:focus img {
-  @apply scale-110;
-} */
+
 .features-slider {
   height: 386px;
   margin-bottom: 24px !important;
