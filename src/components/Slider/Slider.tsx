@@ -1,13 +1,16 @@
 "use client";
+import { FC, ReactNode, useCallback, useState } from "react";
+import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
-import { A11y } from "swiper/modules";
-import { FC, ReactNode, useCallback, useState } from "react";
+
+import SliderNavigation from "@/components/SliderNavigation";
+
+import { SliderProps } from "./types";
+
 import { cn } from "@/utils/cn";
 import { getSliderOptions } from "@/utils/getSliderOptions";
 
-import SliderNavigation from "@/components/SliderNavigation";
-import { SliderProps } from "./types";
 import "swiper/css";
 import "swiper/css/a11y";
 

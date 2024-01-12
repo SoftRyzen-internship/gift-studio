@@ -18,7 +18,7 @@ const Advantages = () => {
   return (
     <section id={id} className="section ">
       <div className="container md:max-lg:px-[108px] lg:px-[48px]">
-        <SectionHeading title={title} />
+        <SectionHeading title={title} className="max-md:leading-[48px]" />
         <ul className="max-md:hidden md:grid md:grid-cols-2 md:gap-[81px] lg:grid-cols-4 ">
           {advantagesList}
         </ul>
