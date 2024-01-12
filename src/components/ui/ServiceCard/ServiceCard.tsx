@@ -25,7 +25,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
       }
     >
       <a
-        className="flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
+        className="flex flex-col gap-3 transition-all hover:scale-110 hover:text-accent focus:scale-110 focus:text-accent lg:gap-6"
         href={link}
         target="_blank"
         rel="noopener noreferrer"
