@@ -25,7 +25,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="rounded-3xl overflow-hidden">
+        <div className="overflow-hidden rounded-3xl">
           <Image
             src={src}
             alt={alt}

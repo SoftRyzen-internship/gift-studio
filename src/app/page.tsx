@@ -11,17 +11,20 @@ import Hero from "@/sections/Hero";
 import Faq from "@/sections/Faq";
 
 import Services from "@/sections/Services";
+import Advantages from "@/sections/Advantages";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Services />
+
       <Navbar isMobile={false} />
       <ContactsList />
       <PhoneLink />
       <SocialMediaList />
       <About />
+      <Advantages />
       <Faq />
       <Gallery />
       <Example />

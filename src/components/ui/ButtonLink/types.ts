@@ -3,4 +3,5 @@ export interface ButtonLinkProps {
   targetName: string;
   variant: "primary" | "outline" | "ghost";
   className?: string;
+  handleClick?: () => void;
 }
