@@ -18,7 +18,7 @@ async function Example() {
 
   return (
     <div className="mx-auto max-w-screen-lg p-4">
-      <SectionHeading title="About" />
+      <SectionHeading title="Examples to use sanity data." />
       <SanityImage
         image={aboutImage}
         width={300}
