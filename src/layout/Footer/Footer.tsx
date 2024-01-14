@@ -10,16 +10,23 @@ import data from "@/data/footer.json";
 const Footer = () => {
   const { madeBy } = data;
   return (
-    <footer className="border-t-[1px] border-accent pb-6 pt-[36px] md:py-9 lg:pt-6">
+    <footer className="pb-6 md:pb-9 ">
       <div className="container flex flex-col gap-6 md:gap-9">
-        <div className="flex items-center max-lg:justify-between">
+        <div className="flex items-center border-t-[1px] border-accent  pt-[36px]  max-lg:justify-between md:pt-9 lg:pt-6">
           <Logo className="lg:mr-[181px]" />
           <NavBar isMobile={false} />
           <SocialMediaList customListStyle="lg:ml-[288px]" />
         </div>
         <div className="flex flex-col gap-6 text-center md:flex-row md:justify-between">
           <ContactsList />
-          <a href="https://softryzen.com/">{madeBy}</a>
+          <a
+            className="text-sm transition-colors hover:text-accent focus:text-accent"
+            href="https://softryzen.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            {madeBy}
+          </a>
         </div>
       </div>
     </footer>
