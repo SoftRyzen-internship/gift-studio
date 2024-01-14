@@ -1,42 +1,43 @@
 import { PortableTextBlock } from "sanity";
 
-export type ISections = "advantages" | "feedback" | "gallery" | "services";
+export type TSections = "advantages" | "feedback" | "gallery" | "services";
 
-export type ContactsResponse = {
+export type TContactsResponse = {
   phone: string;
   email: string;
   instagram: string;
   facebook: string;
 };
 
-export type ImageType = {
-  image: {
-    _type: "image";
-    asset: object;
-  };
+export type TImage = {
+  src: string;
   alt: string;
+  lqip: string;
 };
 
-export type GalleryResponse = (ImageType & {
+export type TGalleryResponse = {
+  image: TImage;
   id: string;
-})[];
+}[];
 
-export type AboutResponse = { image: ImageType };
+export type TAboutResponse = TImage;
 
-export type FeedbackResponse = (ImageType & {
+export type TFeedbackResponse = {
+  image: TImage;
   text: PortableTextBlock[];
   id: string;
-})[];
+}[];
 
-export type ServicesResponse = (ImageType & {
+export type TServicesResponse = {
+  image: TImage;
   serviceName: PortableTextBlock[];
   serviceUrl: string;
   id: string;
-})[];
+}[];
 
-export interface TextBlock {
+export interface ITextBlock {
   _type: string;
   children?: Array<{ text?: string }>;
 }
 
-export type TBlocks = TextBlock[] | undefined;
+export type TBlocks = ITextBlock[] | undefined;

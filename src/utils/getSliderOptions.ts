@@ -1,8 +1,8 @@
-import { ISections } from "@/types";
+import { TSections } from "@/types";
 
 import { SCREENS } from "@/constants";
 
-export const getSliderOptions = (section: ISections) => {
+export const getSliderOptions = (section: TSections) => {
   switch (section) {
     case "services": {
       return {
