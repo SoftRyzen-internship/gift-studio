@@ -5,7 +5,6 @@ import About from "@/sections/About";
 import Gallery from "@/sections/Gallery";
 import Hero from "@/sections/Hero";
 import Faq from "@/sections/Faq";
-
 import Services from "@/sections/Services";
 import Advantages from "@/sections/Advantages";
 
