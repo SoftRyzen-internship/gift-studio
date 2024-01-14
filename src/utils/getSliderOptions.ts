@@ -1,8 +1,8 @@
-import { ISections } from "@/types";
+import { TSections } from "@/types";
 
 import { SCREENS } from "@/constants";
 
-export const getSliderOptions = (section: ISections) => {
+export const getSliderOptions = (section: TSections) => {
   switch (section) {
     case "services": {
       return {
@@ -13,7 +13,7 @@ export const getSliderOptions = (section: ISections) => {
         },
       };
     }
-    case "features": {
+    case "advantages": {
       return {
         [SCREENS.SX]: {
           slidesPerView: 1,
