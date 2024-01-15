@@ -56,6 +56,8 @@ const config: Config = {
         lava: "#CF1919",
         latte: "#FFFAE7",
         gray: "#292D32",
+        socialGradientStart: "#c84b4c",
+        socialGradientEnd: "#672e66",
       },
       screens: {
         sm: "480px",
