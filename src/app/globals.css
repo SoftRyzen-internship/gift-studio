@@ -51,8 +51,10 @@ h3 {
   }
 
   .services-slider:hover .services-card:not(:hover),
-  .services-slider:focus-within .services-card:not(:focus) {
-    @apply opacity-25;
+  .services-slider:focus-within .services-card:not(:focus),
+  .services-list:hover .services-card:not(:hover),
+  .services-list:focus-within .services-card:not(:focus) {
+    opacity: 0.25 !important;
   }
 }
 

@@ -19,7 +19,7 @@ const ServicesList = async () => {
         className={cn(
           "max-md:space-y-6 md:grid md:grid-cols-2 md:max-lg:gap-x-6 md:max-lg:gap-y-10 lg:hidden md:max-lg:px-[47px]",
           {
-            "lg:flex lg:gap-3 lg:justify-center service-list": !isShowSlider,
+            "lg:flex lg:gap-3 lg:justify-center services-list": !isShowSlider,
           },
         )}
       >
