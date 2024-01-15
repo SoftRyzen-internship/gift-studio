@@ -26,6 +26,7 @@ const Hero = () => {
             label={btnLabel}
             variant="primary"
             targetName="services"
+            className="inline-block text-center"
           />
         </div>
       </div>
