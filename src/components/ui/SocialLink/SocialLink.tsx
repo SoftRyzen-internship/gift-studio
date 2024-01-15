@@ -12,7 +12,7 @@ const SocialLink: FC<SocialLinkProps> = ({
   socialLink,
   children,
 }) => {
-  const link = content.socialLinks[0].link;
+  const { link } = content.socialLinks[0];
   const instagramLink = link.concat(username);
 
   return (
