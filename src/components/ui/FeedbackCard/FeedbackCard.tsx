@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import s from "@/public/assets/images/feedback/feedback@x2.webp";
+import image from "@/public/assets/images/feedback/feedback@x2.webp";
 
 import data from "@/data/feedback.json";
 
@@ -28,7 +28,7 @@ const FeedbackCard = () => {
   } = data;
 
   return (
-    <div className="group h-[531px] w-[320px] rounded-3xl [perspective:1000px] md:w-[708px] lg:w-[600px]">
+    <div className="group h-[531px] w-fit rounded-3xl [perspective:1000px] md:w-[708px] lg:w-[600px]">
       <div
         className={
           isFlipped
@@ -37,21 +37,21 @@ const FeedbackCard = () => {
             : "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative "
         }
       >
-        <div className="flex h-full flex-col items-center justify-center rounded-3xl text-slate-200 [backface-visibility:hidden]">
+        <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
           <Image
-            src={s}
+            src={image}
             alt="yoyoyo"
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
-          <div className="absolute bottom-0 left-0 p-6 text-start">
-            <p className="text-base">
+          <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
+            <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
               {text.length > 100 ? `${text.slice(0, 100)}...` : text}
             </p>
             <button
               type="button"
               aria-label={btnOpenAriaLabel}
               onClick={handleFlip}
-              className="mr-auto mt-2 rounded-md bg-transparent  py-1 text-sm transition-colors hover:text-accent focus:text-accent"
+              className="mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
             >
               {btnOpenName}
             </button>
@@ -61,10 +61,10 @@ const FeedbackCard = () => {
           <div
             className={
               css.bg +
-              " rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-[88px] lg:py-10 lg:px-20"
+              " text-left rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-10 lg:py-10 lg:px-20"
             }
           >
-            <p className="mb-6 text-[24px] font-bold text-black md:mb-4">
+            <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
               {label}
             </p>
 
