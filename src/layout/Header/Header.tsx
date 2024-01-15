@@ -30,15 +30,19 @@ const Header = () => {
           <PhoneLink
             customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mr-0"}
           />
+
           <MobileBtn
             handleClick={toggleMenu}
             isMobileMenuShown={isMobileMenuShown}
           />
         </div>
       </header>
-      {isMobileMenuShown && (
-        <MobileMenu handleClick={toggleMenu} isMobile={true} />
-      )}
+
+      <MobileMenu
+        className={!isMobileMenuShown ? "[transform:translateX(100%)]" : ""}
+        handleClick={toggleMenu}
+        isMobile={true}
+      />
     </>
   );
 };

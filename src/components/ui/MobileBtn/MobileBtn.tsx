@@ -9,7 +9,7 @@ import MenuIcon from "@/public/assets/icons/icon-menu.svg";
 
 const MobileBtn: FC<MobileBtnType> = ({ isMobileMenuShown, handleClick }) => {
   return (
-    <button className="block h-[24px] w-[24px] lg:hidden" onClick={handleClick}>
+    <button className="block h-[24px] w-[40px] lg:hidden" onClick={handleClick}>
       {!isMobileMenuShown ? <MenuIcon /> : <CloseIcon />}
     </button>
   );

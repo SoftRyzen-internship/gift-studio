@@ -3,7 +3,6 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 
 import { ServiceCardProps } from "@/components/ui/ServiceCard/types";
 
@@ -33,9 +32,9 @@ const ServiceCard: FC<ServiceCardProps> = ({
           />
         </div>
 
-        <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
+        <p className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
           {serviceDescription}
-        </ReactMarkdown>
+        </p>
       </Link>
     </div>
   );
