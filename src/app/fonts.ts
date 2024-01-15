@@ -2,7 +2,7 @@ import { Caveat, Montserrat } from "next/font/google";
 
 export const montserrat = Montserrat({
   weight: ["400", "500", "700"],
-  subsets: ["cyrillic"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-montserrat",
   display: "swap",
 });

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-montserrat text-[#000000];
+  @apply font-montserrat text-black;
 }
 
 h1,
