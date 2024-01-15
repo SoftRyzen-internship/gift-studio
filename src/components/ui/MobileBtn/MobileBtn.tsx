@@ -15,7 +15,7 @@ const MobileBtn: FC<MobileBtnType> = ({ isMobileMenuShown, handleClick }) => {
   return (
     <button
       aria-label={isMobileMenuShown ? openBtnAriaLabel : closeBtnAriaLabel}
-      className="block h-[24px] w-[40px] lg:hidden"
+      className="block h-[24px] w-[40px] px-2 lg:hidden"
       onClick={handleClick}
     >
       {!isMobileMenuShown ? <MenuIcon /> : <CloseIcon />}

@@ -22,7 +22,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         className="services-card group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
         href={link}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
       >
         <div className="overflow-hidden rounded-3xl">
           <Image
