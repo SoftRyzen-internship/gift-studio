@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-import { TBlocks } from "@/types";
+import { TBlocks } from "@/src/types";
 
 const serviceList = {
   name: "serviceList",

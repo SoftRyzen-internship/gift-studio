@@ -1,6 +1,6 @@
-import { TSections } from "@/types";
+import { TSections } from "@/src/types";
 
-import { SCREENS } from "@/constants";
+import { SCREENS } from "@/src/constants";
 
 export const getSliderOptions = (section: TSections) => {
   switch (section) {

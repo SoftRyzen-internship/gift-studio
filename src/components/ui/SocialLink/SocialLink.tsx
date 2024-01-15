@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { SocialLinkProps } from "./types";
 
-import { cn } from "@/utils";
+import { cn } from "@/src/utils";
 
 import content from "@/data/contacts.json";
 
