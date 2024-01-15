@@ -4,16 +4,16 @@ import { visionTool } from "@sanity/vision";
 
 import { schemaTypes } from "./admin/schemas";
 import { myStructure } from "admin/deskStructure";
+import { projectId, dataset } from "./admin/env";
 
 export default defineConfig({
-  name: "default",
-  title: "project test sanity",
+  name: "gift",
+  title: "project gift sanity",
   basePath: "/admin",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
-  dataset: "production",
+  projectId,
+  dataset,
 
   plugins: [
-    // deskTool(),
     deskTool({
       structure: myStructure,
     }),
