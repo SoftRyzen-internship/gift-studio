@@ -26,6 +26,7 @@ export type TFeedbackResponse = {
   image: TImage;
   text: PortableTextBlock[];
   id: string;
+  reviewName: string;
 }[];
 
 export type TServicesResponse = {
