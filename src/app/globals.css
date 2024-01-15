@@ -28,7 +28,11 @@ h3 {
 }
 
 .social-link {
-  background: -webkit-linear-gradient(180deg, #c84b4c 9.21%, #672e66 39.47%);
+  background: linear-gradient(
+    180deg,
+    theme("colors.socialGradientStart") 9.21%,
+    theme("colors.socialGradientEnd") 39.47%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,7 +41,7 @@ h3 {
 
 .social-link:hover,
 .social-link:focus {
-  -webkit-text-fill-color: #e42c2c;
+  -webkit-text-fill-color: theme("colors.accent");
 }
 
 @media screen and (min-width: 1280px) {
@@ -90,5 +94,33 @@ h3 {
 
   .gallery-slide.swiper-slide-active {
     transform: scale(1.364, 1.186) !important;
+  }
+}
+
+.answer-opening {
+  opacity: 1;
+  animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
