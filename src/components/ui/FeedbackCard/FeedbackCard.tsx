@@ -42,9 +42,9 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
       <div
         className={
           isFlipped
-            ? "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative " +
+            ? "duration-500 h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative " +
               flipStyle
-            : "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative "
+            : "h-full w-full rounded-3xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] marker:relative "
         }
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">

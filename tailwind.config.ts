@@ -67,6 +67,7 @@ const config: Config = {
     },
     transitionDuration: {
       DEFAULT: "300ms",
+      "500": "300ms",
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
