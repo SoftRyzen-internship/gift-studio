@@ -1,9 +1,5 @@
-interface IFeedback {
-  title: string;
-  imagePath: string;
-  alt: string;
-}
+import { IFeedbackCard } from "@/types";
 
 export interface FeedbackSliderProps {
-  feedbacks: IFeedback[];
+  feedbacks: IFeedbackCard[];
 }
