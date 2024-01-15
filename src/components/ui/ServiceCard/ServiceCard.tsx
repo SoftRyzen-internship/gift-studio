@@ -19,16 +19,16 @@ const ServiceCard: FC<ServiceCardProps> = ({
   return (
     <div className={cn("w-fit text-center", wrapperCustomStyle)}>
       <a
-        className="services-card group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6 hover:scale-110 focus:scale-110"
+        className="services-card group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
         href={link}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="rounded-3xl overflow-hidden">
+        <div className="overflow-hidden rounded-3xl">
           <Image
             src={src}
             alt={alt}
-            className="h-[416px] object-cover md:w-[295px]  lg:transition-transform lg:group-hover:scale-110 lg:group-focus:scale-110"
+            className="h-[416px] object-cover md:w-[295px] lg:transition-transform lg:group-hover:scale-110 lg:group-focus:scale-110"
           />
         </div>
 

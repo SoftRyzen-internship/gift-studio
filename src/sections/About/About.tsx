@@ -1,11 +1,16 @@
+import Image from "next/image";
+import { fetchAbout } from "admin/requests/fetchAbout";
+
 import SectionHeading from "@/components/typography/SectionHeading";
 import ButtonLink from "@/components/ui/ButtonLink";
 
-import content from "@/data/about.json";
-import Image from "next/image";
+import { urlFor } from "@/utils/urlFor";
 
-const About = () => {
-  const { id, title, image, description, buttonLabel, btnScrollTo } = content;
+import content from "@/data/about.json";
+
+const About = async () => {
+  const { id, title, description, buttonLabel, btnScrollTo } = content;
+  const aboutImage = await fetchAbout();
 
   return (
     <section id={id} className="section">
@@ -15,9 +20,9 @@ const About = () => {
           className="md:max-lg:mb-9 lg:mb-0 lg:mt-6 lg:self-end"
         />
         <Image
-          className="h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6 md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]"
-          src={`/assets/images/about/about@x2.webp`}
-          alt={image.alt}
+          className="h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6 max-md:object-cover md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]"
+          src={urlFor(aboutImage.image.image).url()}
+          alt={aboutImage.image.alt}
           width={320}
           height={376}
           sizes="(max-width: 767px) 100vw, (min-width: 1280px) 548px"

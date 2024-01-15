@@ -1,16 +1,18 @@
-import { FC } from "react";
 import Image from "next/image";
+import { fetchGallery } from "admin/requests/fetchGallery";
 
 import Slider from "@/components/Slider";
 
-import { GallerySliderProps } from "./types";
+import { urlFor } from "@/utils/urlFor";
 
-const GallerySlider: FC<GallerySliderProps> = ({ images }) => {
-  const dataSlides = images.map(({ title, imagePath, alt }) => (
+const GallerySlider = async () => {
+  const imagesGallery = await fetchGallery();
+
+  const dataSlides = imagesGallery.map((image, idx) => (
     <Image
-      key={title}
-      src={`/assets/images/gallery/${imagePath}`}
-      alt={alt}
+      key={idx}
+      src={urlFor(image.image).url()}
+      alt={image.alt}
       sizes="(max-width: 767px) 100vw, (min-width: 768px) 60vw, (min-width: 1280px) 50vw"
       className="rounded-3xl"
       fill
