@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Image from "next/image";
+
+import { FeedbackCardProps } from "./types";
 
 import image from "@/public/assets/images/feedback/feedback@x2.webp";
 
@@ -9,8 +11,15 @@ import data from "@/data/feedback.json";
 
 import css from "./feedback.module.css";
 
-const FeedbackCard = () => {
+const FeedbackCard: FC<FeedbackCardProps> = ({
+  cardImage = image,
+  isActive,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    setIsFlipped(isActive || false);
+  }, [isActive]);
 
   const handleFlip = () => {
     setIsFlipped(prevState => !prevState);
@@ -25,6 +34,7 @@ const FeedbackCard = () => {
     btnCloseName,
     btnOpenAriaLabel,
     btnCloseAriaLabel,
+    alt,
   } = data;
 
   return (
@@ -39,8 +49,8 @@ const FeedbackCard = () => {
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
           <Image
-            src={image}
-            alt="yoyoyo"
+            src={cardImage}
+            alt={alt}
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">

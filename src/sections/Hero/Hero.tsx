@@ -26,6 +26,7 @@ const Hero = () => {
             label={btnLabel}
             variant="primary"
             targetName="services"
+            className="lg:mx-auto"
           />
         </div>
       </div>
