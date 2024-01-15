@@ -2,6 +2,7 @@
 
 import { FC, useState } from "react";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 
 import { urlFor } from "@/utils/urlFor";
 
@@ -10,13 +11,12 @@ import data from "@/data/feedback.json";
 import { FeedbackCardProps } from "./types";
 
 import css from "./feedback.module.css";
-// import { PortableText } from "@portabletext/react";
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   content,
   // isActive,
 }) => {
-  const { alt, image } = content;
+  const { alt, image, reviewName, text } = content;
   console.log("🚀 ---------------------🚀");
   console.log("🚀 ~ content:", content);
   console.log("🚀 ---------------------🚀");
@@ -36,26 +36,42 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   const { btnOpenName, btnCloseName, btnOpenAriaLabel, btnCloseAriaLabel } =
     data.button;
 
-  // const components = {
-  //   block: {
-  //     // Ex. 1: customizing common block types
-  //     cardHeading: ({ children }: { children: string[] }) => (
-  //       <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
-  //         {children.length > 100 ? `${children.slice(0, 100)}...` : children}
-  //       </p>
-  //     ),
-  //     feedback: ({ children }: { children: string[] }) => (
-  //       <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
-  //         {children}
-  //       </p>
-  //     ),
+  const components = {
+    block: {
+      // Ex. 1: customizing common block types
+      cardHeading: ({ children }: { children: string[] }) => (
+        <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
+          {children.length > 100 ? `${children.slice(0, 100)}...` : children}
+        </p>
+      ),
+      feedback: ({ children }: { children: string[] }) => (
+        <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
+          {children}
+        </p>
+      ),
 
-  //     // Ex. 2: rendering custom styles
-  //     customHeading: ({ children }: { children: string[] }) => (
-  //       <h2 className="text-primary text-lg text-purple-700">{children}</h2>
-  //     ),
-  //   },
-  // };
+      // Ex. 2: rendering custom styles
+      customHeading2: ({ children }: { children: any }) => {
+        const truncatedChildren = children.map(child => {
+          if (child.text) {
+            return {
+              ...child,
+              text:
+                child.text.length > 100
+                  ? `${child.text.slice(0, 100)}...`
+                  : child.text,
+            };
+          }
+          return child;
+        });
+        return (
+          <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
+            {truncatedChildren}
+          </p>
+        );
+      },
+    },
+  };
 
   return (
     <div className="group h-[531px] w-fit rounded-3xl [perspective:1000px] md:w-[708px] lg:w-[600px]">
@@ -77,10 +93,11 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            {/* <PortableText
+            <PortableText
               value={text}
               components={components.block.cardHeading}
-            /> */}
+            />
+            <PortableText value={reviewName} />
 
             {/* <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
               {alt.length > 100 ? `${text.slice(0, 100)}...` : text}
