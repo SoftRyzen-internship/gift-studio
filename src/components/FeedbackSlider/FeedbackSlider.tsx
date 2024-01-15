@@ -1,17 +1,28 @@
-import { fetchFeedbacks } from "admin/requests/fetchFeedbacks";
+"use client";
+import { FC, useState } from "react";
 
 import Slider from "@/components/Slider";
 import FeedbackCard from "@/components/ui/FeedbackCard";
 
-const FeedbackSlider = async () => {
-  const feedbacks = await fetchFeedbacks();
+import { FeedbackSliderProps } from "./types";
+
+const FeedbackSlider: FC<FeedbackSliderProps> = ({ feedbacks }) => {
+  const [activeCard, setActiveCard] = useState<string | null>(null);
+
+  const handleFlip = (id: string) => {
+    if (id === activeCard) {
+      setActiveCard(null);
+    } else {
+      setActiveCard(id);
+    }
+  };
 
   const feedbackSlides = feedbacks.map(feedback => (
     <FeedbackCard
       key={feedback.id}
       content={feedback}
-      // isActive={isActive}
-      // setIsActive={setIsActive}
+      isActiveCard={feedback.id === activeCard}
+      setActiveCard={() => handleFlip(feedback.id)}
     />
   ));
 

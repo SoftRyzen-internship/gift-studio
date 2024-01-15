@@ -91,4 +91,7 @@ h3 {
   .gallery-slide.swiper-slide-active {
     transform: scale(1.364, 1.186) !important;
   }
+  .gallery-slide.swiper-slide-active > img {
+    object-fit: fill !important;
+  }
 }

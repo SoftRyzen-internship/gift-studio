@@ -1,5 +1,5 @@
-// import { IFeedbackCard } from "@/types";
+import { FeedbackResponse } from "@/data/types";
 
-// export interface FeedbackSliderProps {
-//   feedbacks: IFeedbackCard[];
-// }
+export interface FeedbackSliderProps {
+  feedbacks: FeedbackResponse;
+}

@@ -4,4 +4,6 @@
 export interface FeedbackCardProps {
   // content: { image: TImage; text: PortableTextBlock[]; id: string };
   content: any;
+  isActiveCard: boolean;
+  setActiveCard: () => void;
 }

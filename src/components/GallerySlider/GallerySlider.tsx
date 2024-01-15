@@ -14,9 +14,8 @@ const GallerySlider = async () => {
       src={urlFor(image.image).url()}
       alt={image.alt}
       sizes="(max-width: 767px) 100vw, (min-width: 768px) 60vw, (min-width: 1280px) 50vw"
-      className="rounded-3xl"
+      className="rounded-3xl object-cover"
       fill
-      style={{ objectFit: "cover" }}
     />
   ));
 

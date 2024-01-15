@@ -1,8 +1,8 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
+import { PortableText, toPlainText } from "@portabletext/react";
 
 import { urlFor } from "@/utils/urlFor";
 
@@ -14,70 +14,27 @@ import css from "./feedback.module.css";
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   content,
-  // isActive,
+  setActiveCard,
+  isActiveCard,
 }) => {
-  const { alt, image, reviewName, text } = content;
-  console.log("🚀 ---------------------🚀");
-  console.log("🚀 ~ content:", content);
-  console.log("🚀 ---------------------🚀");
-
-  const [isFlipped, setIsFlipped] = useState(false);
+  const { alt, image, text } = content;
 
   // useEffect(() => {
-  //   setIsFlipped(isActive || false);
+  //   setisActiveCard(isActive || false);
   // }, [isActive]);
-
-  const handleFlip = () => {
-    setIsFlipped(prevState => !prevState);
-  };
 
   const flipStyle = "[transform:rotateY(180deg)]";
 
   const { btnOpenName, btnCloseName, btnOpenAriaLabel, btnCloseAriaLabel } =
     data.button;
 
-  const components = {
-    block: {
-      // Ex. 1: customizing common block types
-      cardHeading: ({ children }: { children: string[] }) => (
-        <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
-          {children.length > 100 ? `${children.slice(0, 100)}...` : children}
-        </p>
-      ),
-      feedback: ({ children }: { children: string[] }) => (
-        <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
-          {children}
-        </p>
-      ),
-
-      // Ex. 2: rendering custom styles
-      customHeading2: ({ children }: { children: any }) => {
-        const truncatedChildren = children.map(child => {
-          if (child.text) {
-            return {
-              ...child,
-              text:
-                child.text.length > 100
-                  ? `${child.text.slice(0, 100)}...`
-                  : child.text,
-            };
-          }
-          return child;
-        });
-        return (
-          <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
-            {truncatedChildren}
-          </p>
-        );
-      },
-    },
-  };
+  const plainText = toPlainText(text);
 
   return (
     <div className="group h-[531px] w-fit rounded-3xl [perspective:1000px] md:w-[708px] lg:w-[600px]">
       <div
         className={
-          isFlipped
+          isActiveCard
             ? "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative " +
               flipStyle
             : "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative "
@@ -93,19 +50,15 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <PortableText
-              value={text}
-              components={components.block.cardHeading}
-            />
-            <PortableText value={reviewName} />
-
-            {/* <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
-              {alt.length > 100 ? `${text.slice(0, 100)}...` : text}
-            </p> */}
+            <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
+              {plainText.length > 100
+                ? `${plainText.slice(0, 100)}...`
+                : plainText}
+            </p>
             <button
               type="button"
               aria-label={btnOpenAriaLabel}
-              onClick={handleFlip}
+              onClick={setActiveCard}
               className="mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
             >
               {btnOpenName}
@@ -119,17 +72,19 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               " text-left rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-10 lg:py-10 lg:px-20"
             }
           >
-            {/* <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
+            <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
               {alt}
-            </p> */}
-            {/* <PortableText value={text} components={components.block.feedback} /> */}
+            </p>
 
-            {/* <p className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
-              {alt.length > 420 ? `${text.slice(0, 420)}...` : text}
-            </p> */}
-            {/* <PortableText value={text} /> */}
+            <p className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
+              {alt.plainText > 425 ? (
+                `${text.slice(0, 425)}...`
+              ) : (
+                <PortableText value={text} />
+              )}
+            </p>
             <button
-              onClick={handleFlip}
+              onClick={setActiveCard}
               type="button"
               aria-label={btnCloseAriaLabel}
               className="absolute bottom-6 left-6 text-[16px] font-normal leading-[21.6px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24.3px] lg:bottom-10 lg:left-20"
