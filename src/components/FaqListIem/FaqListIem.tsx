@@ -2,11 +2,11 @@ import { FC } from "react";
 
 import SocialLink from "@/components/ui/SocialLink";
 
-import { TabListIemProps } from "./types";
+import { FaqListIemProps } from "./types";
 
 import { cn, getSocialLink } from "@/utils";
 
-const TabListIem: FC<TabListIemProps> = ({
+const FaqListIem: FC<FaqListIemProps> = ({
   isActive,
   question,
   answer,
@@ -18,7 +18,7 @@ const TabListIem: FC<TabListIemProps> = ({
     <li
       onClick={setActive}
       className={cn(
-        "flex flex-col text-left gap-1 md:gap-2 transition border-none max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:pr-4 lg:pl-8 lg:py-8 rounded-3xl bg-latte cursor-pointer",
+        "flex flex-col text-left gap-1 md:gap-2 transition border-transparent max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:pr-4 lg:pl-8 lg:py-8 rounded-3xl bg-latte cursor-pointer",
         { "bg-white border-solid border-[1px] border-accent": isActive },
       )}
     >
@@ -43,4 +43,4 @@ const TabListIem: FC<TabListIemProps> = ({
   );
 };
 
-export default TabListIem;
+export default FaqListIem;

@@ -1,10 +1,11 @@
 import { FC } from "react";
 
+import { AdvantagesItemProps, IComponentsIcons } from "./types";
+
 import IconWideSet from "@/public/assets/icons/icon-choice-1.svg";
 import IconBouquetEveryone from "@/public/assets/icons/icon-choice-2.svg";
 import IconAlwaysNearby from "@/public/assets/icons/icon-choice-3.svg";
 import IconAlwaysReady from "@/public/assets/icons/icon-choice-4.svg";
-import { AdvantagesItemProps, IComponentsIcons } from "./types";
 
 const AdvantagesItem: FC<AdvantagesItemProps> = ({ data }) => {
   const iconComponents: IComponentsIcons = {

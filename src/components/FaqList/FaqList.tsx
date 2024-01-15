@@ -1,10 +1,10 @@
 "use client";
 
 import { FC, useState } from "react";
-import TabListIem from "@/components/TabListIem";
-import { TabListProps } from "./types";
+import FaqListIem from "@/components/FaqListIem";
+import { FaqListProps } from "./types";
 
-const TabList: FC<TabListProps> = ({ data }) => {
+const FaqList: FC<FaqListProps> = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const handleAccordionClick = (idx: number) => {
@@ -18,7 +18,7 @@ const TabList: FC<TabListProps> = ({ data }) => {
   return (
     <ul className="flex flex-col gap-4 lg:mx-auto lg:max-w-[922px]">
       {data.map(({ question, answer }, idx) => (
-        <TabListIem
+        <FaqListIem
           key={question}
           question={question}
           answer={answer}
@@ -30,4 +30,4 @@ const TabList: FC<TabListProps> = ({ data }) => {
   );
 };
 
-export default TabList;
+export default FaqList;
