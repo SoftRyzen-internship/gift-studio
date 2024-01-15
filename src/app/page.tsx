@@ -1,32 +1,25 @@
 import React from "react";
 
-import Example from "@/components/Example";
-import ContactsList from "@/components/ui/ContactsList";
-import Navbar from "@/components/ui/NavBar";
-import PhoneLink from "@/components/ui/PhoneLink";
-import SocialMediaList from "@/components/ui/SocialMediaList";
-
-import About from "@/sections/About";
-import Gallery from "@/sections/Gallery";
+// import Example from "@/components/Example";
 import Hero from "@/sections/Hero";
-import Faq from "@/sections/Faq";
+import About from "@/sections/About";
 import Services from "@/sections/Services";
+import Advantages from "@/sections/Advantages";
+import Faq from "@/sections/Faq";
 import Feedback from "@/sections/Feedback";
+import Gallery from "@/sections/Gallery";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <Navbar isMobile={false} />
-      <ContactsList />
-      <PhoneLink />
-      <SocialMediaList />
       <About />
-      <Feedback />
+      <Services />
+      <Advantages />
       <Faq />
+      <Feedback />
       <Gallery />
-      <Example />
+      {/* <Example /> */}
     </>
   );
 }

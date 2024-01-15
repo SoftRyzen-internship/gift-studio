@@ -1,24 +1,17 @@
-import { FC } from "react";
+import { fetchServices } from "@/admin/requests/fetchServices";
 
 import Slider from "@/components/Slider";
 import ServiceCard from "@/components/ui/ServiceCard";
 
 import { cn } from "@/utils/cn";
 
-import { ServicesListProps } from "./types";
+const ServicesList = async () => {
+  const services = await fetchServices();
 
-const ServicesList: FC<ServicesListProps> = ({ cards }) => {
-  const isShowSlider = cards.length > 4;
+  const isShowSlider = services.length > 4;
   const serviceCards = !isShowSlider
     ? []
-    : cards.map(card => (
-        <ServiceCard
-          key={card.alt}
-          link={card.link}
-          serviceDescription={card.serviceDescription}
-          alt={card.alt}
-        />
-      ));
+    : services.map(service => <ServiceCard key={service.id} data={service} />);
 
   return (
     <>
@@ -30,19 +23,17 @@ const ServicesList: FC<ServicesListProps> = ({ cards }) => {
           },
         )}
       >
-        {cards.map(card => (
-          <li key={card.alt}>
-            <ServiceCard
-              link={card.link}
-              serviceDescription={card.serviceDescription}
-              alt={card.alt}
-            />
+        {services.map(service => (
+          <li key={service.id}>
+            <ServiceCard key={service.id} data={service} />
           </li>
         ))}
       </ul>
-      <div className={cn("hidden", { "lg:block": isShowSlider })}>
-        <Slider section="services" slides={serviceCards} />
-      </div>
+      {isShowSlider ? (
+        <div className={cn("hidden", { "lg:block": isShowSlider })}>
+          <Slider section="services" slides={serviceCards} />
+        </div>
+      ) : null}
     </>
   );
 };

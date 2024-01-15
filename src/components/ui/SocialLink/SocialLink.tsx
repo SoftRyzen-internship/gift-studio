@@ -21,6 +21,7 @@ const SocialLink: FC<SocialLinkProps> = ({
       href={!socialLink ? instagramLink : socialLink}
       target="_blank"
       title={username}
+      tabIndex={0}
       rel="noopener noreferrer nofollow"
     >
       {!children && `@${username}`}

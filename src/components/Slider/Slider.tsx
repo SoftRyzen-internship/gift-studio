@@ -1,4 +1,5 @@
 "use client";
+
 import { FC, ReactNode, useCallback, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
@@ -33,7 +34,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
         modules={[A11y]}
         slidesPerView={1}
         loop={true}
-        speed={1000}
+        speed={500}
         spaceBetween={24}
         breakpoints={getSliderOptions(section)}
         className={cn(`${section}-slider`)}

@@ -1,9 +1,7 @@
-// import { TImage } from "@/types";
-// import { PortableTextBlock } from "sanity";
+import { IFeedback } from "@/components/FeedbackSlider/types";
 
 export interface FeedbackCardProps {
-  // content: { image: TImage; text: PortableTextBlock[]; id: string };
-  content: any;
+  content: IFeedback;
   isActiveCard: boolean;
   setActiveCard: () => void;
 }

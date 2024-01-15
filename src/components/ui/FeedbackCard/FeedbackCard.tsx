@@ -1,10 +1,9 @@
 "use client";
 
 import { FC } from "react";
-import Image from "next/image";
 import { PortableText, toPlainText } from "@portabletext/react";
 
-import { urlFor } from "@/utils/urlFor";
+import SanityImage from "@/components/ui/SanityImage";
 
 import data from "@/data/feedback.json";
 
@@ -17,11 +16,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   setActiveCard,
   isActiveCard,
 }) => {
-  const { alt, image, text } = content;
-
-  // useEffect(() => {
-  //   setisActiveCard(isActive || false);
-  // }, [isActive]);
+  const { image, text, reviewName } = content;
 
   const flipStyle = "[transform:rotateY(180deg)]";
 
@@ -41,11 +36,10 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         }
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
-          <Image
-            src={urlFor(image).url()}
+          <SanityImage
+            image={image}
             width={100}
             height={100}
-            alt={alt}
             sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
@@ -73,16 +67,12 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             }
           >
             <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
-              {alt}
+              {reviewName}
             </p>
 
-            <p className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
-              {alt.plainText > 425 ? (
-                `${text.slice(0, 425)}...`
-              ) : (
-                <PortableText value={text} />
-              )}
-            </p>
+            <div className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
+              <PortableText value={text} />
+            </div>
             <button
               onClick={setActiveCard}
               type="button"

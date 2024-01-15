@@ -1,7 +1,14 @@
+import { TImage } from "@/types";
+import { PortableTextBlock } from "sanity";
+
+export interface IServiceCard {
+  image: TImage;
+  serviceName: PortableTextBlock[];
+  serviceUrl: string;
+  id: string;
+}
+
 export interface ServiceCardProps {
-  link: string;
-  serviceDescription: string;
-  alt: string;
-  src?: string;
   wrapperCustomStyle?: string;
+  data: IServiceCard;
 }

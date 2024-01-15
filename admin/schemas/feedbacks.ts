@@ -1,24 +1,21 @@
 import { defineField } from "sanity";
 
-import { TBlocks } from "@/data/types";
+import { TBlocks } from "@/types";
 
 const feedbacks = {
   name: "feedbacks",
-  title: "Відгуки",
   description: "Review Schema",
   type: "document",
   fields: [
     defineField({
       name: "reviews",
-      title: "Відгуки",
-      description: "Додайте відгук",
+      title: "Редагування та додавання відгуків",
       type: "array",
       of: [
         defineField({
           name: "review",
-          title: "Відгук",
+          title: "Додавання/редагування відгука",
           type: "object",
-          description: "Додайте відгук",
           fields: [
             defineField({
               name: "reviewName",
@@ -40,7 +37,7 @@ const feedbacks = {
               name: "image",
               title: "Зображення",
               type: "image",
-              description: "Upload Зображення",
+              description: "Завантажте зображення",
               options: { hotspot: true },
               validation: rule =>
                 rule.required().custom(value => {
@@ -52,10 +49,12 @@ const feedbacks = {
             }),
             defineField({
               name: "alt",
-              title: "Alt",
+              title: "Опис зображення",
+              description:
+                "Введіть короткий опис того, що зображено на картинці",
               type: "string",
               validation: rule =>
-                rule.required().error("Alt є обов'язковим полем"),
+                rule.required().error("Опис зображення є обов'язковим полем"),
             }),
             defineField({
               name: "text",
@@ -66,7 +65,7 @@ const feedbacks = {
               validation: Rule =>
                 Rule.custom((blocks: TBlocks) => {
                   if (!blocks || !Array.isArray(blocks)) {
-                    return "Description must be an array of blocks";
+                    return "Немає тексту відгука";
                   }
                   const totalLength = blocks.reduce((acc, block) => {
                     if (

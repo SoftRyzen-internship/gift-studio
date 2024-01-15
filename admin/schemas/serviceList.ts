@@ -1,24 +1,21 @@
 import { defineField } from "sanity";
 
-import { TBlocks } from "@/data/types";
+import { TBlocks } from "@/types";
 
 const serviceList = {
   name: "serviceList",
-  title: "Послуги",
   description: "serviceList Schema",
   type: "document",
   fields: [
     defineField({
       name: "services",
-      title: "Послуги",
-      description: "Додайте послуги",
+      title: "Редагування та додавання послуг",
       type: "array",
       of: [
         defineField({
           name: "service",
-          title: "Послуга",
+          title: "Додавання/редагування послуги",
           type: "object",
-          description: "Додайте послугу",
           fields: [
             defineField({
               name: "serviceName",
@@ -47,7 +44,6 @@ const serviceList = {
               name: "image",
               title: "Зображення",
               type: "image",
-              description: "Завантажте зображення",
               options: { hotspot: true },
               validation: rule =>
                 rule.required().custom(value => {
@@ -59,7 +55,8 @@ const serviceList = {
             }),
             defineField({
               name: "alt",
-              title: "Опис зображення",
+              description:
+                "Введіть короткий опис того, що зображено на картинці",
               type: "string",
               validation: rule =>
                 rule.required().error("Опис зображення є обов'язковим полем"),

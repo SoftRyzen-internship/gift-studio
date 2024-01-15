@@ -9,7 +9,7 @@ export const getSliderOptions = (section: TSections) => {
         [SCREENS.LG]: {
           slidesPerView: 4,
           spaceBetween: 12,
-          loopedSlides: 3,
+          loopedSlides: 4,
         },
       };
     }
@@ -17,6 +17,13 @@ export const getSliderOptions = (section: TSections) => {
       return {
         [SCREENS.SX]: {
           slidesPerView: 1,
+          loop: false,
+        },
+        [SCREENS.MD]: {
+          loop: false,
+        },
+        [SCREENS.LG]: {
+          loop: false,
         },
       };
     }
@@ -24,8 +31,8 @@ export const getSliderOptions = (section: TSections) => {
       return {
         [SCREENS.LG]: {
           slidesPerView: 2,
-          loopedSlides: 2,
           spaceBetween: 16,
+          loopedSlides: 2,
         },
       };
     }
@@ -33,6 +40,7 @@ export const getSliderOptions = (section: TSections) => {
       return {
         [SCREENS.SX]: {
           slidesPerView: 1,
+          loopedSlides: 2,
         },
         [SCREENS.MD]: {
           slidesPerView: 2,
@@ -54,6 +62,7 @@ export const getSliderOptions = (section: TSections) => {
       return {
         [SCREENS.SX]: {
           slidesPerView: 1,
+          loopedSlides: 2,
         },
         [SCREENS.MD]: {
           slidesPerView: 2,
