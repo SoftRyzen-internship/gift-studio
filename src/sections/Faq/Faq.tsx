@@ -1,4 +1,4 @@
-import TabList from "@/components/TabList";
+import FaqList from "@/components/FaqList";
 import SectionHeading from "@/components/typography/SectionHeading";
 
 import content from "@/data/faq.json";
@@ -10,7 +10,7 @@ const Faq = () => {
     <section id={id} className="section">
       <div className="container">
         <SectionHeading title={title} />
-        <TabList data={answers} />
+        <FaqList data={answers} />
       </div>
     </section>
   );

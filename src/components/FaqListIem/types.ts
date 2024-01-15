@@ -1,4 +1,4 @@
-export interface TabListIemProps {
+export interface FaqListIemProps {
   question: string;
   answer: string;
   isActive: boolean;

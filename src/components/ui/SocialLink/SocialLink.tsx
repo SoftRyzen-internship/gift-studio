@@ -4,7 +4,7 @@ import { SocialLinkProps } from "./types";
 
 import { cn } from "@/utils";
 
-import content from "@/data/common.json";
+import content from "@/data/contacts.json";
 
 const SocialLink: FC<SocialLinkProps> = ({
   username,
@@ -12,7 +12,8 @@ const SocialLink: FC<SocialLinkProps> = ({
   socialLink,
   children,
 }) => {
-  const instagramLink = content.instagramLink.concat(username);
+  const { link } = content.socialLinks[0];
+  const instagramLink = link.concat(username);
 
   return (
     <a
@@ -20,6 +21,7 @@ const SocialLink: FC<SocialLinkProps> = ({
       href={!socialLink ? instagramLink : socialLink}
       target="_blank"
       title={username}
+      tabIndex={0}
       rel="noopener noreferrer nofollow"
     >
       {!children && `@${username}`}

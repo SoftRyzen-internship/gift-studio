@@ -2,6 +2,7 @@ import { defineType, defineField } from "sanity";
 
 export default defineType({
   name: "accessibleImage",
+  title: "Редагування/додавання зображення",
   type: "object",
   fields: [
     defineField({
