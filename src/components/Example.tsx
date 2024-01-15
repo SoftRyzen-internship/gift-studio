@@ -43,23 +43,25 @@ async function Example() {
         </div>
       ))}
       <h2>feedbacks</h2>
-      {feedbacks.map(feedback => (
-        <div key={feedback.id}>
-          {feedback.alt}
-          <p>PortableText</p>
-          <PortableText value={feedback.text} />
-          <Image
-            src={urlFor(feedback.image).url()}
-            alt={feedback.alt}
-            width={100}
-            height={100}
-            sizes="
+      <div className="bg-slate-300">
+        {feedbacks.map(feedback => (
+          <div key={feedback.id}>
+            {feedback.alt}
+            <p>PortableText</p>
+            <PortableText value={feedback.text} />
+            <Image
+              src={urlFor(feedback.image).url()}
+              alt={feedback.alt}
+              width={100}
+              height={100}
+              sizes="
             (max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
             40vw"
-          />
-        </div>
-      ))}
+            />
+          </div>
+        ))}
+      </div>
       <h2>services</h2>
       {services.map(service => (
         <div key={service.alt}>

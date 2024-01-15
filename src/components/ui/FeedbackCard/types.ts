@@ -1,5 +1,7 @@
-import { IFeedbackCard } from "@/types";
+// import { TImage } from "@/types";
+// import { PortableTextBlock } from "sanity";
 
 export interface FeedbackCardProps {
-  content: IFeedbackCard;
+  // content: { image: TImage; text: PortableTextBlock[]; id: string };
+  content: any;
 }

@@ -1,13 +1,18 @@
-import { FC } from "react";
+import { fetchFeedbacks } from "admin/requests/fetchFeedbacks";
 
 import Slider from "@/components/Slider";
 import FeedbackCard from "@/components/ui/FeedbackCard";
 
-import { FeedbackSliderProps } from "./types";
+const FeedbackSlider = async () => {
+  const feedbacks = await fetchFeedbacks();
 
-const FeedbackSlider: FC<FeedbackSliderProps> = ({ feedbacks }) => {
   const feedbackSlides = feedbacks.map(feedback => (
-    <FeedbackCard key={feedback.text} content={feedback} />
+    <FeedbackCard
+      key={feedback.id}
+      content={feedback}
+      // isActive={isActive}
+      // setIsActive={setIsActive}
+    />
   ));
 
   return <Slider slides={feedbackSlides} section="feedback" />;

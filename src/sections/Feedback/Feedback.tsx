@@ -4,13 +4,13 @@ import SectionHeading from "@/components/typography/SectionHeading";
 import content from "@/data/feedback.json";
 
 const Feedback = () => {
-  const { id, title, feedbacks } = content;
+  const { id, title } = content;
 
   return (
     <section id={id} className="section">
       <div className="container">
         <SectionHeading title={title} />
-        <FeedbackSlider feedbacks={feedbacks} />
+        <FeedbackSlider />
       </div>
     </section>
   );
