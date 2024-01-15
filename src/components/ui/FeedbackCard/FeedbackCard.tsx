@@ -54,8 +54,8 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
-              {text.length > 100 ? `${text.slice(0, 100)}...` : text}
+            <p className="text-[18px] leading-[24.3px] md:max-w-[416px] md:text-[22px] md:leading-[29.7px] lg:max-w-[353px]">
+              {text.length > 90 ? `${text.slice(0, 90)}...` : text}
             </p>
             <button
               type="button"
