@@ -30,9 +30,9 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
       <div
         className={
           isActiveCard
-            ? "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative " +
+            ? "duration-500 h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative " +
               flipStyle
-            : "duration-[500ms] h-full w-full rounded-3xl shadow-xl transition-all [transform-style:preserve-3d] marker:relative "
+            : "h-full w-full rounded-3xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] marker:relative "
         }
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
@@ -44,16 +44,21 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p className="text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
-              {plainText.length > 74
-                ? `${plainText.slice(0, 74)}...`
-                : plainText}
+            <p
+              className={
+                css.max +
+                " text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]"
+              }
+            >
+              {plainText}
             </p>
             <button
               type="button"
               aria-label={btnOpenAriaLabel}
               onClick={setActiveCard}
-              className="mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
+              className={
+                "mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
+              }
             >
               {btnOpenName}
             </button>

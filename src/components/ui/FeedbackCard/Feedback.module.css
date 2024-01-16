@@ -2,3 +2,13 @@
   background-position: center;
   background-image: url("../../../../public/assets/bg/feedback/feebback-bg.svg");
 }
+.max {
+  line-height: 2rem;
+  max-height: 6rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
