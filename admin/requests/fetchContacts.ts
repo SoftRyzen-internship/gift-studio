@@ -1,4 +1,4 @@
-import { TContactsResponse } from "@/types";
+import { TContactsResponse } from "@/src/types";
 
 import { client } from "admin/client";
 import { contactsQuery } from "./queries/contacts";

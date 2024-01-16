@@ -1,4 +1,4 @@
-import { TGalleryResponse } from "@/types";
+import { TGalleryResponse } from "@/src/types";
 
 import { client } from "admin/client";
 import { galleryQuery } from "./queries/gallery";

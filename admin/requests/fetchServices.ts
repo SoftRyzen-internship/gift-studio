@@ -1,4 +1,4 @@
-import { TServicesResponse } from "@/types";
+import { TServicesResponse } from "@/src/types";
 
 import { client } from "admin/client";
 import { servicesQuery } from "./queries/services";

@@ -1,12 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
 
-import Header from "@/layout/Header";
-import Footer from "@/layout/Footer";
+import Header from "@/src/layout/Header";
+import Footer from "@/src/layout/Footer";
 
-import { montserrat, caveat } from "./fonts";
+import { montserrat, caveat } from "@/src/app/fonts";
 
-import "./globals.css";
+import "@/src/app/globals.css";
 
 import meta from "@/data/meta";
 

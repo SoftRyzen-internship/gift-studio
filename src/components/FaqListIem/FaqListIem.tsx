@@ -4,7 +4,7 @@ import SocialLink from "@/components/ui/SocialLink";
 
 import { FaqListIemProps } from "./types";
 
-import { cn, getSocialLink } from "@/utils";
+import { cn, getSocialLink } from "@/src/utils";
 
 const FaqListIem: FC<FaqListIemProps> = ({
   isActive,

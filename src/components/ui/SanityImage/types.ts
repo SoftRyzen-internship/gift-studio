@@ -1,6 +1,6 @@
 import { ImageProps } from "next/image";
 
-import { TImage } from "@/types";
+import { TImage } from "@/src/types";
 
 type OmittedProps = "src" | "alt" | "blur" | "blurDataURL";
 

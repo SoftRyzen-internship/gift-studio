@@ -1,4 +1,4 @@
-import { TAboutResponse } from "@/types";
+import { TAboutResponse } from "@/src/types";
 
 import { client } from "admin/client";
 import { aboutQuery } from "./queries/about";
