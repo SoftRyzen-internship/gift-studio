@@ -10,7 +10,7 @@ const GallerySlider = async () => {
     <SanityImage
       key={image.id}
       image={image.image}
-      sizes="(max-width: 767px) 100vw, (min-width: 768px) 60vw, (min-width: 1280px) 50vw"
+      sizes="(max-width: 767px) 100vw, (min-width: 768px) 346px, (min-width: 1280px) 480px"
       className="rounded-3xl object-cover"
       fill
     />

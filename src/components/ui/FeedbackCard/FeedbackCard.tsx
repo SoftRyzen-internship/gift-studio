@@ -38,15 +38,15 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
           <SanityImage
             image={image}
-            width={100}
-            height={100}
-            sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+            width={480}
+            height={531}
+            sizes="(max-width: 767px) 100vw, (min-width: 768px) 708px, (min-width: 1280px) 600px"
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p className="text-base md:max-w-[416px] lg:max-w-[353px]">
-              {plainText.length > 100
-                ? `${plainText.slice(0, 100)}...`
+            <p className="text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
+              {plainText.length > 74
+                ? `${plainText.slice(0, 74)}...`
                 : plainText}
             </p>
             <button
@@ -66,18 +66,18 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               " text-left rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-10 lg:py-10 lg:px-20"
             }
           >
-            <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
+            <p className="mb-6 text-[24px] font-bold leading-[29px] text-black md:mb-4">
               {reviewName}
             </p>
 
-            <div className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
+            <div className="text-[16px] font-normal leading-[22px] text-black md:text-[18px] md:leading-[24px] ">
               <PortableText value={text} />
             </div>
             <button
               onClick={setActiveCard}
               type="button"
               aria-label={btnCloseAriaLabel}
-              className="absolute bottom-6 left-6 text-[16px] font-normal leading-[21.6px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24.3px] lg:bottom-10 lg:left-20"
+              className="absolute bottom-6 left-6 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
             >
               {btnCloseName}
             </button>

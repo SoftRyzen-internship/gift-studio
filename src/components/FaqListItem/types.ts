@@ -1,4 +1,4 @@
-export interface FaqListIemProps {
+export interface FaqListItemProps {
   question: string;
   answer: string;
   isActive: boolean;

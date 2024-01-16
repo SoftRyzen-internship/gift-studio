@@ -22,19 +22,21 @@ export type TGalleryResponse = {
 
 export type TAboutResponse = TImage;
 
-export type TFeedbackResponse = {
+export type TFeedbackCard = {
   image: TImage;
   text: PortableTextBlock[];
   id: string;
   reviewName: string;
-}[];
+};
+export type TFeedbackResponse = TFeedbackCard[];
 
-export type TServicesResponse = {
+export type TServicesCard = {
   image: TImage;
   serviceName: PortableTextBlock[];
   serviceUrl: string;
   id: string;
-}[];
+};
+export type TServicesResponse = TServicesCard[];
 
 export interface ITextBlock {
   _type: string;

@@ -23,7 +23,7 @@ const About = async () => {
           className="h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6 max-md:object-cover md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]"
           width={320}
           height={376}
-          sizes="(max-width: 767px) 100vw, (min-width: 1280px) 548px"
+          sizes="(max-width: 767px) 100vw,(min-width: 768px) 592px, (min-width: 1280px) 548px"
         />
         <div className="max-md:mb-6 md:max-lg:mb-10 lg:h-[448px] lg:overflow-auto">
           {description.map(text => (

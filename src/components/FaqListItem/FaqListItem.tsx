@@ -1,12 +1,12 @@
-import { FC } from "react";
+import { FC, KeyboardEvent } from "react";
 
 import SocialLink from "@/components/ui/SocialLink";
 
-import { FaqListIemProps } from "./types";
+import { FaqListItemProps } from "./types";
 
 import { cn, getSocialLink } from "@/src/utils";
 
-const FaqListIem: FC<FaqListIemProps> = ({
+const FaqListItem: FC<FaqListItemProps> = ({
   isActive,
   question,
   answer,
@@ -17,14 +17,26 @@ const FaqListIem: FC<FaqListIemProps> = ({
     base: "cursor-pointer rounded-3xl text-left max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:py-8 lg:pl-8 lg:pr-4",
     question: "text-lg font-bold lg:text-3xl lg:leading-32",
   };
+  const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
+    event.preventDefault();
+    if (event.key === " " || event.key === "Spacebar") {
+      setActive();
+    }
+  };
 
   return !isActive ? (
-    <li onClick={setActive} className={cn(styles.base, "border-none bg-latte")}>
+    <li
+      onClick={setActive}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      className={cn(styles.base, "border-transparent bg-latte")}
+    >
       <p className={styles.question}>{question}</p>
     </li>
   ) : (
     <li
       onClick={setActive}
+      tabIndex={0}
       className={cn(
         styles.base,
         "answer-opening flex flex-col gap-1 border-[1px] border-solid border-accent bg-white md:gap-2",
@@ -43,4 +55,4 @@ const FaqListIem: FC<FaqListIemProps> = ({
   );
 };
 
-export default FaqListIem;
+export default FaqListItem;

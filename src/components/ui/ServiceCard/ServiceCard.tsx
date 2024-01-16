@@ -26,7 +26,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ data, wrapperCustomStyle }) => {
             className="h-[416px] object-cover md:w-[295px] lg:transition-transform lg:group-hover:scale-110 lg:group-focus:scale-110"
           />
         </div>
-        <div className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px]">
+        <div className="flex flex-col items-center text-xl leading-[27px] md:text-3xl md:leading-[32px]">
           <PortableText value={data.serviceName} />
         </div>
       </a>

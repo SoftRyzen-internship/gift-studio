@@ -44,7 +44,7 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
             key={idx}
             tag="li"
             className={cn(
-              "overflow-hidden rounded-normal relative cursor-grab",
+              "overflow-hidden rounded-3xl relative cursor-grab",
               `${section}-slide`,
             )}
           >
