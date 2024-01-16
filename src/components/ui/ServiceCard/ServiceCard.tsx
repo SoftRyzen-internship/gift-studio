@@ -1,40 +1,34 @@
 "use client";
 
 import { FC } from "react";
-import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 
 import { ServiceCardProps } from "@/components/ui/ServiceCard/types";
+import SanityImage from "@/components/ui/SanityImage";
 
 import { cn } from "@/utils/cn";
 
-import cardImage from "@/public/assets/images/services/services-1@x2.webp";
-
-const ServiceCard: FC<ServiceCardProps> = ({
-  link,
-  serviceDescription,
-  src = cardImage,
-  alt,
-  wrapperCustomStyle,
-}) => {
+const ServiceCard: FC<ServiceCardProps> = ({ data, wrapperCustomStyle }) => {
   return (
     <div className={cn("w-fit text-center", wrapperCustomStyle)}>
       <a
         className="services-card group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
-        href={link}
+        href={data.serviceUrl}
         target="_blank"
         rel="noopener noreferrer nofollow"
       >
         <div className="overflow-hidden rounded-3xl">
-          <Image
-            src={src}
-            alt={alt}
-            className="h-[416px] object-cover md:w-[295px]  lg:transition-transform lg:group-hover:scale-110 lg:group-focus:scale-110"
+          <SanityImage
+            image={data.image}
+            priority
+            width={295}
+            height={416}
+            className="h-[416px] object-cover md:w-[295px] lg:transition-transform lg:group-hover:scale-110 lg:group-focus:scale-110"
           />
         </div>
-
-        <p className="flex flex-col items-center text-xl leading-[27px] md:text-3xl md:leading-[32px] ">
-          {serviceDescription}
-        </p>
+        <div className="flex flex-col items-center text-xl leading-[27px] md:text-3xl md:leading-[32px]">
+          <PortableText value={data.serviceName} />
+        </div>
       </a>
     </div>
   );
