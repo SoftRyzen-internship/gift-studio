@@ -1,7 +1,7 @@
-import { TFeedbackCard } from "@/src/types";
+import { TFeedback } from "@/src/types";
 
 export interface FeedbackCardProps {
-  content: TFeedbackCard;
+  content: TFeedback;
   isActiveCard: boolean;
   setActiveCard: () => void;
 }

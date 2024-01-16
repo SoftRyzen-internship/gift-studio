@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import Slider from "@/components/Slider";
 import FeedbackCard from "@/components/ui/FeedbackCard";
 
-import { TFeedbackCard } from "@/src/types";
+import { TFeedback } from "@/src/types";
 import { FeedbackSliderProps } from "./types";
 
 const FeedbackSlider: FC<FeedbackSliderProps> = ({ feedbacks }) => {
@@ -18,7 +18,7 @@ const FeedbackSlider: FC<FeedbackSliderProps> = ({ feedbacks }) => {
     }
   };
 
-  const feedbackSlides = feedbacks.map((feedback: TFeedbackCard) => (
+  const feedbackSlides = feedbacks.map((feedback: TFeedback) => (
     <FeedbackCard
       key={feedback.id}
       content={feedback}
