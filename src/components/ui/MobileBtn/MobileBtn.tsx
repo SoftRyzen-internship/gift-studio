@@ -18,7 +18,7 @@ const MobileBtn: FC<MobileBtnType> = ({ isMobileMenuShown, handleClick }) => {
       className="block h-[36px] w-[36px] p-1 transition-transform hover:scale-110 focus:scale-110 lg:hidden"
       onClick={handleClick}
     >
-      {!isMobileMenuShown ? <MenuIcon /> : <CloseIcon />}
+      {!isMobileMenuShown ? <MenuIcon /> : <CloseIcon className="p-2" />}
     </button>
   );
 };
