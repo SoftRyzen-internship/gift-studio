@@ -31,6 +31,7 @@ async function Example() {
       {feedbacks.map(feedback => (
         <div key={feedback.id} className="mb-4">
           <p className="text-xl font-semibold">{feedback.image.alt}</p>
+          <p className="text-xl font-semibold">{feedback.reviewName}</p>
           <PortableText value={feedback.text} />
           <SanityImage
             image={feedback.image}

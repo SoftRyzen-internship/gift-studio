@@ -2,6 +2,6 @@ export interface AnswersProps {
   question: string;
   answer: string;
 }
-export interface TabListProps {
+export interface FaqListProps {
   data: AnswersProps[];
 }

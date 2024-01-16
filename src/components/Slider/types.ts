@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { TSections } from "@/types";
+import { TSections } from "@/src/types";
 
 export interface SliderProps {
   slides: ReactNode[];

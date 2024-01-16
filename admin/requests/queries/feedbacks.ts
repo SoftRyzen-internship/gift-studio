@@ -9,6 +9,7 @@ export const feedbackQuery = groq`
         "lqip":image.asset->metadata.lqip,
       },
       text,
+      reviewName,
       "id": _key
     }
   }[0].reviews

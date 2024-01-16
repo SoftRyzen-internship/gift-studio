@@ -2,13 +2,12 @@
 
 import { FC } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 
 import { ServiceCardProps } from "@/components/ui/ServiceCard/types";
 
-import cardImage from "@/public/assets/images/services/services-1@x2.webp";
 import { cn } from "@/utils/cn";
+
+import cardImage from "@/public/assets/images/services/services-1@x2.webp";
 
 const ServiceCard: FC<ServiceCardProps> = ({
   link,
@@ -19,11 +18,11 @@ const ServiceCard: FC<ServiceCardProps> = ({
 }) => {
   return (
     <div className={cn("w-fit text-center", wrapperCustomStyle)}>
-      <Link
+      <a
         className="services-card group flex flex-col gap-3 transition-all hover:text-accent focus:text-accent lg:gap-6"
         href={link}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
       >
         <div className="overflow-hidden rounded-3xl">
           <Image
@@ -33,10 +32,10 @@ const ServiceCard: FC<ServiceCardProps> = ({
           />
         </div>
 
-        <ReactMarkdown className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
+        <p className="flex flex-col items-center text-xl leading-[26.8px] md:text-3xl md:leading-[32.1px] ">
           {serviceDescription}
-        </ReactMarkdown>
-      </Link>
+        </p>
+      </a>
     </div>
   );
 };

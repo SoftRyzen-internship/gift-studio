@@ -12,7 +12,9 @@ const Hero = () => {
   const { title, btnLabel, accentWord } = data;
 
   return (
-    <section className={css.hero}>
+    <section
+      className={css.hero + " " + css.max + " bg-cover bg-[#d9d9d9] bg-bottom"}
+    >
       <div className="container pb-[258px] pt-[117px] text-center md:py-[160px] lg:pb-[182px] lg:pt-[184px]">
         <div className="md:w-fit lg:ml-6">
           <h1
@@ -26,6 +28,7 @@ const Hero = () => {
             label={btnLabel}
             variant="primary"
             targetName="services"
+            className="inline-block text-center"
           />
         </div>
       </div>

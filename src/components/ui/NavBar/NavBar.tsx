@@ -14,7 +14,7 @@ const Navbar: FC<NavPropsType> = ({ isMobile, handleClick }) => {
 
   return (
     <nav className={!isMobile ? desktopStyles : mobileStyles}>
-      <ul className="mx-auto flex list-none flex-col justify-center gap-6 text-center lg:flex-row ">
+      <ul className="mx-auto flex list-none flex-col justify-center gap-6 text-center max-lg:items-center lg:flex-row ">
         {data.map(({ text, textRef, id }: NavDataType) => (
           <li key={id}>
             <ButtonLink
@@ -22,6 +22,7 @@ const Navbar: FC<NavPropsType> = ({ isMobile, handleClick }) => {
               label={text}
               targetName={textRef}
               variant="ghost"
+              className="text-[24px] leading-[29.26px]"
             />
           </li>
         ))}
