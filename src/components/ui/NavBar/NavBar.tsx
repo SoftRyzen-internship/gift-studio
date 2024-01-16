@@ -22,7 +22,7 @@ const Navbar: FC<NavPropsType> = ({ isMobile, handleClick }) => {
               label={text}
               targetName={textRef}
               variant="ghost"
-              className="text-[24px] leading-[29.26px]"
+              className="text-[24px] leading-[29px]"
             />
           </li>
         ))}

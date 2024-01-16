@@ -5,11 +5,11 @@ import Image from "next/image";
 
 import { FeedbackCardProps } from "./types";
 
+import css from "./Feedback.module.css";
+
 import image from "@/public/assets/images/feedback/feedback@x2.webp";
 
 import data from "@/data/feedback.json";
-
-import css from "./feedback.module.css";
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   cardImage = image,
@@ -54,14 +54,14 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p className="text-[18px] leading-[24.3px] md:max-w-[416px] md:text-[22px] md:leading-[29.7px] lg:max-w-[353px]">
+            <p className="text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {text.length > 90 ? `${text.slice(0, 90)}...` : text}
             </p>
             <button
               type="button"
               aria-label={btnOpenAriaLabel}
               onClick={handleFlip}
-              className="mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
+              className="mr-auto mt-6 rounded-md bg-transparent text-base leading-[22px] transition-colors hover:text-accent focus:text-accent md:mt-4"
             >
               {btnOpenName}
             </button>
@@ -74,18 +74,18 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               " text-left rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-10 lg:py-10 lg:px-20"
             }
           >
-            <p className="mb-6 text-[24px] font-bold leading-[29.26px] text-black md:mb-4">
+            <p className="mb-6 text-[24px] font-bold leading-[29px] text-black md:mb-4">
               {label}
             </p>
 
-            <p className="text-[16px] font-normal leading-[21.6px] text-black md:text-[18px] md:leading-[24.3px] ">
+            <p className="text-[16px] font-normal leading-[22px] text-black md:text-[18px] md:leading-[24px] ">
               {text.length > 420 ? `${text.slice(0, 420)}...` : text}
             </p>
             <button
               onClick={handleFlip}
               type="button"
               aria-label={btnCloseAriaLabel}
-              className="absolute bottom-6 left-6 text-[16px] font-normal leading-[21.6px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24.3px] lg:bottom-10 lg:left-20"
+              className="absolute bottom-6 left-6 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
             >
               {btnCloseName}
             </button>

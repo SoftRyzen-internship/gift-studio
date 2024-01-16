@@ -6,17 +6,19 @@ import ButtonLink from "@/components/ui/ButtonLink";
 
 import data from "@/data/hero.json";
 
-import css from "@/sections/Hero/hero.module.css";
-
+import css from "@/sections/Hero/Hero.module.css";
 const Hero = () => {
   const { title, btnLabel, accentWord } = data;
 
   return (
     <section
-      className={css.hero + " " + css.max + " bg-cover bg-[#d9d9d9] bg-bottom"}
+      className={
+        css.hero +
+        " bg-cover bg-bottom md:bg-[length:768px] xl:bg-cover xlg:bg-[length:1440px] bg-no-repeat"
+      }
     >
-      <div className="container pb-[258px] pt-[117px] text-center md:py-[160px] lg:pb-[182px] lg:pt-[184px]">
-        <div className="md:w-fit lg:ml-6">
+      <div className="container pb-[258px] pt-[117px] text-center md:py-[160px] lg:pb-[182px] lg:pl-[56px] lg:pt-[184px]">
+        <div className="md:w-fit">
           <h1
             className=" mb-[15px] flex flex-col text-center font-caveat text-[32px] font-bold leading-[28px] text-accent md:mb-[24px] 
           md:text-[36px] md:leading-[36px] lg:text-7xl lg:leading-[52px]"

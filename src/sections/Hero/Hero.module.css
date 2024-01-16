@@ -3,7 +3,7 @@
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
-  (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi) and (max-width: 767px),
   (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
@@ -34,19 +34,5 @@
   screen and (min-width: 1280px) and (min-resolution: 2dppx) and (min-width: 1280px) {
   .hero {
     background-image: url("../../../public/assets/bg/hero/hero_lg_1@x2.webp");
-  }
-}
-
-.max {
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
