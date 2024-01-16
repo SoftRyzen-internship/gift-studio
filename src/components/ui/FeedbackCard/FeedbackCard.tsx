@@ -9,7 +9,7 @@ import data from "@/data/feedback.json";
 
 import { FeedbackCardProps } from "./types";
 
-import css from "./feedback.module.css";
+import css from "./Feedback.module.css";
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   content,
