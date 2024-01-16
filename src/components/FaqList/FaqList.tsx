@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
-import FaqListIem from "@/components/FaqListIem";
+import FaqListItem from "@/components/FaqListItem";
 import { FaqListProps } from "./types";
 
 const FaqList: FC<FaqListProps> = ({ data }) => {
@@ -18,7 +18,7 @@ const FaqList: FC<FaqListProps> = ({ data }) => {
   return (
     <ul className="flex flex-col gap-4 lg:mx-auto lg:max-w-[922px]">
       {data.map(({ question, answer }, idx) => (
-        <FaqListIem
+        <FaqListItem
           key={question}
           question={question}
           answer={answer}
