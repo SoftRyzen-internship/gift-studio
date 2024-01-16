@@ -8,16 +8,22 @@ import { NavDataType, NavPropsType } from "./types";
 
 import data from "@/data/navbar.json";
 
-const Navbar: FC<NavPropsType> = ({ isMobile }) => {
-  const desktopStyles = "hidden lg:flex w-fit h-fit";
-  const mobileStyles = "lg:hidden flex w-fit h-fit mx-auto";
+const Navbar: FC<NavPropsType> = ({ isMobile, handleClick }) => {
+  const desktopStyles = "max-lg:hidden w-fit h-fit";
+  const mobileStyles = "lg:hidden block w-fit h-fit mx-auto";
 
   return (
     <nav className={!isMobile ? desktopStyles : mobileStyles}>
-      <ul className="mx-auto flex list-none flex-col justify-center gap-6 text-center lg:flex-row ">
+      <ul className="mx-auto flex list-none flex-col justify-center gap-6 text-center max-lg:items-center lg:flex-row ">
         {data.map(({ text, textRef, id }: NavDataType) => (
           <li key={id}>
-            <ButtonLink label={text} targetName={textRef} variant="ghost" />
+            <ButtonLink
+              handleClick={handleClick}
+              label={text}
+              targetName={textRef}
+              variant="ghost"
+              className="text-[24px] leading-[29.26px]"
+            />
           </li>
         ))}
       </ul>

@@ -2,24 +2,30 @@ import { FC } from "react";
 
 import { SocialLinkProps } from "./types";
 
-import { cn } from "@/utils";
+import { cn } from "@/src/utils";
 
 import content from "@/data/contacts.json";
 
-const SocialLink: FC<SocialLinkProps> = ({ username, className }) => {
-  const link = content.socialLinks[0].link;
+const SocialLink: FC<SocialLinkProps> = ({
+  username,
+  className,
+  socialLink,
+  children,
+}) => {
+  const { link } = content.socialLinks[0];
   const instagramLink = link.concat(username);
 
   return (
     <a
       className={cn("social-link transition font-medium", className)}
-      href={instagramLink}
+      href={!socialLink ? instagramLink : socialLink}
       target="_blank"
       title={username}
       tabIndex={0}
       rel="noopener noreferrer nofollow"
     >
-      {`@${username}`}
+      {!children && `@${username}`}
+      {children && children}
     </a>
   );
 };

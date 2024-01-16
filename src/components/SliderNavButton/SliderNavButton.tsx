@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-import { SliderNavButtonProps } from "./types";
-
 import { cn } from "@/utils/cn";
 
 import content from "@/data/gallery.json";
+
+import { SliderNavButtonProps } from "./types";
 
 import ArrowIcon from "@/public/assets/icons/icon-arrow-left.svg";
 

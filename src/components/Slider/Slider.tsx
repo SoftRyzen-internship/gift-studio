@@ -1,15 +1,15 @@
 "use client";
+
 import { FC, ReactNode, useCallback, useState } from "react";
-import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
-
-import SliderNavigation from "@/components/SliderNavigation";
-
-import { SliderProps } from "./types";
+import { A11y } from "swiper/modules";
 
 import { cn } from "@/utils/cn";
 import { getSliderOptions } from "@/utils/getSliderOptions";
+
+import SliderNavigation from "@/components/SliderNavigation";
+import { SliderProps } from "./types";
 
 import "swiper/css";
 import "swiper/css/a11y";
@@ -24,9 +24,11 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
   const handleNext = useCallback(() => {
     swiperRef?.slideNext();
   }, [swiperRef]);
+
   return (
     <>
       <Swiper
+        wrapperTag="ul"
         onSwiper={setSwiperRef}
         id={`swiper-${section}`}
         modules={[A11y]}
@@ -40,8 +42,9 @@ const Slider: FC<SliderProps> = ({ slides, section }) => {
         {slides.map((slide: ReactNode, idx: number) => (
           <SwiperSlide
             key={idx}
+            tag="li"
             className={cn(
-              "overflow-hidden rounded-normal relative",
+              "overflow-hidden rounded-normal relative cursor-grab",
               `${section}-slide`,
             )}
           >

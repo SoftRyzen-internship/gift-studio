@@ -1,5 +1,7 @@
 "use client";
 
+import { FC } from "react";
+
 import PhoneLink from "@/components/ui/PhoneLink";
 
 import { ContactsListType } from "./types";
@@ -8,7 +10,7 @@ import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
 import contacts from "@/data/contacts.json";
 
-const ContactsList = ({ customListStyle }: ContactsListType) => {
+const ContactsList: FC<ContactsListType> = ({ customListStyle }) => {
   const {
     emailData: { email, ariaLabel },
   } = contacts;
@@ -22,10 +24,10 @@ const ContactsList = ({ customListStyle }: ContactsListType) => {
             customListStyle
       }
     >
-      <li>
-        <PhoneLink />
+      <li className="flex">
+        <PhoneLink customStyle="lg:text-xl leading-[24.38px]" />
       </li>
-      <li>
+      <li className="flex">
         <a
           className="group flex items-center gap-2 stroke-black stroke-[1.5px] text-xl transition hover:text-accent focus:text-accent"
           href={`tel:${email}`}
