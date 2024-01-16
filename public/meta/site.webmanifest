@@ -1,6 +1,10 @@
 {
     "name": "Gift Studio – Студія створення красивих та смачних їстівних букетів",
     "short_name": "Gift Studio",
+    "title": "Gift Studio – Студія створення красивих та смачних їстівних букетів",
+    "description": "Запрошуємо до нашої студії їстівних букетів, де ми перетворюємо смак та естетику в неперевершені подарунки. ",
+    "locale": "uk_UA",
+    "keywords": "Gift Studio, їстівні букети, неповторний подарунок, смаколики",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,6 +17,14 @@
             "type": "image/png"
         }
     ],
+      "images": [
+    {
+      "url": "/meta/opengraph-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Gift Studio - Студія їстівних букетів"
+    }
+  ],    
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
