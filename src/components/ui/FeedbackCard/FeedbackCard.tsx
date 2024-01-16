@@ -5,11 +5,11 @@ import Image from "next/image";
 
 import { FeedbackCardProps } from "./types";
 
+import css from "./Feedback.module.css";
+
 import image from "@/public/assets/images/feedback/feedback@x2.webp";
 
 import data from "@/data/feedback.json";
-
-import css from "./Feedback.module.css";
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   cardImage = image,
