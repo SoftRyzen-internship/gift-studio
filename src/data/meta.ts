@@ -30,6 +30,11 @@ const meta: Metadata = {
     card: "summary_large_image",
     images,
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+  },
   icons: {
     icon: [
       {
