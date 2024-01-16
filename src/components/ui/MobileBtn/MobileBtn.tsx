@@ -15,7 +15,7 @@ const MobileBtn: FC<MobileBtnType> = ({ isMobileMenuShown, handleClick }) => {
   return (
     <button
       aria-label={isMobileMenuShown ? openBtnAriaLabel : closeBtnAriaLabel}
-      className="block h-[24px] w-[40px] px-2 lg:hidden"
+      className="block h-[36px] w-[36px] p-1 transition-transform hover:scale-110 focus:scale-110 lg:hidden"
       onClick={handleClick}
     >
       {!isMobileMenuShown ? <MenuIcon /> : <CloseIcon />}

@@ -25,7 +25,7 @@ const ContactsList: FC<ContactsListType> = ({ customListStyle }) => {
       }
     >
       <li className="flex">
-        <PhoneLink customStyle="lg:text-xl leading-[24.38px]" />
+        <PhoneLink customStyle="lg:text-xl leading-[24px]" />
       </li>
       <li className="flex">
         <a
