@@ -2,11 +2,11 @@ import { FC } from "react";
 
 import SocialLink from "@/components/ui/SocialLink";
 
-import { FaqListIemProps } from "./types";
+import { FaqListItemProps } from "./types";
 
 import { cn, getSocialLink } from "@/src/utils";
 
-const FaqListIem: FC<FaqListIemProps> = ({
+const FaqListItem: FC<FaqListItemProps> = ({
   isActive,
   question,
   answer,
@@ -19,12 +19,17 @@ const FaqListIem: FC<FaqListIemProps> = ({
   };
 
   return !isActive ? (
-    <li onClick={setActive} className={cn(styles.base, "border-none bg-latte")}>
+    <li
+      onClick={setActive}
+      tabIndex={0}
+      className={cn(styles.base, "border-transparent bg-latte")}
+    >
       <p className={styles.question}>{question}</p>
     </li>
   ) : (
     <li
       onClick={setActive}
+      tabIndex={0}
       className={cn(
         styles.base,
         "answer-opening flex flex-col gap-1 border-[1px] border-solid border-accent bg-white md:gap-2",
@@ -43,4 +48,4 @@ const FaqListIem: FC<FaqListIemProps> = ({
   );
 };
 
-export default FaqListIem;
+export default FaqListItem;

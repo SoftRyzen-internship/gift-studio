@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import SliderNavButton from "@/components/SliderNavButton";
+import SliderNavButton from "@/components/ui/SliderNavButton";
 
 import { SliderNavigationProps } from "./types";
 

@@ -12,9 +12,8 @@ const GallerySlider: FC<GallerySliderProps> = ({ images }) => {
       src={`/assets/images/gallery/${imagePath}`}
       alt={alt}
       sizes="(max-width: 767px) 100vw, (min-width: 768px) 60vw, (min-width: 1280px) 50vw"
-      className="rounded-3xl"
+      className="rounded-3xl object-cover"
       fill
-      style={{ objectFit: "cover" }}
     />
   ));
 
