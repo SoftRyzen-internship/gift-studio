@@ -81,31 +81,3 @@ h3 {
 .swiper-slide.gallery-slide.swiper-slide-active > img {
   @apply lg:!object-fill;
 }
-
-.answer-opening {
-  opacity: 1;
-  animation-name: fadeOut;
-  -webkit-animation-name: fadeOut;
-  animation-duration: 0.5s;
-  -webkit-animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  visibility: visible !important;
-}
-
-@keyframes fadeOut {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
