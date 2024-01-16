@@ -91,3 +91,36 @@ Slider component by `div` adn set up conditions in classNames.
 | ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `section ` | `undefined` | обов'язковий, потрібно вказати назву секції для котрої обирається слайдер: `services`, `features`, `feedback` or `gallery` по ній будуть застосовані кількість елементів слайдеру згідно точок перелому |
 | `slides`   | `undefined` | обов'язковий, масив слайді `ReactNode` для перебору і інтеграції до слайдеру                                                                                                                            |
+
+- ### NavBar
+
+The component is a nav tag containing a list of anchor links for navigation
+between sections. It is used in the header and footer of the site.
+
+| Prop           | Default     | Description                                                                                                                                                                        |
+| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
+| `handleClick ` | `undefined` | optionally, wakes up from ButtonLink, required to close the mobile menu when clicking on the navigation link                                                                       |
+| `className `   | `undefined` | optionally, if it's necessary to add some style changes                                                                                                                            |
+
+- ### MobileMenu
+
+The mobile menu appears when the user clicks on Mobile Btn. Appears only when
+the screen width is up to 1280px. Contains the main navigation and the PhoneLink
+component
+
+| Prop           | Default     | Description                                                                                                                                                                        |
+| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
+| `handleClick ` | `undefined` | optionally, wakes up from NavBar, required to close the mobile menu when clicking on the navigation link                                                                           |
+| `className `   | `undefined` | used in the header, to add a transform along the horizontal axis by condition                                                                                                      |
+
+- ### MobileBtn
+
+Button to open and close the mobile menu. Depending on the props,
+isMobileMenuShown renders an icon in itself and closes or opens the mobile menu
+
+| Prop                 | Default     | Description                                                                                                                                                                     |
+| -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobileMenuShown ` | `undefined` | required, boolean value. If false, generates a mobile menu close icon and close text for the aria-label. If true, generates a burger menu icon and opening text for aria-label. |
+| `handleClick `       | `undefined` | allback which returns void. Moves up to the header, for toggle mobile menu                                                                                                      |
