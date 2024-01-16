@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section
-      className={css.hero + " " + css.max + " bg-cover bg-[#d9d9d9] bg-bottom"}
+      className={css.hero + " " + css.max + " bg-cover bg-heroBg bg-bottom"}
     >
       <div className="container pb-[258px] pt-[117px] text-center md:py-[160px] lg:pb-[182px] lg:pt-[184px]">
         <div className="md:w-fit lg:ml-6">

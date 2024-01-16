@@ -56,6 +56,7 @@ const config: Config = {
         lava: "#CF1919",
         latte: "#FFFAE7",
         gray: "#292D32",
+        heroBg: "#d9d9d9",
         socialGradientStart: "#c84b4c",
         socialGradientEnd: "#672e66",
       },
