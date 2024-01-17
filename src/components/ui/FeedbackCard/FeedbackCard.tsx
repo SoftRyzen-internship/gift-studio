@@ -26,7 +26,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   const plainText = toPlainText(text);
 
   return (
-    <div className="group h-[531px] w-fit rounded-3xl [perspective:1000px] md:w-[708px] lg:w-[600px]">
+    <div className="group h-[531px] w-full rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
       <div
         className={
           isActiveCard
@@ -44,12 +44,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p
-              className={
-                css.max +
-                " text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]"
-              }
-            >
+            <p className=" text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {plainText}
             </p>
             <button
