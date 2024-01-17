@@ -1,6 +1,6 @@
-import { TServicesCard } from "@/src/types";
+import { TService } from "@/src/types";
 
 export interface ServiceCardProps {
   wrapperCustomStyle?: string;
-  data: TServicesCard;
+  data: TService;
 }

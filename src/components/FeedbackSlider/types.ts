@@ -1,5 +1,5 @@
-import { TFeedbackCard } from "@/src/types";
+import { TFeedback } from "@/src/types";
 
 export interface FeedbackSliderProps {
-  feedbacks: TFeedbackCard[];
+  feedbacks: TFeedback[];
 }
