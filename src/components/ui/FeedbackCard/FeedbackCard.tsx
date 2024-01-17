@@ -45,14 +45,16 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
             <p className=" text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
-              {plainText}
+              {plainText.length > 74
+                ? `${plainText.slice(0, 74)}...`
+                : plainText}
             </p>
             <button
               type="button"
               aria-label={btnOpenAriaLabel}
               onClick={setActiveCard}
               className={
-                "mr-auto mt-6 rounded-md bg-transparent text-base leading-[21.6px] transition-colors hover:text-accent focus:text-accent md:mt-4"
+                "mr-auto mt-6 rounded-md bg-transparent text-base leading-[22px] transition-colors hover:text-accent focus:text-accent md:mt-4"
               }
             >
               {btnOpenName}
