@@ -32,7 +32,7 @@ export const getSliderOptions = (section: TSections) => {
         [SCREENS.LG]: {
           slidesPerView: 2,
           spaceBetween: 16,
-          loopedSlides: 2,
+          loopedSlides: 4,
         },
       };
     }
