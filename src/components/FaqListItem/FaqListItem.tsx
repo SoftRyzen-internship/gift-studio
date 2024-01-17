@@ -49,7 +49,13 @@ const FaqListItem: FC<FaqListItemProps> = ({
           <p className="text-base font-normal leading-16 ">
             {answerWithSocialLink.map((text, index) => {
               if (index === 1) {
-                return <SocialLink key={index} username={text} />;
+                return (
+                  <SocialLink
+                    key={index}
+                    username={text}
+                    tabIndex={isActive ? 0 : -1}
+                  />
+                );
               }
               return text;
             })}

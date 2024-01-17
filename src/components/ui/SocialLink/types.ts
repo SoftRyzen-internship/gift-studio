@@ -7,4 +7,5 @@ export interface SocialLinkProps {
   isIcon?: boolean;
   children?: ReactNode;
   ariaLabel?: string;
+  tabIndex?: number;
 }
