@@ -18,8 +18,8 @@ const FaqListItem: FC<FaqListItemProps> = ({
     question: "text-lg font-bold lg:text-3xl lg:leading-32 transition-color",
   };
   const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
-    event.preventDefault();
     if (event.key === " " || event.key === "Spacebar") {
+      event.preventDefault();
       setActive();
     }
   };
