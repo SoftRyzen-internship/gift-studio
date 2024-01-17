@@ -15,13 +15,13 @@ const MobileBtn: FC<MobileBtnType> = ({ isMobileMenuShown, handleClick }) => {
   return (
     <button
       aria-label={isMobileMenuShown ? openBtnAriaLabel : closeBtnAriaLabel}
-      className="block h-[36px] w-[36px] p-1 transition-transform hover:scale-110 focus:scale-110 lg:hidden"
+      className="block h-[40px] w-[40px] p-2 transition-transform hover:scale-110 focus:scale-110 lg:hidden"
       onClick={handleClick}
     >
       {!isMobileMenuShown ? (
-        <MenuIcon className="p-1" />
+        <MenuIcon className="p-[3px]" />
       ) : (
-        <CloseIcon className="p-2" />
+        <CloseIcon className="p-[7px]" />
       )}
     </button>
   );

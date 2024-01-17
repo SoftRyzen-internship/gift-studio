@@ -47,6 +47,12 @@ Check out our
 [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
 details.
 
+## 💼 Панель керування адміністратора Sanity Studio 💼
+
+Для управління вмістом та конфігурацією вашого додатка Next.js, перегляньте
+додаткову документацію з
+[Sanity Studio](https://docs.google.com/document/d/14rdHNc4vb7Z7vKZZglbxdZAlBCxMK1AByJ6xttbFOlI/edit?usp=sharing).
+
 ---
 
 ## 💼 Components API 💼

@@ -18,7 +18,7 @@ const Footer = () => {
           <NavBar isMobile={false} />
           <SocialMediaList customListStyle="lg:ml-[288px]" />
         </div>
-        <div className="flex flex-col gap-6 text-center md:flex-row md:justify-between">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between">
           <ContactsList />
           <a
             className="text-sm transition-colors hover:text-accent focus:text-accent"
