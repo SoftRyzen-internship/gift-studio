@@ -130,3 +130,26 @@ isMobileMenuShown renders an icon in itself and closes or opens the mobile menu
 | -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isMobileMenuShown ` | `undefined` | required, boolean value. If false, generates a mobile menu close icon and close text for the aria-label. If true, generates a burger menu icon and opening text for aria-label. |
 | `handleClick `       | `undefined` | allback which returns void. Moves up to the header, for toggle mobile menu                                                                                                      |
+
+- ### PhoneLink
+
+The link component contains the phone number for the contact. It is used
+separately in the mobile menu up to a width of 768px and in the header with a
+width of 768px. Imported into the ContactsLink component located in the Footer.
+Contains the href attribute with the phone number and the aria-label attribute
+with the description of the button. The link wraps around the phone icon
+
+| Prop           | Default     | Description                                             |
+| -------------- | ----------- | ------------------------------------------------------- |
+| `customStyle ` | `undefined` | optionally, if it's necessary to add some style changes |
+
+- ### ContactsList
+
+The contact list component contains the PhoneLink component with a phone number
+and a link with email. Used in Footer. The mail link contains an href attribute
+with the email address and an aria-label attribute with the description of the
+button. The link wraps around the mail icon.
+
+| Prop               | Default     | Description                                                         |
+| ------------------ | ----------- | ------------------------------------------------------------------- |
+| `customListStyle ` | `undefined` | optionally, if it's necessary to add some style changes to the list |
