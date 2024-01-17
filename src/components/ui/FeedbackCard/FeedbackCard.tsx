@@ -44,10 +44,8 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
-            <p className=" text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
-              {plainText.length > 74
-                ? `${plainText.slice(0, 74)}...`
-                : plainText}
+            <p className=" line-clamp-3 text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
+              {plainText}
             </p>
             <button
               type="button"
