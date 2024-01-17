@@ -66,90 +66,129 @@ is a list of more common components and their API.
 наступних розмірах: (екран до 768px) - 48/60.48/400 Caveat, (екран від 768 до
 1280px) 56/70.56/400 Caveat, (екран від 1280px) 64/80.64/400 Caveat
 
-| Prop         | Default     | Description                                                   |
-| ------------ | ----------- | ------------------------------------------------------------- |
-| `title `     | `undefined` | обов'язковий, рядок - текст заголовку секції,                 |
-| `className ` | `undefined` | опціонально, при необхідності додатково стилізувати компонент |
+| Prop         | За замовчуванням | Опис                                                             |
+| ------------ | ---------------- | ---------------------------------------------------------------- |
+| `title `     | `undefined`      | обов'язковий, рядок - текст заголовку секції,                    |
+| `className ` | `undefined`      | не обов'язковo, при необхідності додатково стилізувати компонент |
 
 - ### ButtonLink
 
-The `ButtonLink` component is created using `Link` from `react-scroll`, has
-styled variant and perfom smooth scroll to `targetName` by `click`Rendered as
-tag `a`.
+Компонент `ButtonLink` створюється за допомогою `Link` з
+бібліотеки`react-scroll`, має стилізований варіант і виконує плавний скрол до
+`targetName` за допомогою`click`. Рендериться як тег `a`.
 
-| Prop         | Default     | Description                                                                                                                                                                                                                                                                                        |
-| ------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `label `     | `undefined` | обов'язковий, рядок - текст кнопки, буде 16/19.5/700                                                                                                                                                                                                                                               |
-| `targetName` | `undefined` | обов'язковий, рядок - містить ID секцї до котрої здійснюється плавний скролл                                                                                                                                                                                                                       |
-| `variant `   | `undefined` | обов'язковий, рядок: `primary`- кнопка буде акцентного кольору та білим шрифтом, ховер теж присутній, `outline` - кнопка буде білого кольору з акцентним бордером 1px та акцентим кольором, ховер присутній, `ghost` - тільки текст, ховер присутній, текст кнопки, буде 24/29/400 чорного кольору |
-| `className ` | `undefined` | пціонально, при необхідності додатково стилізувати компонент                                                                                                                                                                                                                                       |
+| Prop         | За замовчуванням | Опис                                                                                                                                                                                                                                                                                               |
+| ------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `label `     | `undefined`      | обов'язковий, рядок - текст кнопки, буде 16/19.5/700                                                                                                                                                                                                                                               |
+| `targetName` | `undefined`      | обов'язковий, рядок - містить ID секцї до котрої здійснюється плавний скролл                                                                                                                                                                                                                       |
+| `variant `   | `undefined`      | обов'язковий, рядок: `primary`- кнопка буде акцентного кольору та білим шрифтом, ховер теж присутній, `outline` - кнопка буде білого кольору з акцентним бордером 1px та акцентим кольором, ховер присутній, `ghost` - тільки текст, ховер присутній, текст кнопки, буде 24/29/400 чорного кольору |
+| `className ` | `undefined`      | не обов'язковo, при необхідності додатково стилізувати компонент                                                                                                                                                                                                                                   |
 
 - ### Slider
 
-The `Slider` component is created using `swiper` library. It is important to
-give the `section` property `position: relative`. This is necessary in order for
-the `Slider` to extend beyond the `container`. By section bame you will able to
-edit custom styles for your `sectionName`-slider and `sectionName`-slide. Base
-height for every Slider added to global.css. For hiddeen/show you able to wrap
-Slider component by `div` adn set up conditions in classNames.
+Компонент `Slider` створений за допомогою бібліотеки `swiper`. Важливо давати
+для `section` властивість `position: relative`.Це необхідно для того, щоб
+`Slider` міг вийти за межі `container`. За назвою розділу ви зможете редагувати
+власні стилі для вашого `sectionName`-слайдера і `sectionName`-слайду. Базова
+висота для кожного Slider додана до global.css. Щоб приховати чи показати
+компонент, ви можете його обернути в `div` і встановити умови і стилі в
+classNames.
 
-| Prop       | Default     | Description                                                                                                                                                                                             |
-| ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `section ` | `undefined` | обов'язковий, потрібно вказати назву секції для котрої обирається слайдер: `services`, `features`, `feedback` or `gallery` по ній будуть застосовані кількість елементів слайдеру згідно точок перелому |
-| `slides`   | `undefined` | обов'язковий, масив слайді `ReactNode` для перебору і інтеграції до слайдеру                                                                                                                            |
+| Prop       | За замовчуванням | Опис                                                                                                                                                                                                    |
+| ---------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `section ` | `undefined`      | обов'язковий, потрібно вказати назву секції для котрої обирається слайдер: `services`, `features`, `feedback` or `gallery` по ній будуть застосовані кількість елементів слайдеру згідно точок перелому |
+| `slides`   | `undefined`      | обов'язковий, масив слайді `ReactNode` для перебору і інтеграції до слайдеру                                                                                                                            |
 
 - ### NavBar
+  Компонент є навігаційним тегом, що містить список прив’язних посилань для
+  навігації між розділами. Використовується в `footer`, `header` та `MobileMenu`
+  сайту .
 
-The component is a nav tag containing a list of anchor links for navigation
-between sections. It is used in the header and footer of the site.
-
-| Prop           | Default     | Description                                                                                                                                                                        |
-| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
-| `handleClick ` | `undefined` | optionally, wakes up from ButtonLink, required to close the mobile menu when clicking on the navigation link                                                                       |
-| `className `   | `undefined` | optionally, if it's necessary to add some style changes                                                                                                                            |
+| Prop           | За замовчуванням | Опис                                                                                                                                                                          |
+| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobile `    | `undefined`      | обов’язковий, якщо значення `true`, застосовує стилі для мобільної версії, які використовуються в мобільному меню. Якщо `false`, компонент прихований до 1280px ширини екрану |
+| `handleClick ` | `undefined`      | не обов'язковo, прокидається наверх від `ButtonLink`, необхідний для закриття мобільного меню під час натискання на елемент навігації                                         |
+| `className `   | `undefined`      | не обов'язковo, якщо необхідно додати деякі зміни через стилі                                                                                                                 |
 
 - ### MobileMenu
 
-The mobile menu appears when the user clicks on Mobile Btn. Appears only when
-the screen width is up to 1280px. Contains the main navigation and the PhoneLink
-component
+Мобільне меню з’являється, коли користувач натискає на `Mobile Btn` компонент.
+З'являється лише тоді, коли ширина екрана є до 1280px. Містить основну навігацію
+та `PhoneLink` компонент.
 
-| Prop           | Default     | Description                                                                                                                                                                        |
-| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
-| `handleClick ` | `undefined` | optionally, wakes up from NavBar, required to close the mobile menu when clicking on the navigation link                                                                           |
-| `className `   | `undefined` | used in the header, to add a transform along the horizontal axis by condition                                                                                                      |
+| Prop           | За замовчуванням | Опис                                                                                                                           |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `isMobile `    | `undefined`      | обов’язковий, прокидається наверх від компоненту `NavBar`                                                                      |
+| `handleClick ` | `undefined`      | не обов'язковo, прокидається з `NavBar`, пропс необхідний для закриття мобільного меню при натисканні на навігаційне посилання |
+| `className `   | `undefined`      | не обов'язковo, використовується в `header` для того, щоб додати трансформацію вздовж горизонтальної осі за умовою             |
 
 - ### MobileBtn
 
-Button to open and close the mobile menu. Depending on the props,
-isMobileMenuShown renders an icon in itself and closes or opens the mobile menu
+Кнопка для відкриття та закриття мобільного меню. Залежно від `true` чи `false`
+`isMobileMenuShown` змінює іконку та закриває або відкриває мобільне меню.
 
-| Prop                 | Default     | Description                                                                                                                                                                     |
-| -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isMobileMenuShown ` | `undefined` | required, boolean value. If false, generates a mobile menu close icon and close text for the aria-label. If true, generates a burger menu icon and opening text for aria-label. |
-| `handleClick `       | `undefined` | allback which returns void. Moves up to the header, for toggle mobile menu                                                                                                      |
+| Prop                 | За замовчуванням | Опис                                                                                                                                                                                                                    |
+| -------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobileMenuShown ` | `undefined`      | необхідне, `boolean` тип. Якщо значення `true`, генерує в кнопці ікноку закриття і відповідний текст для `aria-label`. Якщо значення `false`, генерує в кнопці ікноку бургер-меню і відповідний текст для `aria-label`. |
+| `handleClick `       | `undefined`      | необхідно, колбек функція, яка нічого не повертає. Використовується в `header` для відкриття та закриття мобільного меню                                                                                                |
 
 - ### PhoneLink
 
-The link component contains the phone number for the contact. It is used
-separately in the mobile menu up to a width of 768px and in the header with a
-width of 768px. Imported into the ContactsLink component located in the Footer.
-Contains the href attribute with the phone number and the aria-label attribute
-with the description of the button. The link wraps around the phone icon
+Компонент посилання містить номер телефону для контакту. Він використовується
+окремо в `MobileMenu` шириною до 768 пікселів і в `header` при ширині екрану від
+768 пікселів. Імпортується в компонент ContactsLink, розташований у `footer`.
+Містить атрибут `href` із номером телефону та атрибут `aria-label` з описом
+кнопки. Посилання огортається навколо іконки телефону та номера телефону.
 
-| Prop           | Default     | Description                                             |
-| -------------- | ----------- | ------------------------------------------------------- |
-| `customStyle ` | `undefined` | optionally, if it's necessary to add some style changes |
+| Prop           | За замовчуванням | Опис                                                          |
+| -------------- | ---------------- | ------------------------------------------------------------- |
+| `customStyle ` | `undefined`      | не обов'язковo, якщо необхідно додати деякі зміни через стилі |
 
 - ### ContactsList
 
-The contact list component contains the PhoneLink component with a phone number
-and a link with email. Used in Footer. The mail link contains an href attribute
-with the email address and an aria-label attribute with the description of the
-button. The link wraps around the mail icon.
+Компонент списку контактів містить компонент `PhoneLink` із номером телефону і
+посилання `a` на електронну пошту. Використовується в `footer`. Посилання на
+пошту містить атрибут `href` з адресою електронної пошти та атрибутом
+`aria-label` з описом кнопки. Посилання огортається навколо іконки пошти та
+електронної адреси.
 
-| Prop               | Default     | Description                                                         |
-| ------------------ | ----------- | ------------------------------------------------------------------- |
-| `customListStyle ` | `undefined` | optionally, if it's necessary to add some style changes to the list |
+| Prop               | За замовчуванням | Опис                                                                    |
+| ------------------ | ---------------- | ----------------------------------------------------------------------- |
+| `customListStyle ` | `undefined`      | не обов'язковo, якщо необхідно додати деякі змін для списку через стилі |
+
+- ### SocialMediaList
+
+Список `ul`, що містить посилання на соціальні мережі. Використовується в
+`footer`. Елемент списку містить компонент `SocialLink`, який огортає іконку
+відповідної соціальної мережі.
+
+| Prop               | За замовчуванням | Опис                                                                    |
+| ------------------ | ---------------- | ----------------------------------------------------------------------- |
+| `customListStyle ` | `undefined`      | не обов'язковo, якщо необхідно додати деякі змін для списку через стилі |
+
+- ### SocialLink
+
+A component containing a link to a social network. Used in the SocialMediaList
+in the Footer and in the FaqListItem component. The component contains the href
+attribute with a link, the attribute target with the "\_blank" property, the rel
+attribute with the "noopener noreferrer nofollow" property, the title attribute
+with the username prop, and the tabIndex attribute with the same prop. By
+default, it has a link to Instagram from the variable InstagramLink, if there is
+no other link from SocialLink prop.
+
+Компонент, що містить посилання на соціальну мережу. Використовується в
+`SocialMediaList` та в компоненті `FaqListItem`. Компонент містить `href`
+атрибут із посиланням, `target` атрибут із властивістю `"_blank"`, `rel` атрибут
+із властивістю `"noopener noreferrer nofollow"`, атрибут `title` з prop
+`username` та атрибутом `tabIndex` з prop `tabIndex`. За замовчуванням він
+містить посилання на Instagram зі змінної `InstagramLink`, якщо `SocialLink`
+prop є `undefined`.
+
+| Prop          | За замовчуванням | Опис                                                                                                                                                 |
+| ------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `username `   | `undefined`      | потрібно, додається до змінної link за допомогою методу `concat()` для створення посилання на користувача в Instagram                                |
+| `className `  | `undefined`      | не обов'язковo, якщо необхідно додати деякі зміни через стилі                                                                                        |
+| `socialLink ` | `undefined`      | не обов'язковo, `string` для атрибута `href`, якщо його немає, використовується змінна `InstagramLink`                                               |
+| `tabIndex `   | `0`              | не обов'язковo, має тип `number`. Використовується як індекс для атрибуту `tabindex`                                                                 |
+| `children `   | `undefined`      | не обов'язковo, якщо немає prop, з’являється текст з іменем користувача Instagram. Використовується в `SocialMediaList` щоб огорнути іконки соцмереж |
+| `aria-label ` | `undefined`      | не обов'язковo, додає опис до `aria-label`                                                                                                           |
