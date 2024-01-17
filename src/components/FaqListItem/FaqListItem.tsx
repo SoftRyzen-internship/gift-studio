@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, KeyboardEvent } from "react";
 
 import SocialLink from "@/components/ui/SocialLink";
 
@@ -14,36 +14,54 @@ const FaqListItem: FC<FaqListItemProps> = ({
 }) => {
   const answerWithSocialLink = getSocialLink(answer);
   const styles = {
-    base: "cursor-pointer rounded-3xl text-left max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:py-8 lg:pl-8 lg:pr-4",
-    question: "text-lg font-bold lg:text-3xl lg:leading-32",
+    base: "cursor-pointer rounded-3xl text-left max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:py-8 lg:pl-8 lg:pr-4 border-transparent bg-latte transition border-[1px] border-solid",
+    question: "text-lg font-bold lg:text-3xl lg:leading-32 transition-color",
+  };
+  const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
+    if (event.key === " " || event.key === "Spacebar") {
+      event.preventDefault();
+      setActive();
+    }
   };
 
-  return !isActive ? (
+  return (
     <li
       onClick={setActive}
+      onKeyDown={handleKeyDown}
       tabIndex={0}
-      className={cn(styles.base, "border-transparent bg-latte")}
+      className={cn(styles.base, {
+        "flex flex-col gap-1 border-accent bg-white md:gap-2": isActive,
+      })}
     >
-      <p className={styles.question}>{question}</p>
-    </li>
-  ) : (
-    <li
-      onClick={setActive}
-      tabIndex={0}
-      className={cn(
-        styles.base,
-        "answer-opening flex flex-col gap-1 border-[1px] border-solid border-accent bg-white md:gap-2",
-      )}
-    >
-      <p className={cn(styles.question, "text-accent")}>{question}</p>
-      <p className="text-base font-normal leading-16">
-        {answerWithSocialLink.map((text, index) => {
-          if (index === 1) {
-            return <SocialLink key={index} username={text} />;
-          }
-          return text;
-        })}
+      <p className={cn(styles.question, { "text-accent": isActive })}>
+        {question}
       </p>
+      <div
+        className={cn(
+          "overflow-hidden transition-all duration-300 ease-in-out grid",
+          {
+            "grid-rows-[1fr] opacity-100": isActive,
+            "grid-rows-[0fr] opacity-0": !isActive,
+          },
+        )}
+      >
+        <div className="overflow-hidden">
+          <p className="text-base font-normal leading-16 ">
+            {answerWithSocialLink.map((text, index) => {
+              if (index === 1) {
+                return (
+                  <SocialLink
+                    key={index}
+                    username={text}
+                    tabIndex={isActive ? 0 : -1}
+                  />
+                );
+              }
+              return text;
+            })}
+          </p>
+        </div>
+      </div>
     </li>
   );
 };

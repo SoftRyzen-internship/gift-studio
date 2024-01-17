@@ -1,17 +1,16 @@
-import { FC } from "react";
-import Image from "next/image";
+import { fetchGallery } from "admin/requests/fetchGallery";
 
+import SanityImage from "@/components/ui/SanityImage";
 import Slider from "@/components/Slider";
 
-import { GallerySliderProps } from "./types";
+const GallerySlider = async () => {
+  const imagesGallery = await fetchGallery();
 
-const GallerySlider: FC<GallerySliderProps> = ({ images }) => {
-  const dataSlides = images.map(({ title, imagePath, alt }) => (
-    <Image
-      key={title}
-      src={`/assets/images/gallery/${imagePath}`}
-      alt={alt}
-      sizes="(max-width: 767px) 100vw, (min-width: 768px) 60vw, (min-width: 1280px) 50vw"
+  const dataSlides = imagesGallery.map(image => (
+    <SanityImage
+      key={image.id}
+      image={image.image}
+      sizes="(max-width: 767px) 100vw, (min-width: 768px) 346px, (min-width: 1280px) 480px"
       className="rounded-3xl object-cover"
       fill
     />

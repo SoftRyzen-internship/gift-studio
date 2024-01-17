@@ -1,11 +1,14 @@
+import { fetchAbout } from "admin/requests/fetchAbout";
+
+import SanityImage from "@/components/ui/SanityImage";
 import SectionHeading from "@/components/typography/SectionHeading";
 import ButtonLink from "@/components/ui/ButtonLink";
 
 import content from "@/data/about.json";
-import Image from "next/image";
 
-const About = () => {
-  const { id, title, image, description, buttonLabel, btnScrollTo } = content;
+const About = async () => {
+  const { id, title, description, buttonLabel, btnScrollTo } = content;
+  const aboutImage = await fetchAbout();
 
   return (
     <section id={id} className="section">
@@ -14,13 +17,13 @@ const About = () => {
           title={title}
           className="md:max-lg:mb-9 lg:mb-0 lg:mt-6 lg:self-end"
         />
-        <Image
+        <SanityImage
+          image={aboutImage}
+          priority
           className="h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6 max-md:object-cover md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]"
-          src={`/assets/images/about/about@x2.webp`}
-          alt={image.alt}
           width={320}
           height={376}
-          sizes="(max-width: 767px) 100vw, (min-width: 1280px) 548px"
+          sizes="(max-width: 767px) 100vw,(min-width: 768px) 592px, (min-width: 1280px) 548px"
         />
         <div className="max-md:mb-6 md:max-lg:mb-10 lg:h-[448px] lg:overflow-auto">
           {description.map(text => (
