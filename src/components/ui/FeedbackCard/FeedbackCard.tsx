@@ -41,7 +41,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             width={480}
             height={531}
             sizes="(max-width: 767px) 100vw, (min-width: 768px) 708px, (min-width: 1280px) 600px"
-            className="h-full w-full rounded-3xl object-cover object-center shadow-xl "
+            className="h-full rounded-3xl object-cover object-center shadow-xl "
           />
           <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
             <p className=" line-clamp-3 text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
