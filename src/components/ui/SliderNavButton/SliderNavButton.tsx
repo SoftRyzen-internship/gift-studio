@@ -19,14 +19,14 @@ const SliderNavButton: FC<SliderNavButtonProps> = ({
   return (
     <button
       className={cn(
-        "h-6 w-6 cursor-pointer text-gray transition hover:text-accent focus:text-accent flex-center",
+        "max-md:h-10 max-md:w-10 h-6 w-6 cursor-pointer text-gray transition hover:text-accent focus:text-accent flex-center",
         { "rotate-180": direction === "right" },
       )}
       type="button"
       aria-label={ariaNav}
       onClick={onClick}
     >
-      <ArrowIcon className="h-4 w-4 [&>path]:stroke-current" />
+      <ArrowIcon className="h-6 w-6 [&>path]:stroke-current" />
     </button>
   );
 };
