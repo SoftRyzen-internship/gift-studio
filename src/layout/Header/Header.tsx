@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative z-20 py-6 md:py-9">
+      <header className="relative z-20 pb-6 pt-[22px] md:py-9">
         <div className="container flex items-center justify-between">
           <Logo className="lg:mr-[180px]" />
           <Navbar isMobile={false} />
