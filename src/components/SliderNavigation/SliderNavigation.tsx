@@ -6,7 +6,7 @@ import { SliderNavigationProps } from "./types";
 
 const SliderNavigation: FC<SliderNavigationProps> = ({ onNext, onPrev }) => {
   return (
-    <ul className="flex-center gap-4">
+    <ul className="flex-center max-md:h-6 max-md:gap-0 md:gap-4">
       <li key="prev">
         <SliderNavButton onClick={onPrev} />
       </li>
