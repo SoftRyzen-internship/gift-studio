@@ -19,7 +19,7 @@ const SliderNavButton: FC<SliderNavButtonProps> = ({
   return (
     <button
       className={cn(
-        "max-md:h-10 max-md:w-10 h-6 w-6 cursor-pointer text-gray transition hover:text-accent focus:text-accent flex-center",
+        "max-md:h-10 max-md:w-10 h-6 w-6 cursor-pointer text-gray transition hover:text-accent focus-visible:text-accent flex-center",
         { "rotate-180": direction === "right" },
       )}
       type="button"
