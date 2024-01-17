@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 
 import SocialLink from "@/components/ui/SocialLink";
@@ -10,13 +8,18 @@ import {
 } from "@/components/ui/SocialMediaList/types";
 
 import { cn } from "@/utils/cn";
+import { fetchContacts } from "@/admin/requests/fetchContacts";
 
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
 import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
 
-import contacts from "@/data/contacts.json";
+import data from "@/data/contacts.json";
 
-const SocialMediaList: FC<SocialMediaListType> = ({ customListStyle }) => {
+const SocialMediaList: FC<SocialMediaListType> = async ({
+  customListStyle,
+}) => {
+  const contacts = await fetchContacts();
+
   const icons = [
     <InstagramIcon
       key={1}
@@ -28,22 +31,22 @@ const SocialMediaList: FC<SocialMediaListType> = ({ customListStyle }) => {
     />,
   ];
 
+  const socialLinks = [contacts.instagram, contacts.facebook];
+
   return (
     <ul className={cn("inline-flex items-start gap-2", customListStyle)}>
-      {contacts.socialLinks.map(
-        ({ id, link, ariaLabel }: SocialMediaLinkProps) => (
-          <li key={id}>
-            <SocialLink
-              username={ariaLabel}
-              className="group stroke-black stroke-[1.5px] text-transparent transition"
-              socialLink={link}
-              ariaLabel={ariaLabel}
-            >
-              {icons[id]}
-            </SocialLink>
-          </li>
-        ),
-      )}
+      {data.socialLinks.map(({ id, ariaLabel }: SocialMediaLinkProps) => (
+        <li key={id}>
+          <SocialLink
+            username={ariaLabel}
+            className="group stroke-black stroke-[1.5px] text-transparent transition"
+            socialLink={socialLinks[id]}
+            ariaLabel={ariaLabel}
+          >
+            {icons[id]}
+          </SocialLink>
+        </li>
+      ))}
     </ul>
   );
 };
