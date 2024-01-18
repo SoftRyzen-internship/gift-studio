@@ -10,6 +10,7 @@ const Faq = () => {
     <section id={id} className="section">
       <div className="container">
         <SectionHeading title={title} />
+
         <FaqList data={answers} />
       </div>
     </section>
