@@ -43,7 +43,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             sizes="(max-width: 767px) 100vw, (min-width: 768px) 708px, (min-width: 1280px) 600px"
             className="h-full rounded-3xl object-cover object-center shadow-xl "
           />
-          <div className="absolute bottom-0 left-0 p-6 text-start md:px-[48px] md:pb-7 lg:p-10 ">
+          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-[48px] md:pb-[19px] lg:p-[10] lg:pb-[31px] ">
             <p className=" line-clamp-3 text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {plainText}
             </p>
@@ -52,7 +52,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               aria-label={btnOpenAriaLabel}
               onClick={setActiveCard}
               className={
-                "mr-auto mt-6 rounded-md bg-transparent text-base leading-[22px] transition-colors hover:text-accent focus:text-accent md:mt-4"
+                "mr-auto mt-[15px] h-10 rounded-md bg-transparent text-base leading-[22px] transition-colors hover:text-accent focus:text-accent md:mt-[5px]"
               }
             >
               {btnOpenName}
@@ -63,7 +63,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
           <div
             className={
               css.bg +
-              " text-left rounded-3xl absolute inset-0 p-6 md:py-7 md:px-12 lg:pt-10 lg:py-10 lg:px-20"
+              " text-left rounded-3xl absolute inset-0 p-6 pb-[15px] md:py-7 md:pb-[19px] md:px-12 lg:py-10 lg:pb-[31px] lg:px-20"
             }
           >
             <p className="mb-6 text-[24px] font-bold leading-[29px] text-black md:mb-4">
@@ -77,7 +77,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               onClick={setActiveCard}
               type="button"
               aria-label={btnCloseAriaLabel}
-              className="absolute bottom-6 left-6 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
+              className="absolute bottom-6 left-6 h-10 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
             >
               {btnCloseName}
             </button>
