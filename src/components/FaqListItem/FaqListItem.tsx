@@ -14,9 +14,11 @@ const FaqListItem: FC<FaqListItemProps> = ({
 }) => {
   const answerWithSocialLink = getSocialLink(answer);
   const styles = {
-    base: "cursor-pointer rounded-3xl text-left max-md:px-4 max-md:py-6 md:max-lg:p-8 lg:py-8 lg:pl-8 lg:pr-4 border-transparent bg-latte transition border-[1px] border-solid",
-    question: "text-lg font-bold lg:text-3xl lg:leading-32 transition-color",
+    base: "flex flex-col gap-1 md:gap-2 cursor-pointer rounded-3xl text-left max-md:px-4 max-md:pt-6 max-md:pb-4 md:px-8 md:pt-8 md:pb-6 lg:pl-8 lg:pr-4 border-latte bg-latte transition border-[1px] border-solid",
+    question:
+      "text-lg font-bold lg:text-3xl lg:leading-32 transition-color transition",
   };
+
   const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
     if (event.key === " " || event.key === "Spacebar") {
       event.preventDefault();
@@ -30,12 +32,14 @@ const FaqListItem: FC<FaqListItemProps> = ({
       onKeyDown={handleKeyDown}
       tabIndex={0}
       className={cn(styles.base, {
-        "flex flex-col gap-1 border-accent bg-white md:gap-2": isActive,
+        "flex flex-col gap-1 border-accent bg-white md:gap-2 max-md:pb-6 md:pb-8":
+          isActive,
       })}
     >
       <p className={cn(styles.question, { "text-accent": isActive })}>
         {question}
       </p>
+
       <div
         className={cn(
           "overflow-hidden transition-all duration-300 ease-in-out grid",
