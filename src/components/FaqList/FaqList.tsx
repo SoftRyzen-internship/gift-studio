@@ -5,12 +5,10 @@ import FaqListItem from "@/components/FaqListItem";
 import { FaqListProps } from "./types";
 
 const FaqList: FC<FaqListProps> = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleAccordionClick = (idx: number) => {
-    if (idx === activeIndex) {
-      setActiveIndex(null);
-    } else {
+    if (idx !== activeIndex) {
       setActiveIndex(idx);
     }
   };
