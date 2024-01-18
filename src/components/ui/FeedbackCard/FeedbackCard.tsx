@@ -5,9 +5,9 @@ import { PortableText, toPlainText } from "@portabletext/react";
 
 import SanityImage from "@/components/ui/SanityImage";
 
-import data from "@/data/feedback.json";
-
 import { FeedbackCardProps } from "./types";
+
+import data from "@/data/feedback.json";
 
 import css from "./Feedback.module.css";
 
@@ -20,8 +20,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
 
   const flipStyle = "[transform:rotateY(180deg)]";
 
-  const { btnOpenName, btnCloseName, btnOpenAriaLabel, btnCloseAriaLabel } =
-    data.button;
+  const { btnOpenName, btnCloseName } = data.button;
 
   const plainText = toPlainText(text);
 
@@ -49,7 +48,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             </p>
             <button
               type="button"
-              aria-label={btnOpenAriaLabel}
+              aria-label={btnOpenName}
               onClick={setActiveCard}
               className={
                 "mr-auto mt-[15px] h-10 rounded-md bg-transparent text-base leading-[22px] transition-colors hover:text-accent focus:text-accent md:mt-[5px]"
@@ -76,7 +75,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             <button
               onClick={setActiveCard}
               type="button"
-              aria-label={btnCloseAriaLabel}
+              aria-label={btnCloseName}
               className="absolute bottom-6 left-6 h-10 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
             >
               {btnCloseName}
