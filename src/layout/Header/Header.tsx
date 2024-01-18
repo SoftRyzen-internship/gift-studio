@@ -1,15 +1,33 @@
 "use client";
 
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import Logo from "@/components/ui/Logo";
 import MobileBtn from "@/components/ui/MobileBtn";
 import MobileMenu from "@/components/ui/MobileMenu";
 import Navbar from "@/components/ui/NavBar";
 import PhoneLink from "@/components/ui/PhoneLink";
 
+import { TContactsResponse } from "@/src/types";
+
+import { fetchContacts } from "@/admin/requests/fetchContacts";
+
 const Header = () => {
-  const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);
+  const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
+  const [contacts, setContacts] = useState<TContactsResponse | null>(null);
+
+  useEffect(() => {
+    // Викликаємо функцію fetchContacts асинхронно та оновлюємо стан з контактами
+    const fetchData = async () => {
+      try {
+        const contactsData = await fetchContacts();
+        setContacts(contactsData);
+      } catch (error) {
+        console.error("Помилка при отриманні контактів:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Порожній масив забезпечує виклик useEffect лише під час монтажу
 
   const toggleMenu = () => {
     setIsMobileMenuShown(prevState => !prevState);
@@ -27,9 +45,12 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           <Logo className="lg:mr-[180px]" />
           <Navbar isMobile={false} />
-          <PhoneLink
-            customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mr-0"}
-          />
+          {contacts && (
+            <PhoneLink
+              contacts={contacts}
+              customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mr-0"}
+            />
+          )}
 
           <MobileBtn
             handleClick={toggleMenu}
@@ -38,12 +59,16 @@ const Header = () => {
         </div>
       </header>
 
-      <MobileMenu
-        className={!isMobileMenuShown ? "[transform:translateX(100%)]" : ""}
-        handleClick={toggleMenu}
-        isMobile={true}
-      />
+      {contacts && (
+        <MobileMenu
+          contacts={contacts}
+          className={!isMobileMenuShown ? "[transform:translateX(100%)]" : ""}
+          handleClick={toggleMenu}
+          isMobile={true}
+        />
+      )}
     </>
   );
 };
+
 export default Header;

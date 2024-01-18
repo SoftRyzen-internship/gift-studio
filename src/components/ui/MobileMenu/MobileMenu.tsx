@@ -7,9 +7,14 @@ import { cn } from "@/utils/cn";
 import Navbar from "@/components/ui/NavBar";
 import PhoneLink from "@/components/ui/PhoneLink";
 
-import { NavPropsType } from "@/components/ui/NavBar/types";
+import { MobileMenuProps } from "@/components/ui/MobileMenu/types";
 
-const MobileMenu: FC<NavPropsType> = ({ isMobile, handleClick, className }) => {
+const MobileMenu: FC<MobileMenuProps> = ({
+  isMobile,
+  contacts,
+  handleClick,
+  className,
+}) => {
   return (
     <>
       <div
@@ -20,7 +25,10 @@ const MobileMenu: FC<NavPropsType> = ({ isMobile, handleClick, className }) => {
       >
         <div className="pointer-events-auto flex w-full flex-col text-center sm:justify-between">
           <Navbar handleClick={handleClick} isMobile={isMobile} />
-          <PhoneLink customStyle={"md:hidden mx-auto mt-[58px]"} />
+          <PhoneLink
+            contacts={contacts}
+            customStyle={"md:hidden mx-auto mt-[58px]"}
+          />
         </div>
       </div>
     </>
