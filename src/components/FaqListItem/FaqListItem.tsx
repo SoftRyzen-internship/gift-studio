@@ -20,7 +20,7 @@ const FaqListItem: FC<FaqListItemProps> = ({
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
-    if (event.key === " " || event.key === "Spacebar") {
+    if (event.key === " " || event.key === "Enter") {
       event.preventDefault();
       setActive();
     }
