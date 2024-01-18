@@ -169,13 +169,36 @@ classNames.
 
 - ### SocialLink
 
-A component containing a link to a social network. Used in the SocialMediaList
-in the Footer and in the FaqListItem component. The component contains the href
-attribute with a link, the attribute target with the "\_blank" property, the rel
-attribute with the "noopener noreferrer nofollow" property, the title attribute
-with the username prop, and the tabIndex attribute with the same prop. By
-default, it has a link to Instagram from the variable InstagramLink, if there is
-no other link from SocialLink prop.
+Компонент, що містить посилання на соціальну мережу. Використовується в
+`SocialMediaList` та в компоненті `FaqListItem`. Компонент містить `href`
+атрибут із посиланням, `target` атрибут із властивістю `"_blank"`, `rel` атрибут
+із властивістю `"noopener noreferrer nofollow"`, атрибут `title` з prop
+`username` та атрибутом `tabIndex` з prop `tabIndex`. За замовчуванням він
+містить посилання на Instagram зі змінної `InstagramLink`, якщо `SocialLink`
+prop є `undefined`.
+
+| Prop          | За замовчуванням | Опис                                                                                                                                                 |
+| ------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `username `   | `undefined`      | потрібно, додається до змінної link за допомогою методу `concat()` для створення посилання на користувача в Instagram                                |
+| `className `  | `undefined`      | не обов'язковo, якщо необхідно додати деякі зміни через стилі                                                                                        |
+| `socialLink ` | `undefined`      | не обов'язковo, `string` для атрибута `href`, якщо його немає, використовується змінна `InstagramLink`                                               |
+| `tabIndex `   | `0`              | не обов'язковo, має тип `number`. Використовується як індекс для атрибуту `tabindex`                                                                 |
+| `children `   | `undefined`      | не обов'язковo, якщо немає prop, з’являється текст з іменем користувача Instagram. Використовується в `SocialMediaList` щоб огорнути іконки соцмереж |
+| `aria-label ` | `undefined`      | не обов'язковo, додає опис до кнопки `aria-label`                                                                                                    |
+
+- ### Logo
+
+Компонент, що містить посилання на головну стоірнку, яке огортає логотип
+компанії. Використовується в `header` та в `footer` проекту. Компонент містить
+`href` атрибут із посиланням на головну сторінку, та `aria-label`, який додає
+опис до кнопки. Використовує утиліту `cn()` для поєдання класів tailwind та з
+можливими додатковими класами
+
+| Prop         | За замовчуванням | Опис                                                                |
+| ------------ | ---------------- | ------------------------------------------------------------------- |
+| `className ` | `''`             | не обов'язковo, використовується для додаткої стилізації компоненту |
+
+- ### FeedbackCard
 
 Компонент, що містить посилання на соціальну мережу. Використовується в
 `SocialMediaList` та в компоненті `FaqListItem`. Компонент містить `href`
@@ -192,4 +215,4 @@ prop є `undefined`.
 | `socialLink ` | `undefined`      | не обов'язковo, `string` для атрибута `href`, якщо його немає, використовується змінна `InstagramLink`                                               |
 | `tabIndex `   | `0`              | не обов'язковo, має тип `number`. Використовується як індекс для атрибуту `tabindex`                                                                 |
 | `children `   | `undefined`      | не обов'язковo, якщо немає prop, з’являється текст з іменем користувача Instagram. Використовується в `SocialMediaList` щоб огорнути іконки соцмереж |
-| `aria-label ` | `undefined`      | не обов'язковo, додає опис до `aria-label`                                                                                                           |
+| `aria-label ` | `undefined`      | не обов'язковo, додає опис до кнопки `aria-label`                                                                                                    |
