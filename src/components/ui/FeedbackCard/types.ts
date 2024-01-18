@@ -1,4 +1,7 @@
-export type FeedbackCardProps = {
-  isActive?: boolean;
-  cardImage?: string;
-};
+import { TFeedback } from "@/src/types";
+
+export interface FeedbackCardProps {
+  content: TFeedback;
+  isActiveCard: boolean;
+  setActiveCard: () => void;
+}

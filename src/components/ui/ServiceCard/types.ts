@@ -1,7 +1,6 @@
+import { TService } from "@/src/types";
+
 export interface ServiceCardProps {
-  link: string;
-  serviceDescription: string;
-  alt: string;
-  src?: string;
   wrapperCustomStyle?: string;
+  data: TService;
 }

@@ -47,6 +47,12 @@ Check out our
 [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
 details.
 
+## 💼 Панель керування адміністратора Sanity Studio 💼
+
+Для управління вмістом та конфігурацією вашого додатка Next.js, перегляньте
+додаткову документацію з
+[Sanity Studio](https://docs.google.com/document/d/14rdHNc4vb7Z7vKZZglbxdZAlBCxMK1AByJ6xttbFOlI/edit?usp=sharing).
+
 ---
 
 ## 💼 Components API 💼
@@ -76,7 +82,8 @@ tag `a`.
 | `label `     | `undefined` | обов'язковий, рядок - текст кнопки, буде 16/19.5/700                                                                                                                                                                                                                                               |
 | `targetName` | `undefined` | обов'язковий, рядок - містить ID секцї до котрої здійснюється плавний скролл                                                                                                                                                                                                                       |
 | `variant `   | `undefined` | обов'язковий, рядок: `primary`- кнопка буде акцентного кольору та білим шрифтом, ховер теж присутній, `outline` - кнопка буде білого кольору з акцентним бордером 1px та акцентим кольором, ховер присутній, `ghost` - тільки текст, ховер присутній, текст кнопки, буде 24/29/400 чорного кольору |
-| `className ` | `undefined` | пціонально, при необхідності додатково стилізувати компонент                                                                                                                                                                                                                                       |
+| `className ` | `undefined` | опціонально, при необхідності додатково стилізувати компонент                                                                                                                                                                                                                                      |
+| `tabIndex `  | `0`         | опціонально, при необхідності додатково вказати активний '0' чи пасивний '-1' для фокусу компонент                                                                                                                                                                                                 |
 
 - ### Slider
 
@@ -91,3 +98,59 @@ Slider component by `div` adn set up conditions in classNames.
 | ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `section ` | `undefined` | обов'язковий, потрібно вказати назву секції для котрої обирається слайдер: `services`, `features`, `feedback` or `gallery` по ній будуть застосовані кількість елементів слайдеру згідно точок перелому |
 | `slides`   | `undefined` | обов'язковий, масив слайді `ReactNode` для перебору і інтеграції до слайдеру                                                                                                                            |
+
+- ### NavBar
+
+The component is a nav tag containing a list of anchor links for navigation
+between sections. It is used in the header and footer of the site.
+
+| Prop           | Default     | Description                                                                                                                                                                        |
+| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
+| `handleClick ` | `undefined` | optionally, wakes up from ButtonLink, required to close the mobile menu when clicking on the navigation link                                                                       |
+| `className `   | `undefined` | optionally, if it's necessary to add some style changes                                                                                                                            |
+
+- ### MobileMenu
+
+The mobile menu appears when the user clicks on Mobile Btn. Appears only when
+the screen width is up to 1280px. Contains the main navigation and the PhoneLink
+component
+
+| Prop           | Default     | Description                                                                                                                                                                        |
+| -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobile `    | `undefined` | required, if true applies the styles for the mobile version that are applied in the mobile menu. If false, it is hidden for mobile versions and tablets and appears on the desktop |
+| `handleClick ` | `undefined` | optionally, wakes up from NavBar, required to close the mobile menu when clicking on the navigation link                                                                           |
+| `className `   | `undefined` | used in the header, to add a transform along the horizontal axis by condition                                                                                                      |
+
+- ### MobileBtn
+
+Button to open and close the mobile menu. Depending on the props,
+isMobileMenuShown renders an icon in itself and closes or opens the mobile menu
+
+| Prop                 | Default     | Description                                                                                                                                                                     |
+| -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isMobileMenuShown ` | `undefined` | required, boolean value. If false, generates a mobile menu close icon and close text for the aria-label. If true, generates a burger menu icon and opening text for aria-label. |
+| `handleClick `       | `undefined` | allback which returns void. Moves up to the header, for toggle mobile menu                                                                                                      |
+
+- ### PhoneLink
+
+The link component contains the phone number for the contact. It is used
+separately in the mobile menu up to a width of 768px and in the header with a
+width of 768px. Imported into the ContactsLink component located in the Footer.
+Contains the href attribute with the phone number and the aria-label attribute
+with the description of the button. The link wraps around the phone icon
+
+| Prop           | Default     | Description                                             |
+| -------------- | ----------- | ------------------------------------------------------- |
+| `customStyle ` | `undefined` | optionally, if it's necessary to add some style changes |
+
+- ### ContactsList
+
+The contact list component contains the PhoneLink component with a phone number
+and a link with email. Used in Footer. The mail link contains an href attribute
+with the email address and an aria-label attribute with the description of the
+button. The link wraps around the mail icon.
+
+| Prop               | Default     | Description                                                         |
+| ------------------ | ----------- | ------------------------------------------------------------------- |
+| `customListStyle ` | `undefined` | optionally, if it's necessary to add some style changes to the list |
