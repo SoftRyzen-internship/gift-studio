@@ -8,14 +8,8 @@ import { fetchContacts } from "@/admin/requests/fetchContacts";
 
 import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
-import data from "@/data/contacts.json";
-
 const ContactsList: FC<ContactsListType> = async ({ customListStyle }) => {
   const contacts = await fetchContacts();
-
-  const {
-    emailData: { ariaLabel },
-  } = data;
 
   return (
     <ul
@@ -35,8 +29,8 @@ const ContactsList: FC<ContactsListType> = async ({ customListStyle }) => {
       <li className="flex">
         <a
           className="group flex items-center gap-2 stroke-black stroke-[1.5px] text-xl transition hover:text-accent focus:text-accent"
-          href={`tel:${contacts.email}`}
-          aria-label={ariaLabel}
+          href={`mailto:${contacts.email}`}
+          aria-label={contacts.email}
         >
           <EmailIcon className="h-6 w-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
           {contacts.email}
