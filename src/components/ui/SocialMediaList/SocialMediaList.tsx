@@ -41,7 +41,7 @@ const SocialMediaList: FC<SocialMediaListType> = async ({
             username={ariaLabel}
             className="group stroke-black stroke-[1.5px] text-transparent transition"
             socialLink={socialLinks[id]}
-            ariaLabel={ariaLabel}
+            ariaLabel={socialLinks[id]}
           >
             {icons[id]}
           </SocialLink>

@@ -12,6 +12,7 @@ const SocialLink: FC<SocialLinkProps> = ({
   socialLink,
   tabIndex = 0,
   children,
+  ariaLabel,
 }) => {
   const { link } = content.socialLinks[0];
   const instagramLink = link.concat(username);
@@ -23,6 +24,7 @@ const SocialLink: FC<SocialLinkProps> = ({
       target="_blank"
       title={username}
       tabIndex={tabIndex}
+      aria-label={ariaLabel}
       rel="noopener noreferrer nofollow"
     >
       {!children && `@${username}`}
