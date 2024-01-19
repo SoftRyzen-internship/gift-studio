@@ -6,12 +6,12 @@ import { PhoneLinkType } from "./types";
 
 import PhoneIcon from "@/public/assets/icons/icon-phone.svg";
 
-import contacts from "@/data/contacts.json";
+import data from "@/data/contacts.json";
 
-const PhoneLink: FC<PhoneLinkType> = ({ customStyle }) => {
+const PhoneLink: FC<PhoneLinkType> = ({ contacts, customStyle }) => {
   const {
-    phoneData: { phone, ariaLabel },
-  } = contacts;
+    phoneData: { ariaLabel },
+  } = data;
 
   return (
     <a
@@ -21,11 +21,11 @@ const PhoneLink: FC<PhoneLinkType> = ({ customStyle }) => {
           : "inline-flex items-center gap-2 text-xl lg:text-[24px] transition group hover:text-accent focus:text-accent group stroke-black stroke-[1.5px] " +
             customStyle
       }
-      href={`tel:${phone}`}
+      href={`tel:${contacts?.phone}`}
       aria-label={ariaLabel}
     >
       <PhoneIcon className="h-6 w-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
-      {phone}
+      {contacts?.phone}
     </a>
   );
 };
