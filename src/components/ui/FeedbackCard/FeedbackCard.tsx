@@ -43,7 +43,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             />
           </div>
 
-          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-[48px] md:pb-[19px] lg:p-[10] lg:pb-[31px] ">
+          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-[48px] md:pb-[19px] lg:pb-[31px] ">
             <p className=" line-clamp-3 text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {plainText}
             </p>
