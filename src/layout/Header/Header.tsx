@@ -48,7 +48,9 @@ const Header = () => {
           {contacts && (
             <PhoneLink
               contacts={contacts}
-              customStyle={"hidden md:flex md:ml-[139px] md:mr-auto lg:mr-0"}
+              customStyle={
+                "hidden md:flex md:ml-[139px] md:mr-auto lg:ml-auto lg:mr-0"
+              }
             />
           )}
 
