@@ -1,10 +1,18 @@
+"use client";
+
 import { FC } from "react";
 
 import { PhoneLinkType } from "./types";
 
 import PhoneIcon from "@/public/assets/icons/icon-phone.svg";
 
+import data from "@/data/contacts.json";
+
 const PhoneLink: FC<PhoneLinkType> = ({ contacts, customStyle }) => {
+  const {
+    phoneData: { ariaLabel },
+  } = data;
+
   return (
     <a
       className={
@@ -14,7 +22,7 @@ const PhoneLink: FC<PhoneLinkType> = ({ contacts, customStyle }) => {
             customStyle
       }
       href={`tel:${contacts?.phone}`}
-      aria-label={contacts?.phone}
+      aria-label={ariaLabel}
     >
       <PhoneIcon className="h-6 w-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
       {contacts?.phone}
