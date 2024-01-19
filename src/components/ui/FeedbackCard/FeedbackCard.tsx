@@ -35,11 +35,12 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         }
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
-          <div className="relative h-full w-full rounded-3xl object-cover object-center shadow-xl ">
+          <div className="relative h-[531px] w-full rounded-3xl shadow-xl ">
             <SanityImage
               image={image}
               fill
               sizes="(max-width: 767px) 100vw, (min-width: 768px) 708px, (min-width: 1280px) 600px"
+              className="object-cover"
             />
           </div>
 
