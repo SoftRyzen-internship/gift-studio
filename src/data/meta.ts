@@ -4,21 +4,21 @@ import data from "@/data/meta.json";
 
 const { title, description, keywords, locale, images } = data;
 
-const { VERCEL_URL = "http://localhost:3000" } = process.env;
+const { NEXT_PUBLIC_MAIN_SITE_URL = "http://localhost:3000" } = process.env;
 
 const meta: Metadata = {
   title,
   description,
   keywords,
-  metadataBase: new URL(VERCEL_URL as string),
+  metadataBase: new URL(NEXT_PUBLIC_MAIN_SITE_URL as string),
   alternates: {
-    canonical: VERCEL_URL as string,
+    canonical: NEXT_PUBLIC_MAIN_SITE_URL as string,
   },
   manifest: "/meta/site.webmanifest",
   openGraph: {
     title,
     description,
-    url: VERCEL_URL as string,
+    url: NEXT_PUBLIC_MAIN_SITE_URL as string,
     siteName: title,
     locale,
     type: "website",
