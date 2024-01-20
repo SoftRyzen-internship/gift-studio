@@ -33,6 +33,7 @@ export const getSliderOptions = (section: TSections) => {
           slidesPerView: 2,
           spaceBetween: 16,
           loopedSlides: 4,
+          watchSlidesProgress: true,
         },
       };
     }
