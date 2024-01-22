@@ -17,14 +17,15 @@ const About = async () => {
           title={title}
           className="md:max-lg:mb-9 lg:mb-0 lg:mt-6 lg:self-end"
         />
-        <SanityImage
-          image={aboutImage}
-          priority
-          className="h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6 max-md:object-cover md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]"
-          width={320}
-          height={376}
-          sizes="(max-width: 767px) 100vw,(min-width: 768px) 592px, (min-width: 1280px) 548px"
-        />
+        <div className="relative h-[376px] w-full rounded-3xl max-lg:mb-9 max-md:mb-6  md:h-[645px] lg:order-first lg:row-span-3 lg:max-w-[548px]">
+          <SanityImage
+            image={aboutImage}
+            priority
+            fill
+            className="max-md:object-cover"
+            sizes="(max-width: 767px) 100vw,(min-width: 768px) 592px, (min-width: 1280px) 548px"
+          />
+        </div>
         <div className="max-md:mb-6 md:max-lg:mb-10 lg:h-[448px] lg:overflow-auto">
           {description.map(text => (
             <p
