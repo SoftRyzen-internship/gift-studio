@@ -7,7 +7,7 @@ export const getSliderOptions = (section: TSections) => {
     case "services": {
       return {
         [SCREENS.LG]: {
-          slidesPerView: 2,
+          slidesPerView: 4,
           spaceBetween: 12,
           loopedSlides: 4,
         },
@@ -33,6 +33,7 @@ export const getSliderOptions = (section: TSections) => {
           slidesPerView: 2,
           spaceBetween: 16,
           loopedSlides: 4,
+          watchSlidesProgress: true,
         },
       };
     }

@@ -14,7 +14,7 @@ const Hero = () => {
     <section
       className={
         css.hero +
-        " bg-cover bg-bottom md:bg-[length:768px] xl:bg-cover xlg:bg-[length:1440px] bg-no-repeat"
+        " bg-bottom bg-[length:480px] md:bg-[length:768px] xl:bg-cover xlg:bg-[length:1440px] bg-no-repeat"
       }
     >
       <div className="container pb-[258px] pt-[117px] text-center md:py-[160px] lg:pb-[182px] lg:pl-[56px] lg:pt-[184px]">

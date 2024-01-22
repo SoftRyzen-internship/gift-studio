@@ -49,10 +49,19 @@ h3 {
 }
 
 .services-slider:hover .services-card:not(:hover),
-.services-slider:focus-within .services-card:not(:focus),
-.services-list:hover .services-card:not(:hover),
-.services-list:focus-within .services-card:not(:focus) {
+.services-list:hover .services-card:not(:hover) {
   @apply lg:!opacity-25;
+}
+.services-slider:focus-within .services-card:not(:focus),
+.services-list:focus-within .services-card:not(:focus) {
+  @apply lg:!opacity-25 lg:!pointer-events-none lg:!cursor-default;
+}
+
+.services-slider:hover .services-card:hover,
+.services-list:hover .services-card:hover,
+.services-slider:focus-within .services-card:focus,
+.services-list:focus-within .services-card:focus {
+  @apply lg:!opacity-100 lg:!pointer-events-auto !cursor-pointer;
 }
 
 .advantages-slider {
