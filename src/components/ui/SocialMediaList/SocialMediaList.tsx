@@ -31,7 +31,17 @@ const SocialMediaList: FC<SocialMediaListType> = async ({
     />,
   ];
 
-  const socialLinks = [contacts.instagram, contacts.facebook];
+  const socialLinks = [contacts?.instagram, contacts?.facebook];
+
+  function generateAriaLabel(link: string) {
+    const domain = link.replace(/^https?:\/\/(www\.)?/, "");
+    const name =
+      domain.split(".")[0].charAt(0).toUpperCase() +
+      domain.split(".")[0].slice(1);
+
+    const socialLabel = `Відкрити сторінку на ${name}`;
+    return socialLabel;
+  }
 
   return (
     <ul className={cn("inline-flex items-start gap-2", customListStyle)}>
@@ -41,7 +51,7 @@ const SocialMediaList: FC<SocialMediaListType> = async ({
             username={ariaLabel}
             className="group stroke-black stroke-[1.5px] text-transparent transition"
             socialLink={socialLinks[id]}
-            ariaLabel={socialLinks[id]}
+            ariaLabel={generateAriaLabel(socialLinks[id])}
           >
             {icons[id]}
           </SocialLink>
