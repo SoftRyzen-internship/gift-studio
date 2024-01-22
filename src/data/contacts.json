@@ -1,11 +1,11 @@
 {
   "phoneData": {
     "phone": "+380981234567",
-    "ariaLabel": "Контактний телефон компанії"
+    "ariaLabel": "+380981234567"
   },
   "emailData": {
     "email": "support@gift.com.ua",
-    "ariaLabel": "Контактна електронна адреса компанії"
+    "ariaLabel": "support@gift.com.ua"
   },
   "socialLinks": [
     {

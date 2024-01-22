@@ -26,7 +26,6 @@ const FeedbackSlider: FC<FeedbackSliderProps> = ({ feedbacks }) => {
       setActiveCard={() => handleFlip(feedback.id)}
     />
   ));
-
   return <Slider slides={feedbackSlides} section="feedback" />;
 };
 
