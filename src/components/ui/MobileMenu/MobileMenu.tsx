@@ -17,7 +17,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
     <>
       <div
         className={cn(
-          "fixed left-0 top-0 z-10 flex h-full min-w-full flex-col items-center overflow-hidden bg-white pt-[100px] transition-all sm:px-[20px] md:px-[30px] md:pt-[136px] lg:hidden ",
+          "fixed left-0 top-0 z-10 flex h-full min-w-full flex-col items-center overflow-hidden bg-white pt-[100px] transition-all sm:px-5 md:px-[30px] md:pt-[136px] lg:hidden ",
           className,
         )}
       >
