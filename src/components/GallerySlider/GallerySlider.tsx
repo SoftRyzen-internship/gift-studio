@@ -16,7 +16,7 @@ const GallerySlider = async () => {
     />
   ));
 
-  return <Slider slides={dataSlides.concat(dataSlides)} section="gallery" />;
+  return <Slider slides={dataSlides} section="gallery" />;
 };
 
 export default GallerySlider;
