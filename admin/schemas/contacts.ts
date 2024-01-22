@@ -25,7 +25,7 @@ const contacts = {
     defineField({
       name: "instagram",
       title: "Instagram",
-      type: "string",
+      type: "url",
       description: "Введіть посилання на сторінку Instagram",
       validation: rule =>
         rule
@@ -35,7 +35,7 @@ const contacts = {
     defineField({
       name: "facebook",
       title: "Facebook",
-      type: "string",
+      type: "url",
       description: "Введіть посилання на сторінку Facebook",
       validation: rule =>
         rule
