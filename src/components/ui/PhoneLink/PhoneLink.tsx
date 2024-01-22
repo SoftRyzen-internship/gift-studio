@@ -16,7 +16,6 @@ const PhoneLink: FC<PhoneLinkType> = ({ contacts, customStyle }) => {
         customStyle,
       )}
       href={`tel:${contacts?.phone}`}
-      aria-label={contacts?.phone}
     >
       <PhoneIcon className="h-6 w-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
       {contacts?.phone}
