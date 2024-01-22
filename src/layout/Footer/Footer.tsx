@@ -9,11 +9,11 @@ import data from "@/data/footer.json";
 
 const Footer = () => {
   const { madeBy } = data;
+
   return (
     <footer className="pb-6 md:pb-9 ">
       <div className="container flex flex-col gap-6 md:gap-9">
-        {/* border-t-[1px]  border-accent */}
-        <div className="relative flex items-center justify-between pt-[36px] before:absolute before:bottom-full before:block before:h-[1px] before:w-full before:bg-accent md:pt-9 lg:pt-6">
+        <div className="relative flex items-center justify-between pt-9 before:absolute before:bottom-full before:block before:h-[1px] before:w-full before:bg-accent md:pt-9 lg:pt-6">
           <Logo className="lg:mr-[181px]" />
           <NavBar isMobile={false} />
           <SocialMediaList customListStyle="lg:ml-[288px]" />

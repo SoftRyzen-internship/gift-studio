@@ -16,7 +16,6 @@ const Header = () => {
   const [contacts, setContacts] = useState<TContactsResponse | null>(null);
 
   useEffect(() => {
-    // Викликаємо функцію fetchContacts асинхронно та оновлюємо стан з контактами
     const fetchData = async () => {
       try {
         const contactsData = await fetchContacts();
@@ -27,7 +26,7 @@ const Header = () => {
     };
 
     fetchData();
-  }, []); // Порожній масив забезпечує виклик useEffect лише під час монтажу
+  }, []);
 
   const toggleMenu = () => {
     setIsMobileMenuShown(prevState => !prevState);
