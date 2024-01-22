@@ -47,8 +47,8 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             />
           </div>
 
-          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-[48px] md:pb-[19px] lg:pb-[31px] ">
-            <p className=" line-clamp-3 text-[18px] leading-[24px] md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
+          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-12 md:pb-[19px] lg:pb-[31px] ">
+            <p className=" line-clamp-3 text-[18px] leading-6 md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {plainText}
             </p>
             <button
@@ -76,7 +76,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               {reviewName}
             </p>
 
-            <div className="text-[16px] font-normal leading-[22px] text-black md:text-[18px] md:leading-[24px] ">
+            <div className="text-[16px] font-normal leading-[22px] text-black md:text-[18px] md:leading-6 ">
               <PortableText value={text} />
             </div>
             <button
@@ -84,7 +84,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
               type="button"
               tabIndex={-1}
               aria-label={btnCloseName}
-              className="absolute bottom-6 left-6 h-10 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-[48px] md:text-[18px] md:leading-[24px] lg:bottom-10 lg:left-20"
+              className="absolute bottom-6 left-6 h-10 text-[16px] font-normal leading-[22px] text-black transition-colors hover:text-accent focus:text-accent md:bottom-7 md:left-12 md:text-[18px] md:leading-6 lg:bottom-10 lg:left-20"
             >
               {btnCloseName}
             </button>

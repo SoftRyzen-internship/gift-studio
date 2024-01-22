@@ -3,6 +3,6 @@ export type TContacts = {
 };
 
 export type PhoneLinkType = {
-  customStyle?: string;
   contacts: TContacts;
+  customStyle?: string;
 };

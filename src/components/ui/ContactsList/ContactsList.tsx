@@ -5,6 +5,7 @@ import PhoneLink from "@/components/ui/PhoneLink";
 import { ContactsListType } from "./types";
 
 import { fetchContacts } from "@/admin/requests/fetchContacts";
+import { cn } from "@/utils/cn";
 
 import EmailIcon from "@/public/assets/icons/icon-mail.svg";
 
@@ -13,18 +14,13 @@ const ContactsList: FC<ContactsListType> = async ({ customListStyle }) => {
 
   return (
     <ul
-      className={
-        !customListStyle
-          ? "inline-flex flex-col items-center justify-center gap-3 md:flex-row md:gap-[48px]"
-          : "inline-flex flex-col gap-3 justify-center items-center md:flex-row md:gap-[48px] " +
-            customListStyle
-      }
+      className={cn(
+        "inline-flex flex-col items-center justify-center gap-3 md:flex-row md:gap-12",
+        customListStyle,
+      )}
     >
       <li className="flex">
-        <PhoneLink
-          contacts={contacts}
-          customStyle="lg:text-xl leading-[24px]"
-        />
+        <PhoneLink contacts={contacts} customStyle="lg:text-xl leading-6" />
       </li>
       <li className="flex">
         <a
