@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "@/components/ui/Logo";
 
+import Logo from "@/components/ui/Logo";
 import Navbar from "@/components/ui/NavBar";
 import PhoneLink from "@/components/ui/PhoneLink";
+import MobileMenu from "@/components/MobileMenu";
 
 import { fetchContacts } from "@/admin/requests/fetchContacts";
-import HeaderContent from "../../components/HeaderContent/HeaderContent";
 
 const Header = async () => {
   const contacts = await fetchContacts();
@@ -28,7 +28,7 @@ const Header = async () => {
             }
           />
         )}
-        <HeaderContent phoneNumber={phoneNumber} />
+        <MobileMenu phoneNumber={phoneNumber} />
       </div>
     </header>
   );
