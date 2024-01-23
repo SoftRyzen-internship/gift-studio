@@ -26,7 +26,6 @@ const ContactsList: FC<ContactsListType> = async ({ customListStyle }) => {
         <a
           className="group flex items-center gap-2 stroke-black stroke-[1.5px] text-xl transition hover:text-accent focus:text-accent"
           href={`mailto:${contacts.email}`}
-          aria-label={contacts.email}
         >
           <EmailIcon className="h-6 w-6 transition group-hover:stroke-accent group-focus:stroke-accent" />
           {contacts.email}
