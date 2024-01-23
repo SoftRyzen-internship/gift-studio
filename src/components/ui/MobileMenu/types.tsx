@@ -1,8 +1,5 @@
-import { TContacts } from "../PhoneLink/types";
-
 export type MobileMenuProps = {
-  isMobile: boolean;
-  contacts: TContacts;
+  phoneNumber: string;
   handleClick?: () => void;
   className?: string;
 };

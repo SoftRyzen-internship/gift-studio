@@ -20,7 +20,10 @@ const ContactsList: FC<ContactsListType> = async ({ customListStyle }) => {
       )}
     >
       <li className="flex">
-        <PhoneLink contacts={contacts} customStyle="lg:text-xl leading-6" />
+        <PhoneLink
+          phoneNumber={contacts.phone}
+          customStyle="lg:text-xl leading-6"
+        />
       </li>
       <li className="flex">
         <a
