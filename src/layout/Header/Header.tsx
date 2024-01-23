@@ -44,7 +44,9 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           <Logo className="lg:mr-[180px]" />
           <Navbar isMobile={false} />
-          {contacts && (
+          {!contacts ? (
+            <p className=" hidden items-center md:ml-[139px] md:mr-auto md:flex lg:ml-auto lg:mr-0"></p>
+          ) : (
             <PhoneLink
               contacts={contacts}
               customStyle={
