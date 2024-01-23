@@ -8,8 +8,7 @@ import PhoneLink from "@/components/ui/PhoneLink";
 import { MobileMenuProps } from "@/components/ui/MobileMenu/types";
 
 const MobileMenu: FC<MobileMenuProps> = ({
-  isMobile,
-  contacts,
+  phoneNumber,
   handleClick,
   className,
 }) => {
@@ -17,14 +16,14 @@ const MobileMenu: FC<MobileMenuProps> = ({
     <>
       <div
         className={cn(
-          "fixed left-0 top-0 z-10 flex h-full min-w-full flex-col items-center overflow-hidden bg-white pt-[100px] transition-all sm:px-5 md:px-[30px] md:pt-[136px] lg:hidden ",
+          "fixed left-0 top-0 -z-10 flex h-full min-w-full flex-col items-center overflow-hidden bg-white pt-[100px] transition-all sm:px-5 md:px-[30px] md:pt-[136px] lg:hidden ",
           className,
         )}
       >
         <div className="pointer-events-auto flex w-full flex-col text-center sm:justify-between">
-          <Navbar handleClick={handleClick} isMobile={isMobile} />
+          <Navbar handleClick={handleClick} isMobile={true} />
           <PhoneLink
-            contacts={contacts}
+            phoneNumber={phoneNumber}
             customStyle={"md:hidden mx-auto mt-[58px]"}
           />
         </div>
