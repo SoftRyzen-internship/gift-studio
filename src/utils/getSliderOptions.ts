@@ -6,40 +6,47 @@ export const getSliderOptions = (section: TSections) => {
   switch (section) {
     case "services": {
       return {
+        [SCREENS.XS]: {
+          loop: false,
+        },
         [SCREENS.LG]: {
           slidesPerView: 4,
           spaceBetween: 12,
           loopedSlides: 4,
+          loop: true,
         },
       };
     }
     case "advantages": {
       return {
-        [SCREENS.SX]: {
+        [SCREENS.XS]: {
           slidesPerView: 1,
-          loop: false,
+          loopedSlides: 4,
         },
         [SCREENS.MD]: {
-          loop: false,
-        },
-        [SCREENS.LG]: {
           loop: false,
         },
       };
     }
     case "feedback": {
       return {
+        [SCREENS.XS]: {
+          slidesPerView: 1,
+          loopedSlides: 3,
+        },
+        [SCREENS.MD]: {
+          slidesPerView: 1,
+        },
         [SCREENS.LG]: {
           slidesPerView: 2,
           spaceBetween: 16,
-          loopedSlides: 4,
           watchSlidesProgress: true,
         },
       };
     }
     case "gallery": {
       return {
-        [SCREENS.SX]: {
+        [SCREENS.XS]: {
           slidesPerView: 1,
           loopedSlides: 2,
         },
@@ -58,21 +65,17 @@ export const getSliderOptions = (section: TSections) => {
         },
       };
     }
-
     default: {
       return {
-        [SCREENS.SX]: {
+        [SCREENS.XS]: {
           slidesPerView: 1,
-          loopedSlides: 2,
         },
         [SCREENS.MD]: {
           slidesPerView: 2,
-          loopedSlides: 2,
           spaceBetween: 16,
         },
         [SCREENS.LG]: {
           slidesPerView: 3,
-          loopedSlides: 3,
           spaceBetween: 24,
         },
       };

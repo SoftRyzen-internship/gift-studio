@@ -36,7 +36,7 @@ const serviceList = {
               title: "Посилання",
               description:
                 "Введіть посилання на додаткову інформацію про послугу",
-              type: "string",
+              type: "url",
               validation: rule =>
                 rule.required().error("Посилання є обов'язковим полем"),
             }),
