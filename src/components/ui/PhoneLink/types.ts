@@ -1,8 +1,4 @@
-export type TContacts = {
-  phone: string;
-};
-
 export type PhoneLinkType = {
-  contacts: TContacts;
+  phoneNumber: string;
   customStyle?: string;
 };
