@@ -28,7 +28,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   const plainText = toPlainText(text);
 
   return (
-    <div className="group h-[531px] w-full rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
+    <div className="group h-[531px]  w-full rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
       <div
         className={
           isActiveCard
@@ -38,7 +38,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         }
       >
         <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
-          <div className="relative h-[531px] w-full rounded-3xl shadow-xl ">
+          <div className="relative h-[531px] w-full overflow-hidden rounded-3xl shadow-xl ">
             <SanityImage
               image={image}
               fill
@@ -65,11 +65,11 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
           </div>
         </div>
         <div
-          className={`${css.bg} absolute inset-0 h-full w-full rounded-3xl bg-white px-12 text-center [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
+          className={`${css.bg} absolute inset-0  h-full w-full  rounded-3xl bg-white px-12 text-center [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
         >
           <div
             className={
-              "absolute inset-0 rounded-3xl p-6 pb-[15px] text-left md:px-12 md:py-7 md:pb-[19px] lg:px-20 lg:py-10 lg:pb-[31px]"
+              "absolute inset-0 overflow-hidden rounded-3xl p-6 pb-[15px] text-left md:px-12 md:py-7 md:pb-[19px] lg:px-20 lg:py-10 lg:pb-[31px]"
             }
           >
             <p className="mb-6 text-[24px] font-bold leading-[29px] text-black md:mb-4">

@@ -90,3 +90,23 @@ h3 {
 .swiper-slide.gallery-slide > img {
   @apply lg:!h-full lg:!w-auto;
 }
+
+.feedback-slide {
+  @apply invisible;
+}
+
+.feedback-slide.swiper-slide-active {
+  @apply !overflow-visible visible;
+}
+
+.feedback-slide.swiper-slide-next {
+  @apply !overflow-visible lg:visible;
+}
+
+.feedback-slider {
+  @apply !overflow-visible;
+}
+
+#feedback .container {
+  @apply overflow-hidden;
+}
