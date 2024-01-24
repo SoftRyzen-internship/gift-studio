@@ -28,7 +28,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   const plainText = toPlainText(text);
 
   return (
-    <div className="group h-[531px]  w-full rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
+    <div className="group h-[531px] w-full overflow-visible rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
       <div
         className={
           isActiveCard
@@ -37,7 +37,12 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             : "h-full w-full rounded-3xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] marker:relative "
         }
       >
-        <div className="flex h-full flex-col items-center justify-center rounded-3xl text-white [backface-visibility:hidden]">
+        <div
+          className={
+            css.card +
+            " flex h-full flex-col items-center justify-center rounded-3xl text-white overflow-visible [backface-visibility:hidden]"
+          }
+        >
           <div className="relative h-[531px] w-full overflow-hidden rounded-3xl shadow-xl ">
             <SanityImage
               image={image}
@@ -47,7 +52,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
             />
           </div>
 
-          <div className="absolute bottom-0 left-0 p-6 pb-[15px] text-start md:px-12 md:pb-[19px] lg:pb-[31px] ">
+          <div className="absolute  bottom-0 left-0 p-6 pb-[15px] text-start md:px-12 md:pb-[19px] lg:pb-[31px] ">
             <p className=" line-clamp-3 text-[18px] leading-6 md:max-w-[416px] md:text-[22px] md:leading-[30px] lg:max-w-[353px]">
               {plainText}
             </p>
@@ -65,7 +70,9 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
           </div>
         </div>
         <div
-          className={`${css.bg} absolute inset-0  h-full w-full  rounded-3xl bg-white px-12 text-center [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
+          className={`${
+            css.bg + " " + css.card
+          } absolute inset-0 h-full w-full overflow-visible rounded-3xl bg-white px-12 text-center  [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
         >
           <div
             className={
