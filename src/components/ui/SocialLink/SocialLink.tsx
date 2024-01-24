@@ -3,9 +3,10 @@ import { FC } from "react";
 import { SocialLinkProps } from "./types";
 
 import { cn } from "@/src/utils";
-import { fetchContacts } from "@/admin/requests/fetchContacts";
 
-const SocialLink: FC<SocialLinkProps> = async ({
+import content from "@/data/faq.json";
+
+const SocialLink: FC<SocialLinkProps> = ({
   username,
   className,
   socialLink,
@@ -13,10 +14,7 @@ const SocialLink: FC<SocialLinkProps> = async ({
   children,
   ariaLabel,
 }) => {
-  const contacts = await fetchContacts();
-
-  const link = contacts?.instagram;
-
+  const link = content.socialLink;
   const instagramLink = link.concat(username);
 
   return (
