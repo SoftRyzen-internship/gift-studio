@@ -25,7 +25,6 @@ const MobileMenu: FC<TMobileMenu> = ({ phoneNumber }) => {
   const mobileHiddenStyle = !isMobileNavigationShown
     ? "[transform:translateX(100%)]"
     : "";
-
   return (
     <>
       <MobileBtn
