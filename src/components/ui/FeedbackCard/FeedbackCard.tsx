@@ -40,7 +40,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         <div
           className={
             css.card +
-            " flex h-full flex-col items-center justify-center rounded-3xl text-white overflow-visible [backface-visibility:hidden]"
+            " flex h-full flex-col items-center justify-center rounded-3xl text-white overflow-visible [backface-visibility:hidden] [transform:rotateY(0deg)]"
           }
         >
           <div className="relative h-[531px] w-full overflow-hidden rounded-3xl shadow-xl ">
