@@ -1,5 +1,5 @@
 export const SCREENS = {
-  XS: 220,
+  XS: 0,
   SX: 360,
   MD: 768,
   LG: 1280,

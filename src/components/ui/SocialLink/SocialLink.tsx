@@ -4,8 +4,6 @@ import { SocialLinkProps } from "./types";
 
 import { cn } from "@/src/utils";
 
-import content from "@/data/contacts.json";
-
 const SocialLink: FC<SocialLinkProps> = ({
   username,
   className,
@@ -14,7 +12,7 @@ const SocialLink: FC<SocialLinkProps> = ({
   children,
   ariaLabel,
 }) => {
-  const { link } = content.socialLinks[0];
+  const link = "https://www.instagram.com/";
   const instagramLink = link.concat(username);
 
   return (
