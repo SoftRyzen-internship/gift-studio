@@ -5,4 +5,5 @@ export type SocialMediaListType = {
 export type SocialMediaLinkProps = {
   id: number;
   link: string;
+  ariaLabel: string;
 };

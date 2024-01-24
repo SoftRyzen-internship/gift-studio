@@ -1,3 +1,5 @@
+"use client";
+
 import ContactsList from "@/components/ui/ContactsList";
 import NavBar from "@/components/ui/NavBar";
 import Logo from "@/components/ui/Logo";
@@ -12,7 +14,7 @@ const Footer = () => {
     <footer className="pb-6 md:pb-9 ">
       <div className="container flex flex-col gap-6 md:gap-9">
         <div className="relative flex items-center justify-between pt-9 before:absolute before:bottom-full before:block before:h-[1px] before:w-full before:bg-accent md:pt-9 lg:pt-6">
-          <Logo className="shrink-0 lg:mr-[171px]" />
+          <Logo className="lg:mr-[181px]" />
           <NavBar isMobile={false} />
           <SocialMediaList customListStyle="lg:ml-[288px]" />
         </div>

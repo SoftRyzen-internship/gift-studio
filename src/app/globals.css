@@ -87,6 +87,6 @@ h3 {
 .swiper-slide.gallery-slide.swiper-slide-active {
   @apply lg:!scale-[1.364] lg:!scale-y-[1.186];
 }
-.swiper-slide.gallery-slide > img {
-  @apply lg:!h-full lg:!w-auto;
+.swiper-slide.gallery-slide.swiper-slide-active > img {
+  @apply lg:!object-fill;
 }
