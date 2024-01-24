@@ -28,7 +28,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
   const plainText = toPlainText(text);
 
   return (
-    <div className="group h-[531px] w-full rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
+    <div className="group h-[531px] w-full overflow-visible rounded-3xl [perspective:1000px] max-md:max-w-[440px] md:w-[708px] lg:w-[600px]">
       <div
         className={
           isActiveCard
@@ -40,7 +40,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         <div
           className={
             css.card +
-            " flex h-full flex-col items-center justify-center rounded-3xl text-white visible [backface-visibility:hidden]"
+            " flex h-full flex-col items-center justify-center rounded-3xl text-white overflow-visible [backface-visibility:hidden]"
           }
         >
           <div className="relative h-[531px] w-full rounded-3xl shadow-xl ">
@@ -72,7 +72,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
         <div
           className={`${
             css.bg + " " + css.card
-          } visible absolute inset-0 h-full w-full rounded-3xl bg-white px-12 text-center  [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
+          } absolute inset-0 h-full w-full overflow-visible rounded-3xl bg-white px-12 text-center  [backface-visibility:hidden] [transform:rotateY(180deg)] first:bg-white `}
         >
           <div
             className={
