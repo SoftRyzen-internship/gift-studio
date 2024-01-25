@@ -13,6 +13,8 @@ import { fetchContacts } from "@/admin/requests/fetchContacts";
 import FacebookIcon from "@/public/assets/icons/icon-facebook.svg";
 import InstagramIcon from "@/public/assets/icons/icon-instagram.svg";
 
+import data from "@/data/contacts.json";
+
 const SocialMediaList: FC<SocialMediaListType> = async ({
   customListStyle,
 }) => {
@@ -29,10 +31,7 @@ const SocialMediaList: FC<SocialMediaListType> = async ({
     />,
   ];
 
-  const socialLinks = [
-    { link: contacts?.instagram, id: 0 },
-    { link: contacts?.facebook, id: 1 },
-  ];
+  const socialLinks = [contacts?.instagram, contacts?.facebook];
 
   function generateAriaLabel(link: string) {
     const domain = link.replace(/^https?:\/\/(www\.)?/, "");
@@ -46,13 +45,13 @@ const SocialMediaList: FC<SocialMediaListType> = async ({
 
   return (
     <ul className={cn("inline-flex items-start gap-2", customListStyle)}>
-      {socialLinks.map(({ id, link }: SocialMediaLinkProps) => (
+      {data.socialLinks.map(({ id, ariaLabel }: SocialMediaLinkProps) => (
         <li key={id}>
           <SocialLink
-            username={link}
+            username={ariaLabel}
             className="group stroke-black stroke-[1.5px] text-transparent transition"
-            socialLink={link}
-            ariaLabel={generateAriaLabel(link)}
+            socialLink={socialLinks[id]}
+            ariaLabel={generateAriaLabel(socialLinks[id])}
           >
             {icons[id]}
           </SocialLink>

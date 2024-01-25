@@ -7,6 +7,7 @@ import data from "@/data/hero.json";
 import css from "@/sections/Hero/Hero.module.css";
 const Hero = () => {
   const { title, btnLabel, accentWord } = data;
+
   return (
     <section
       className={
