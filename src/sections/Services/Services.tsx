@@ -5,7 +5,6 @@ import content from "@/data/services.json";
 
 const Services = () => {
   const { title, id } = content;
-
   return (
     <section id={id} className="section relative">
       <div className="container">

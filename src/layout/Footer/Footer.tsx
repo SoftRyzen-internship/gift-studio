@@ -1,5 +1,3 @@
-"use client";
-
 import ContactsList from "@/components/ui/ContactsList";
 import NavBar from "@/components/ui/NavBar";
 import Logo from "@/components/ui/Logo";
