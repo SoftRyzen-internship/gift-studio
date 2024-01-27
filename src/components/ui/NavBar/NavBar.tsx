@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 
 import ButtonLink from "@/components/ui/ButtonLink";
@@ -9,7 +7,7 @@ import { NavDataType, NavPropsType } from "./types";
 import data from "@/data/navbar.json";
 
 const Navbar: FC<NavPropsType> = ({ isMobile, handleClick }) => {
-  const desktopStyles = "max-lg:hidden w-fit h-fit";
+  const desktopStyles = "max-lg:hidden w-fit h-fit shrink-0";
   const mobileStyles = "lg:hidden block w-fit h-fit mx-auto";
 
   return (
